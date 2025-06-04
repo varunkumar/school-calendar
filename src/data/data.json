@@ -1,0 +1,1783 @@
+{
+  "academic_calendar": [
+    {
+      "month_year": "June 2025",
+      "general_activities": [
+        "Parent Orientation Classes KG, I-IX, XI [cite: 1]",
+        "Class Competition - Choral Recitation English Classes I-V [cite: 1]",
+        "Class Competition - Poster Making Classes IX-XII [cite: 1]",
+        "Field Trip Class IX-XII [cite: 1]"
+      ],
+      "daily_activities": [
+        {
+          "day": "Wed",
+          "date": "04",
+          "activity": ["School Reopens Classes III-XII [cite: 2, 3]"]
+        },
+        {
+          "day": "Sat",
+          "date": "07",
+          "activity": ["Holiday - Bakrid [cite: 2, 3]"]
+        },
+        {
+          "day": "Mon",
+          "date": "09",
+          "activity": ["School Reopens Classes I-II [cite: 2, 3]"]
+        },
+        {
+          "day": "Wed",
+          "date": "11",
+          "activity": [
+            "School Reopens UKG [cite: 2, 3]",
+            "Assignment Submission Term 2 Classes III-VIII [cite: 2, 3]",
+            "Record and Project Submission Classes IX, X & XII [cite: 2, 3]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "13",
+          "activity": [
+            "School Reopens LKG [cite: 2, 3]",
+            "Nominations of Students Council Classes VI - XII [cite: 2, 3]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "14",
+          "activity": [
+            "Working Day Classes III - XII [cite: 2, 3]",
+            "Holiday-KG & Classes I-II [cite: 2, 3]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "16",
+          "activity": ["School Reopens Pre-KG [cite: 2, 3]"]
+        },
+        {
+          "day": "Wed",
+          "date": "18",
+          "activity": [
+            "Term 1 Exhibition Commences Classes III-VIII [cite: 2, 3]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "20",
+          "activity": ["Students Council Elections [cite: 2, 3]"]
+        },
+        {
+          "day": "Sat",
+          "date": "21",
+          "activity": [
+            "Announcement of Election Results [cite: 2, 3]",
+            "Working Day Classes III- XII [cite: 2, 3]",
+            "Holiday-KG & Classes I-II [cite: 2, 3]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "24",
+          "activity": [
+            "KG - Class Event: Rainbow Week (Red & Orange) [cite: 2, 3]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "25",
+          "activity": [
+            "KG - Class Event: Rainbow Week (Blue / Indigo /Violet) [cite: 2, 3]",
+            "Intramural Sports Selection Begins [cite: 2, 3]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "26",
+          "activity": ["KG - Class Event: Rainbow Week (Yellow) [cite: 2, 3]"]
+        },
+        {
+          "day": "Fri",
+          "date": "27",
+          "activity": [
+            "KG - Class Event: Rainbow Week (Green) [cite: 2, 3]",
+            "Club Activities Classes III - VIII [cite: 2, 3]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "28",
+          "activity": ["Holiday KG - XII [cite: 2, 3]"]
+        },
+        {
+          "day": "Mon",
+          "date": "30",
+          "activity": [
+            "Health Check-up-KG and Classes I-II [cite: 2, 3]",
+            "Investiture Ceremony [cite: 2, 3]"
+          ]
+        }
+      ]
+    },
+    {
+      "month_year": "July 2025",
+      "general_activities": [
+        "Field Trip Class III VIII [cite: 4]",
+        "Class Competition - Think Tank - Classes VI-VIII and IX-XII [cite: 4]",
+        "Inter House Competition - Skit Classes VI- XII [cite: 4]",
+        "Inter House Competition - Adzap- Classes VI- XII [cite: 4]",
+        "Inter House Competition -Cricket Classes VI - XII [cite: 4]"
+      ],
+      "daily_activities": [
+        {
+          "day": "Tue",
+          "date": "01",
+          "activity": ["Health Check-up - KG, Classes I-II [cite: 5, 6]"]
+        },
+        {
+          "day": "Wed",
+          "date": "02",
+          "activity": ["Health Check-up- KG, Classes III-V [cite: 5, 6]"]
+        },
+        {
+          "day": "Thur",
+          "date": "03",
+          "activity": ["Health Check-up- Classes III - VIII [cite: 5, 6]"]
+        },
+        {
+          "day": "Fri",
+          "date": "04",
+          "activity": [
+            "Health Check-up- Classes VI - XII [cite: 5, 6]",
+            "No Bag Day - Classes III- VIII [cite: 5, 6]",
+            "KG-Class Event: Talent Show [cite: 5, 6]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "05",
+          "activity": [
+            "Holiday- KG & Classes I - II, Working Day Classes III- XII [cite: 5, 6]",
+            "Health Check-up- Classes IX - XII [cite: 5, 6]",
+            "Term I Exhibition Display Classes III - VIII [cite: 5, 6]"
+          ]
+        },
+        {
+          "day": "Sun",
+          "date": "06",
+          "activity": ["Holiday - Muharram [cite: 5, 6]"]
+        },
+        {
+          "day": "Wed",
+          "date": "09",
+          "activity": ["FA/PA/Unit Test Commences [cite: 5, 6]"]
+        },
+        {
+          "day": "Fri",
+          "date": "11",
+          "activity": ["KG - Class Event: I, Me, Myself [cite: 5, 6]"]
+        },
+        {
+          "day": "Sat",
+          "date": "12",
+          "activity": ["Holiday KG - XII [cite: 5, 6]"]
+        },
+        {
+          "day": "Wed",
+          "date": "16",
+          "activity": ["FA/PA/Unit Test Ends [cite: 5, 6]"]
+        },
+        {
+          "day": "Fri",
+          "date": "18",
+          "activity": [
+            "KG-Class Event - Home Sweet Home [cite: 5, 6]",
+            "No Bag Day KG, Classes I - II [cite: 5, 6]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "19",
+          "activity": [
+            "Holiday KG, Classes I - II, Working Day Classes III - XII [cite: 5, 6]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "23",
+          "activity": ["Result Publication FA/PA/UT [cite: 5, 6]"]
+        },
+        {
+          "day": "Fri",
+          "date": "25",
+          "activity": [
+            "KG Colouring Competition - Vivid Splendour [cite: 5, 6]",
+            "Club Activities Classes III - VIII [cite: 5, 6]",
+            "Annual Athletic Meet [cite: 5, 6]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "26",
+          "activity": ["Holiday KG - XII [cite: 5, 6]"]
+        },
+        {
+          "day": "Wed",
+          "date": "30",
+          "activity": ["KG-Class Activity: Fun Games [cite: 5, 6]"]
+        },
+        {
+          "day": "Thur",
+          "date": "31",
+          "activity": ["Parent Interactive Meeting Class X [cite: 5, 6]"]
+        }
+      ]
+    },
+    {
+      "month_year": "August 2025",
+      "general_activities": [
+        "Field Trip KG & Classes I-II [cite: 7]",
+        "Inter House Competition -Debate Classes IX-XII [cite: 7]",
+        "Inter House Competition - Patriotic Group Song Classes VI-XII [cite: 7]",
+        "Inter House Competition -Basketball Classes VI-XII [cite: 7]"
+      ],
+      "daily_activities": [
+        {
+          "day": "Fri",
+          "date": "01",
+          "activity": [
+            "Pre KG-Field Trip - Joy Ride [cite: 8, 9]",
+            "Parent Interactive Meeting Class XII [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "02",
+          "activity": [
+            "Working Day KG- Class XII [cite: 8, 9]",
+            "Parent Interactive Meeting Pre KG [cite: 8, 9]",
+            "Parent Interactive Meeting Class I [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "04",
+          "activity": ["LKG - Field Trip - Joy Ride [cite: 8, 9]"]
+        },
+        {
+          "day": "Tue",
+          "date": "05",
+          "activity": ["UKG - Field Trip - Joy Ride [cite: 8, 9]"]
+        },
+        {
+          "day": "Wed",
+          "date": "06",
+          "activity": [
+            "Parent Interactive Meeting LKG [cite: 8, 9]",
+            "Parent Interactive Meeting Class II [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "07",
+          "activity": [
+            "No Bag Day UKG, Classes I, II, IX-XII [cite: 8, 9]",
+            "Parent Interactive Meeting LKG [cite: 8, 9]",
+            "Parent Interactive Meeting Class II [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "08",
+          "activity": ["No Bag Day UKG, Classes I, II, IX-XII [cite: 8, 9]"]
+        },
+        {
+          "day": "Sat",
+          "date": "09",
+          "activity": [
+            "Holiday Pre KG, LKG, Classes III - VIII [cite: 8, 9]",
+            "Working Day UKG, Classes I, II, IX-XII",
+            "Awards Day [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "11",
+          "activity": [
+            "Parent Interactive Meeting UKG [cite: 8, 9]",
+            "Parent Interactive Meeting Class III [cite: 8, 9]",
+            "Term I PBL Commences KG - Class II [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "12",
+          "activity": [
+            "Parent Interactive Meeting UKG [cite: 8, 9]",
+            "Parent Interactive Meeting Class III [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "13",
+          "activity": ["Parent Interactive Meeting Class IV [cite: 8, 9]"]
+        },
+        {
+          "day": "Thur",
+          "date": "14",
+          "activity": [
+            "KG Class Activity - People who help us [cite: 8, 9]",
+            "Parent Interactive Meeting Class IV [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "15",
+          "activity": ["Holiday - Independence Day [cite: 8, 9]"]
+        },
+        {
+          "day": "Sat",
+          "date": "16",
+          "activity": ["Holiday - Krishna Jayanthi [cite: 8, 9]"]
+        },
+        {
+          "day": "Mon",
+          "date": "18",
+          "activity": ["FA/PA/UT Commences [cite: 8, 9]"]
+        },
+        {
+          "day": "Sat",
+          "date": "23",
+          "activity": ["Holiday -KG - XII [cite: 8, 9]"]
+        },
+        {
+          "day": "Mon",
+          "date": "25",
+          "activity": [
+            "Class Competition - Show and Tell - Puppet Talk: Family - UKG [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "26",
+          "activity": [
+            "Class Competition - Show and Tell - Puppet Talk: Family - LKG [cite: 8, 9]",
+            "FA/PA/UT Ends [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "27",
+          "activity": ["Holiday - Ganesh Chaturthi [cite: 8, 9]"]
+        },
+        {
+          "day": "Thur",
+          "date": "28",
+          "activity": [
+            "Class Competition - Show and Tell - Puppet Talk: Family - Pre KG [cite: 8, 9]",
+            "Parent Interactive Meeting Class V [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "29",
+          "activity": [
+            "Club Activities Classes III - VIII [cite: 8, 9]",
+            "Parent Interactive Meeting Class V [cite: 8, 9]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "30",
+          "activity": ["Holiday KG, Working Day Classes I - XII [cite: 8, 9]"]
+        }
+      ]
+    },
+    {
+      "month_year": "September 2025",
+      "general_activities": ["Inter House Chess Classes III- XII [cite: 10]"],
+      "daily_activities": [
+        {
+          "day": "Tue",
+          "date": "02",
+          "activity": [
+            "Result Publication FA/PA/UT [cite: 11, 12]",
+            "No Bag Day - KG - Class II [cite: 11, 12]",
+            "Parent Interactive Meeting Class VI [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "03",
+          "activity": [
+            "Parent Interactive Meeting Class VI [cite: 11, 12]",
+            "Term 1 PBL Display KG - Class II [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "04",
+          "activity": [
+            "Teachers' Day Celebrations [cite: 11, 12]",
+            "No Bag Day - KG-XII [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "05",
+          "activity": ["Holiday - Onam & Eid-e-Milad [cite: 11, 12]"]
+        },
+        {
+          "day": "Sat",
+          "date": "06",
+          "activity": ["Holiday KG - XII [cite: 11, 12]"]
+        },
+        {
+          "day": "Mon",
+          "date": "08",
+          "activity": [
+            "Portion Completion for SA 1 and Mid Term Exam [cite: 11, 12]",
+            "Parent Interactive Meeting Class VII [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "09",
+          "activity": [
+            "Class Competition - Storytelling Competition - UKG [cite: 11, 12]",
+            "Parent Interactive Meeting Class VII [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "10",
+          "activity": [
+            "Class Competition - Rhythm and Rhymes - LKG [cite: 11, 12]",
+            "Parent Interactive Meeting Class VIII [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "11",
+          "activity": [
+            "Class Competition - Rhythm and Rhymes - Pre KG [cite: 11, 12]",
+            "Parent Interactive Meeting Class VIII [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "12",
+          "activity": ["Parent Interactive Meeting Class IX [cite: 11, 12]"]
+        },
+        {
+          "day": "Sat",
+          "date": "13",
+          "activity": [
+            "Holiday, KG & Classes I - II, Working Day Classes III- XII [cite: 11, 12]",
+            "Custodian Meeting Classes X & XII [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "15",
+          "activity": [
+            "Parent Interactive Meeting Class XI [cite: 11, 12]",
+            "Assignment Topic - Term 2 All Subjects Classes I-VIII [cite: 11, 12]",
+            "Project Topics - Classes IX and XI [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "17",
+          "activity": [
+            "SA/Mid Term Exam 1 Commences [cite: 11, 12]",
+            "Diagnostics Assessment for KG - Class II [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "20",
+          "activity": [
+            "Holiday KG - II, Working Day Classes III- XII [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "27",
+          "activity": [
+            "Holiday KG - II, Working Day Classes III- XII [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "29",
+          "activity": [
+            "Diagnostics Assessment for KG-Class II Ends [cite: 11, 12]",
+            "SA/Mid Term Exam 1 Ends [cite: 11, 12]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "30",
+          "activity": ["Term Holiday Commences for Students [cite: 11, 12]"]
+        }
+      ]
+    },
+    {
+      "month_year": "October 2025",
+      "general_activities": [
+        "Leadership Camp - Classes VIII - XII [cite: 13]",
+        "Class Competition - Diwali Décor- Classes I-XII [cite: 13]",
+        "Inter House Competition-Tennikoit Classes I-II [cite: 13]"
+      ],
+      "daily_activities": [
+        {
+          "day": "Wed",
+          "date": "01",
+          "activity": ["Holiday - Ayudha Pooja [cite: 14, 15]"]
+        },
+        {
+          "day": "Thur",
+          "date": "02",
+          "activity": [
+            "Holiday - Vijaya Dashami & Gandhi Jayanthi [cite: 14, 15]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "13",
+          "activity": ["School Reopens - Term 2 Commences [cite: 14, 15]"]
+        },
+        {
+          "day": "Wed",
+          "date": "15",
+          "activity": [
+            "KG Class Activity - Grandparents Day [cite: 14, 15]",
+            "Assignment Submission Classes I - VIII [cite: 14, 15]",
+            "Final Project Submission Classes IX & XI [cite: 14, 15]",
+            "Final Record Submission Classes X & XII [cite: 14, 15]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "16",
+          "activity": ["Result Publication SA / Mid Term Exam 1 [cite: 14, 15]"]
+        },
+        {
+          "day": "Fri",
+          "date": "17",
+          "activity": ["KG Class Activity - Sparkling Diya [cite: 14, 15]"]
+        },
+        {
+          "day": "Sat",
+          "date": "18",
+          "activity": ["Holiday KG-XII [cite: 14, 15]"]
+        },
+        {
+          "day": "Mon",
+          "date": "20",
+          "activity": ["Holiday - Diwali [cite: 14, 15]"]
+        },
+        {
+          "day": "Tue",
+          "date": "21",
+          "activity": ["Holiday - Diwali [cite: 14, 15]"]
+        },
+        {
+          "day": "Wed",
+          "date": "22",
+          "activity": [
+            "MOM & ME Programme Commences for Pre-KG & LKG [cite: 14, 15]",
+            "Term 2 PBL Commences Classes III-VIII [cite: 14, 15]",
+            "Term-1 PTM-Classes III, V, VI, IX [cite: 14, 15]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "23",
+          "activity": ["Term-1 PTM-Classes III, V, VI, IX [cite: 14, 15]"]
+        },
+        {
+          "day": "Fri",
+          "date": "24",
+          "activity": [
+            "KG Class Activity - Fireless Cooking [cite: 14, 15]",
+            "Club Activities Classes III-VIII [cite: 14, 15]",
+            "Term-1PTM-Classes IV, VII, VIII, XI [cite: 14, 15]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "25",
+          "activity": [
+            "Holiday, KG & Classes I-II, Working Day Classes III- XII [cite: 14, 15]",
+            "Term-1 PTM-KG- Class II [cite: 14, 15]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "27",
+          "activity": ["Term-1 PTM - Classes IV VII, VIII, XI [cite: 14, 15]"]
+        },
+        {
+          "day": "Tue",
+          "date": "28",
+          "activity": ["PTM Term 1 Classes X & XII [cite: 14, 15]"]
+        },
+        {
+          "day": "Thur",
+          "date": "31",
+          "activity": [
+            "Portion Completion Classes X & XII [cite: 14, 15]",
+            "No Bag Day KG - Classes I- VIII [cite: 14, 15]"
+          ]
+        }
+      ]
+    },
+    {
+      "month_year": "November 2025",
+      "general_activities": [
+        "Art, Literary and Cultural Fest 2025 [cite: 16]",
+        "Inter House Competition - Group Dance Classes VI-IX, XI [cite: 16]",
+        "Inter House Competition -Kho-Kho Classes III-V [cite: 16]"
+      ],
+      "daily_activities": [
+        {
+          "day": "Sat",
+          "date": "01",
+          "activity": [
+            "Holiday, KG & Classes I-II, Working Day Classes III- XII [cite: 17, 18]",
+            "Term-1PTM-KG, Classes I-II [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "07",
+          "activity": [
+            "KG Class Activity - Wonderful Creatures - Birds [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "08",
+          "activity": ["Holiday KG -XII [cite: 17, 18]"]
+        },
+        {
+          "day": "Mon",
+          "date": "10",
+          "activity": [
+            "Dance Competition - Twist n Turn - UKG [cite: 17, 18]",
+            "Revision Exam 1- Classes X & XII Commences [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "11",
+          "activity": ["Dance Competition - Twist n Turn - LKG [cite: 17, 18]"]
+        },
+        {
+          "day": "Wed",
+          "date": "12",
+          "activity": [
+            "Dance Competition - Twist n Turn - Pre- KG [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "14",
+          "activity": [
+            "Children's Day Celebration [cite: 17, 18]",
+            "No Bag Day - KG, Classes I - XII [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "15",
+          "activity": [
+            "Holiday KG, Working Day Classes I-XII [cite: 17, 18]",
+            "No Bag Day - Classes I - XII [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "17",
+          "activity": [
+            "Library Week - Reading - A Window to the World Commences [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "19",
+          "activity": [
+            "No Bag Day Classes III-VIII [cite: 17, 18]",
+            "Revision Exam 1 Classes X & XII Ends [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "20",
+          "activity": ["Term 2 PBL Display Classes III-VIII [cite: 17, 18]"]
+        },
+        {
+          "day": "Fri",
+          "date": "21",
+          "activity": [
+            "Library Week - Reading - A Window to the World Concludes [cite: 17, 18]",
+            "Club Activities Classes III - VIII [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "22",
+          "activity": ["Holiday KG-XII [cite: 17, 18]"]
+        },
+        {
+          "day": "Mon",
+          "date": "24",
+          "activity": ["FA/PA/UT Commences [cite: 17, 18]"]
+        },
+        {
+          "day": "Wed",
+          "date": "26",
+          "activity": [
+            "Result Publication Revision Exam 1 [cite: 17, 18]",
+            "Parent Interactive Meeting Class X [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "27",
+          "activity": ["Parent Interactive Meeting Class XII [cite: 17, 18]"]
+        },
+        {
+          "day": "Fri",
+          "date": "28",
+          "activity": [
+            "KG Class Activity - Amazing World of Animals [cite: 17, 18]",
+            "MOM & ME Programme Concludes for Pre-KG & LKG [cite: 17, 18]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "29",
+          "activity": [
+            "Holiday, KG & Classes I - II, Working Day Classes III- XII [cite: 17, 18]"
+          ]
+        }
+      ]
+    },
+    {
+      "month_year": "December 2025",
+      "general_activities": [
+        "Picnic - Classes I-II [cite: 19]",
+        "Class Competition - Christmas Décor Classes I-IX, XI [cite: 19]"
+      ],
+      "daily_activities": [
+        {
+          "day": "Mon",
+          "date": "01",
+          "activity": [
+            "Revision Exam 2 Classes X & XII Commences [cite: 20, 21]",
+            "Parent Interactive Meeting LKG [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "02",
+          "activity": [
+            "FA/PA/UT Ends [cite: 20, 21]",
+            "Parent Interactive Meeting LKG [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "03",
+          "activity": ["Parent Interactive Meeting UKG [cite: 20, 21]"]
+        },
+        {
+          "day": "Thur",
+          "date": "04",
+          "activity": ["Parent Interactive Meeting UKG [cite: 20, 21]"]
+        },
+        {
+          "day": "Fri",
+          "date": "05",
+          "activity": [
+            "Pre KG, LKG & UKG-Class Competition- Greeting Card making [cite: 20, 21]",
+            "Parent Interactive Meeting Class I [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "06",
+          "activity": [
+            "Holiday- KG, Working Day Classes I - XII [cite: 20, 21]",
+            "No Bag Day Classes I - IX, XI [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "08",
+          "activity": ["Parent Interactive Meeting Class I [cite: 20, 21]"]
+        },
+        {
+          "day": "Tue",
+          "date": "09",
+          "activity": ["Result Publication FA/PA/UT [cite: 20, 21]"]
+        },
+        {
+          "day": "Wed",
+          "date": "10",
+          "activity": ["Revision Exam 2 Classes X & XII Ends [cite: 20, 21]"]
+        },
+        {
+          "day": "Thur",
+          "date": "11",
+          "activity": ["Parent Interactive Meeting Class II [cite: 20, 21]"]
+        },
+        {
+          "day": "Fri",
+          "date": "12",
+          "activity": [
+            "KG Talk show - Activity [cite: 20, 21]",
+            "Parent Interactive Meeting Class II [cite: 20, 21]",
+            "Club Activities Classes III - VIII [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "13",
+          "activity": [
+            "Holiday, KG & Classes I - II, Working Day Classes III- XII [cite: 20, 21]",
+            "Parent Interactive Meeting Pre- KG [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "15",
+          "activity": [
+            "Model Practical Exam Classes X & XII Commences [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "17",
+          "activity": [
+            "Result Publication Revision Exam 2 [cite: 20, 21]",
+            "Assignment Topic -Term 2 All Subjects Classes I - VIII [cite: 20, 21]",
+            "Project Topics - Classes IX & XI [cite: 20, 21]",
+            "Custodian Meeting Classes X and XII [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "18",
+          "activity": [
+            "Model Practical Exam Classes X & XII Ends [cite: 20, 21]",
+            "No Bag Day KG, Classes III- VIII [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "19",
+          "activity": ["No Bag Day KG, Classes III- VIII [cite: 20, 21]"]
+        },
+        {
+          "day": "Sat",
+          "date": "20",
+          "activity": [
+            "Working Day Pre KG, LKG, Classes II- VIII - Christmas - G-Fest [cite: 20, 21]",
+            "Holiday UKG, Classes I-II, IX-XII [cite: 20, 21]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "22",
+          "activity": ["Term Holiday Commences [cite: 20, 21]"]
+        },
+        {
+          "day": "Thur",
+          "date": "25",
+          "activity": ["Christmas [cite: 20, 21]"]
+        }
+      ]
+    },
+    {
+      "month_year": "January 2026",
+      "general_activities": [
+        "Art, Literary and Cultural Fest 2026 [cite: 22]",
+        "Inter House Competition - Rangoli Classes VI-IX, XI [cite: 22]"
+      ],
+      "daily_activities": [
+        {
+          "day": "Thur",
+          "date": "01",
+          "activity": ["New Year [cite: 23, 24]"]
+        },
+        {
+          "day": "Fri",
+          "date": "02",
+          "activity": ["School Reopens for Classes IX - XII [cite: 23, 24]"]
+        },
+        {
+          "day": "Sat",
+          "date": "03",
+          "activity": ["Holiday KG- II, Working Day IX-XII [cite: 23, 24]"]
+        },
+        {
+          "day": "Mon",
+          "date": "05",
+          "activity": [
+            "School Reopens for KG - Class VIII [cite: 23, 24]",
+            "CSSC Common Exam X & XII Commences [cite: 23, 24]",
+            "Assignment Submission Term 2 Classes I - VIII [cite: 23, 24]",
+            "Project Submission Classes IX & XI [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "06",
+          "activity": ["Parent Interactive Meeting Class III [cite: 23, 24]"]
+        },
+        {
+          "day": "Wed",
+          "date": "07",
+          "activity": ["Parent Interactive Meeting Class III [cite: 23, 24]"]
+        },
+        {
+          "day": "Thur",
+          "date": "08",
+          "activity": ["Parent Interactive Meeting Class IV [cite: 23, 24]"]
+        },
+        {
+          "day": "Fri",
+          "date": "09",
+          "activity": [
+            "Parent Interactive Meeting Class V [cite: 23, 24]",
+            "UKG - Handwriting Competition [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "10",
+          "activity": ["Holiday KG-XII [cite: 23, 24]"]
+        },
+        {
+          "day": "Mon",
+          "date": "12",
+          "activity": ["No Bag Day KG - Classes IX & XI [cite: 23, 24]"]
+        },
+        {
+          "day": "Tue",
+          "date": "13",
+          "activity": [
+            "KG Class Activity - Farm to Table - Pongal Celebration [cite: 23, 24]",
+            "No Bag Day KG - Classes IX & XI [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "14",
+          "activity": ["Holiday - Pongal [cite: 23, 24]"]
+        },
+        {
+          "day": "Thur",
+          "date": "15",
+          "activity": ["Holiday - Pongal [cite: 23, 24]"]
+        },
+        {
+          "day": "Fri",
+          "date": "16",
+          "activity": ["Holiday - Thiruvalluvar Day [cite: 23, 24]"]
+        },
+        {
+          "day": "Sat",
+          "date": "17",
+          "activity": ["Holiday - Uzhavar Thirunal [cite: 23, 24]"]
+        },
+        {
+          "day": "Mon",
+          "date": "19",
+          "activity": [
+            "Parent Interactive Meeting Classes X and XII [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "20",
+          "activity": [
+            "Parent Interactive Meeting Class V [cite: 23, 24]",
+            "Health Checkup KG, Classes I-II [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "21",
+          "activity": [
+            "Parent Interactive Meeting Class V [cite: 23, 24]",
+            "Health Checkup KG, Classes I-II [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "22",
+          "activity": [
+            "Parent Interactive Meeting Class VI [cite: 23, 24]",
+            "Health Checkup KG, Classes I-II [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "23",
+          "activity": [
+            "KG Class Activity - Fun with Clay - National Symbols [cite: 23, 24]",
+            "Club Activities Classes III - VIII [cite: 23, 24]",
+            "Parent Interactive Meeting Class VI [cite: 23, 24]",
+            "Health Checkup KG, Classes III-VIII [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "24",
+          "activity": [
+            "Holiday, KG & Classes I-II, Working Day Classes III- XII [cite: 23, 24]",
+            "Health Checkup Classes VI- XI [cite: 23, 24]",
+            "Graduation Day Class XII [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "26",
+          "activity": ["Holiday - Republic Day [cite: 23, 24]"]
+        },
+        {
+          "day": "Tue",
+          "date": "27",
+          "activity": ["Parent Interactive Meeting Class VII [cite: 23, 24]"]
+        },
+        {
+          "day": "Wed",
+          "date": "28",
+          "activity": [
+            "Parent Interactive Meeting Class VII [cite: 23, 24]",
+            "Farewell Class XII [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "30",
+          "activity": [
+            "Portion Completion Classes IX & XI [cite: 23, 24]",
+            "No Bag Day KG - Classes IX & XI [cite: 23, 24]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "31",
+          "activity": ["Annual Sports Meet [cite: 23, 24]"]
+        }
+      ]
+    },
+    {
+      "month_year": "February 2026",
+      "general_activities": [
+        "Picnic KG-V [cite: 25]",
+        "Class Competition Quiz Classes I-VIII [cite: 25]"
+      ],
+      "daily_activities": [
+        {
+          "day": "Mon",
+          "date": "02",
+          "activity": [
+            "PBL Term 2 KG - Class II Commences [cite: 26, 27]",
+            "FA/PA Commences [cite: 26, 27]",
+            "Parent Interactive Meeting Class IX [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "03",
+          "activity": ["Parent Interactive Meeting Class XI [cite: 26, 27]"]
+        },
+        {
+          "day": "Wed",
+          "date": "04",
+          "activity": ["MOM & ME Programme Commences for UKG [cite: 26, 27]"]
+        },
+        {
+          "day": "Fri",
+          "date": "06",
+          "activity": [
+            "Kiddies Royal Makeover - Prince and Princess [cite: 26, 27]",
+            "Farewell Class XII [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "07",
+          "activity": [
+            "Holiday, KG & Classes I - II, Working Day Classes III- XII [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "09",
+          "activity": ["Annual Class Photo Shoot [cite: 26, 27]"]
+        },
+        {
+          "day": "Tue",
+          "date": "10",
+          "activity": [
+            "FA/PA Ends [cite: 26, 27]",
+            "Annual Class Photo Shoot [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "11",
+          "activity": ["Annual Class Photo Shoot [cite: 26, 27]"]
+        },
+        {
+          "day": "Thur",
+          "date": "12",
+          "activity": ["Parent Interactive Meeting Class VIII [cite: 26, 27]"]
+        },
+        {
+          "day": "Fri",
+          "date": "13",
+          "activity": [
+            "KG Class Activity - Nature trail [cite: 26, 27]",
+            "Club Activities Classes III - VIII [cite: 26, 27]",
+            "Parent Interactive Meeting Class VIII [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "14",
+          "activity": ["Holiday KG-XII [cite: 26, 27]"]
+        },
+        {
+          "day": "Mon",
+          "date": "16",
+          "activity": [
+            "Year End Exam - Classes IX and XI Commences [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "17",
+          "activity": ["Result Publication FA/PA [cite: 26, 27]"]
+        },
+        {
+          "day": "Fri",
+          "date": "20",
+          "activity": ["No Bag Day-KG,Classes I - VIII [cite: 26, 27]"]
+        },
+        {
+          "day": "Sat",
+          "date": "21",
+          "activity": [
+            "Working Day KG, Classes I - IX, XI [cite: 26, 27]",
+            "Term 2 PBL Display KG, Classes I-II [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "23",
+          "activity": ["Picnic - LKG [cite: 26, 27]"]
+        },
+        {
+          "day": "Tue",
+          "date": "24",
+          "activity": ["Picnic- UKG [cite: 26, 27]"]
+        },
+        {
+          "day": "Wed",
+          "date": "25",
+          "activity": [
+            "Picnic - Pre- KG [cite: 26, 27]",
+            "Year End Exam Classes IX and XI Ends [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "26",
+          "activity": []
+        },
+        {
+          "day": "Fri",
+          "date": "27",
+          "activity": [
+            "Portion Completion Classes I- VIII [cite: 26, 27]",
+            "Club Activities Classes III - VIII [cite: 26, 27]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "28",
+          "activity": [
+            "Result Declaration and Promotion List Classes IX & XI [cite: 26, 27]",
+            "Holiday KG-IX, XI [cite: 26, 27]"
+          ]
+        }
+      ]
+    },
+    {
+      "month_year": "March 2026",
+      "general_activities": ["Leadership Camp Classes V-VII [cite: 28]"],
+      "daily_activities": [
+        {
+          "day": "Mon",
+          "date": "02",
+          "activity": [
+            "Revision SA 2 Commences [cite: 29, 30]",
+            "Parent Orientation AY 2026-27 Classes X & XII [cite: 29, 30]",
+            "AY 2026-27 Commences Classes X & XII [cite: 29, 30]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "04",
+          "activity": [
+            "Fancy Dress Competition (Incredible India) - Pre- KG [cite: 29, 30]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "05",
+          "activity": [
+            "Fancy Dress Competition (Incredible India) - LKG [cite: 29, 30]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "06",
+          "activity": [
+            "Fancy Dress Competition (Incredible India) - UKG [cite: 29, 30]",
+            "Revision for SA 2 Ends [cite: 29, 30]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "07",
+          "activity": [
+            "Holiday KG - II [cite: 29]",
+            "Working Day Classes III - VIII, X, XII [cite: 29]"
+          ]
+        },
+        {
+          "day": "Mon",
+          "date": "09",
+          "activity": [
+            "KG Revision for Assessment Commences [cite: 29, 30]",
+            "SA 2 Exam Commences Classes III-VIII [cite: 29, 30]",
+            "Diagnostic Assessments Commences Classes I-II [cite: 29, 30]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "12",
+          "activity": ["KG Event - PUPPET SHOW [cite: 29, 30]"]
+        },
+        {
+          "day": "Sat",
+          "date": "14",
+          "activity": [
+            "Holiday - KG [cite: 29, 30]",
+            "Working Day Classes I - IX, XI [cite: 29, 30]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "18",
+          "activity": [
+            "KG Revision for Assessment Ends [cite: 29, 30]",
+            "SA 2 Exam Ends [cite: 29, 30]",
+            "Diagnostic Assessments Ends Classes I-II [cite: 29, 30]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "19",
+          "activity": ["Holiday - Ugadi [cite: 29, 30]"]
+        },
+        {
+          "day": "Fri",
+          "date": "20",
+          "activity": ["Term Holiday Commences Classes I-VIII [cite: 29, 30]"]
+        },
+        {
+          "day": "Sat",
+          "date": "21",
+          "activity": ["Holiday - Idul Fitr [cite: 29, 30]"]
+        },
+        {
+          "day": "Mon",
+          "date": "23",
+          "activity": ["KG Diagnostic Assessment Commences [cite: 29, 30]"]
+        },
+        {
+          "day": "Fri",
+          "date": "27",
+          "activity": [
+            "MOM & ME Programme Concludes for UKG [cite: 29, 30]",
+            "Result Publication SA2 Exam [cite: 29, 30]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "28",
+          "activity": ["Term 2 PTM Classes VI-VIII [cite: 29, 30]"]
+        },
+        {
+          "day": "Mon",
+          "date": "30",
+          "activity": ["Term 2 PTM Classes III - V [cite: 29, 30]"]
+        },
+        {
+          "day": "Tue",
+          "date": "31",
+          "activity": ["Term 2 PTM Classes I-II [cite: 29, 30]"]
+        }
+      ]
+    },
+    {
+      "month_year": "April 2026",
+      "general_activities": [],
+      "daily_activities": [
+        {
+          "day": "Wed",
+          "date": "01",
+          "activity": [
+            "AY 2026-27 Commences Classes II-IX [cite: 32, 33]",
+            "KG Class Activity - Wealth from Waste [cite: 32, 33]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "02",
+          "activity": ["KG Diagnostic Assessment Ends [cite: 32, 33]"]
+        },
+        {
+          "day": "Fri",
+          "date": "03",
+          "activity": [
+            "Holiday - Good Friday [cite: 32, 33]",
+            "Holiday KG- VIII, X, XII [cite: 32, 33]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "04",
+          "activity": ["Holiday KG- VIII, X, XII [cite: 32, 33]"]
+        },
+        {
+          "day": "Mon",
+          "date": "06",
+          "activity": [
+            "Quiz Competition (Unique India) - UKG [cite: 32, 33]",
+            "Term 2 PTM LKG [cite: 32, 33]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "07",
+          "activity": [
+            "Quiz Competition (Unique India)- LKG [cite: 32, 33]",
+            "Term 2 PTM LKG [cite: 32, 33]"
+          ]
+        },
+        {
+          "day": "Wed",
+          "date": "08",
+          "activity": [
+            "PA/Unit Test Classes X & XII Commences [cite: 32, 33]",
+            "Term 2 PTM Pre- KG & UKG [cite: 32, 33]"
+          ]
+        },
+        {
+          "day": "Thur",
+          "date": "09",
+          "activity": ["Term 2 PTM Pre-KG & UKG [cite: 32, 33]"]
+        },
+        {
+          "day": "Fri",
+          "date": "10",
+          "activity": ["Last Working Day - Pre-KG and LKG [cite: 32, 33]"]
+        },
+        {
+          "day": "Sat",
+          "date": "11",
+          "activity": [
+            "Holiday - Pre KG and LKG, Working Day Classes II- XII [cite: 32, 33]",
+            "Graduation Day UKG and Last Working Day UKG [cite: 32, 33]"
+          ]
+        },
+        {
+          "day": "Tue",
+          "date": "14",
+          "activity": ["Holiday - Tamil New Year [cite: 32, 33]"]
+        },
+        {
+          "day": "Fri",
+          "date": "17",
+          "activity": ["PA/Unit Test Classes X & XII Ends [cite: 32, 33]"]
+        },
+        {
+          "day": "Sat",
+          "date": "18",
+          "activity": ["Holiday - Classes II- XII [cite: 32, 33]"]
+        },
+        {
+          "day": "Mon",
+          "date": "20",
+          "activity": [
+            "AY 2026-27 [cite: 32, 33]",
+            "Assignment Topics-Term -1 All Subjects Classes II - VIII [cite: 32, 33]",
+            "Record Work and Project Topics - Classes IX, X & XII [cite: 32, 33]"
+          ]
+        },
+        {
+          "day": "Fri",
+          "date": "24",
+          "activity": [
+            "Result Publication PA/UT Classes X & XII [cite: 32, 33]"
+          ]
+        },
+        {
+          "day": "Sat",
+          "date": "25",
+          "activity": ["Last Working Day Classes II-IX [cite: 32, 33]"]
+        },
+        {
+          "day": "Tue",
+          "date": "28",
+          "activity": ["Parent Interactive Meeting Class XII [cite: 32, 33]"]
+        },
+        {
+          "day": "Wed",
+          "date": "29",
+          "activity": ["Parent Interactive Meeting Class X [cite: 32, 33]"]
+        },
+        {
+          "day": "Thur",
+          "date": "30",
+          "activity": ["Last Working Day for Classes - X & XII [cite: 32, 33]"]
+        }
+      ]
+    }
+  ],
+  "special_assembly_schedule": [
+    {
+      "month": "June",
+      "date": "05",
+      "year": "2025",
+      "event": "World Environment Day [cite: 35]",
+      "department": "Science [cite: 35]"
+    },
+    {
+      "month": "June",
+      "date": "21",
+      "year": "2025",
+      "event": "World Yoga Day [cite: 35]",
+      "department": "PET [cite: 35]"
+    },
+    {
+      "month": "July",
+      "date": "11",
+      "year": "2025",
+      "event": "World Population Day [cite: 35]",
+      "department": "Social Science [cite: 35]"
+    },
+    {
+      "month": "July",
+      "date": "14",
+      "event": "French Day [cite: 35]",
+      "department": "French [cite: 35]"
+    },
+    {
+      "month": "August",
+      "date": "15",
+      "year": "2025",
+      "event": "Independence Day [cite: 35]",
+      "department": "English [cite: 35]"
+    },
+    {
+      "month": "August",
+      "date": "19",
+      "year": "2025",
+      "event": "World Humanitarian Day [cite: 35]",
+      "department": "Social Science [cite: 35]"
+    },
+    {
+      "month": "September",
+      "date": "05",
+      "year": "2025",
+      "event": "Teachers' Day [cite: 35]",
+      "department": "Students Council [cite: 35]"
+    },
+    {
+      "month": "September",
+      "date": "08",
+      "year": "2025",
+      "event": "International Literacy Day [cite: 35]",
+      "department": "Social Science [cite: 35]"
+    },
+    {
+      "month": "September",
+      "date": "14",
+      "year": "2025",
+      "event": "Hindi Divas [cite: 35]",
+      "department": "Hindi [cite: 35]"
+    },
+    {
+      "month": "September",
+      "date": "21",
+      "year": "2025",
+      "event": "International Day of Peace World Gratitude Day [cite: 35]",
+      "department": "English [cite: 35]"
+    },
+    {
+      "month": "October",
+      "date": "01",
+      "year": "2025",
+      "event": "World Elders Day International Music Day [cite: 35]",
+      "department": "English [cite: 35]"
+    },
+    {
+      "month": "October",
+      "date": "10",
+      "year": "2025",
+      "event": "World Mental Health Day [cite: 35]",
+      "department": "Science [cite: 35]"
+    },
+    {
+      "month": "October",
+      "date": "16",
+      "year": "2025",
+      "event": "World Food Day [cite: 35]",
+      "department": "Science [cite: 35]"
+    },
+    {
+      "month": "October",
+      "date": "17",
+      "year": "2025",
+      "event": "Diwali [cite: 35]",
+      "department": "Language [cite: 35]"
+    },
+    {
+      "month": "October",
+      "date": "24",
+      "year": "2025",
+      "event": "UNO Day [cite: 35]",
+      "department": "Social Science Staff Club [cite: 35]"
+    },
+    {
+      "month": "November",
+      "date": "14",
+      "year": "2025",
+      "event": "Children's Day [cite: 35]",
+      "department": "Social Science [cite: 35]"
+    },
+    {
+      "month": "November",
+      "date": "16",
+      "year": "2025",
+      "event": "International Day of Tolerance [cite: 35]",
+      "department": "Science [cite: 35]"
+    },
+    {
+      "month": "December",
+      "date": "03",
+      "year": "2025",
+      "event": "World Disability Day [cite: 35]",
+      "department": "Social Science [cite: 35]"
+    },
+    {
+      "month": "December",
+      "date": "10",
+      "year": "2025",
+      "event": "Human Rights Day [cite: 35]",
+      "department": "Math [cite: 35]"
+    },
+    {
+      "month": "December",
+      "date": "22",
+      "year": "2025",
+      "event": "Ramanujan Birthday [cite: 35]",
+      "department": "Math [cite: 35]"
+    },
+    {
+      "month": "January",
+      "date": "12",
+      "year": "2026",
+      "event": "National Youth Day [cite: 35]",
+      "department": "Social Science [cite: 35]"
+    },
+    {
+      "month": "January",
+      "date": "13",
+      "year": "2026",
+      "event": "Pongal [cite: 35]",
+      "department": "Tamil [cite: 35]"
+    },
+    {
+      "month": "January",
+      "date": "26",
+      "year": "2026",
+      "event": "Republic Day [cite: 35]",
+      "department": "Social Science [cite: 35]"
+    },
+    {
+      "month": "January",
+      "date": "30",
+      "year": "2026",
+      "event": "Martyrs' Day [cite: 35]",
+      "department": "English [cite: 35]"
+    },
+    {
+      "month": "February",
+      "date": "28",
+      "year": "2026",
+      "event": "National Science Day [cite: 35]",
+      "department": "Science [cite: 35]"
+    },
+    {
+      "month": "March",
+      "date": "03",
+      "year": "2026",
+      "event": "World Wildlife Day [cite: 35]",
+      "department": "Staff Club [cite: 35]"
+    },
+    {
+      "month": "March",
+      "date": "08",
+      "year": "2026",
+      "event": "International Women's Day [cite: 35]",
+      "department": "Science [cite: 35]"
+    },
+    {
+      "month": "March",
+      "date": "22",
+      "year": "2026",
+      "event": "World Water Day [cite: 35]",
+      "department": "Math [cite: 35]"
+    },
+    {
+      "month": "April",
+      "date": "21",
+      "year": "2026",
+      "event": "World Creativity & Innovation Day [cite: 35]",
+      "department": "Science [cite: 35]"
+    },
+    {
+      "month": "April",
+      "date": "22",
+      "year": "2026",
+      "event": "International Mother Earth Day [cite: 35]",
+      "department": "Science [cite: 35]"
+    }
+  ],
+  "holidays": [
+    { "s_no": "1", "date": "07.06.2025", "occasion": "Bakrid [cite: 38]" },
+    { "s_no": "2", "date": "06.07.2025", "occasion": "Muharram [cite: 38]" },
+    {
+      "s_no": "3",
+      "date": "15.08.2025",
+      "occasion": "Independence Day [cite: 38]"
+    },
+    {
+      "s_no": "4",
+      "date": "16.08.2025",
+      "occasion": "Krishna Jayanti [cite: 38]"
+    },
+    {
+      "s_no": "5",
+      "date": "27.08.2025",
+      "occasion": "Ganesh Chaturthi [cite: 38]"
+    },
+    {
+      "s_no": "6",
+      "date": "05.09.2025",
+      "occasion": "Onam Eid-e Milad [cite: 38]"
+    },
+    {
+      "s_no": "7",
+      "date": "01.10.2025",
+      "occasion": "Ayutha Pooja [cite: 38]"
+    },
+    {
+      "s_no": "8",
+      "date": "02.10.2025",
+      "occasion": "Gandhi Jayanti. & Vijaya Dashmi [cite: 38]"
+    },
+    {
+      "s_no": "9",
+      "date": "20.10.2025 & 21.10.25",
+      "occasion": "Diwali [cite: 38]"
+    },
+    { "s_no": "10", "date": "25.12.2025", "occasion": "Christmas [cite: 38]" },
+    {
+      "s_no": "11",
+      "date": "14.01.2026 & 15.01.2026",
+      "occasion": "Pongal [cite: 38]"
+    },
+    {
+      "s_no": "12",
+      "date": "16.01.2026",
+      "occasion": "Thiruvalluvar Day [cite: 38]"
+    },
+    {
+      "s_no": "13",
+      "date": "17.01.2026",
+      "occasion": "Uzhavar Thirunal [cite: 38]"
+    },
+    {
+      "s_no": "14",
+      "date": "26.01.2026",
+      "occasion": "Republic Day [cite: 38]"
+    },
+    { "s_no": "15", "date": "19.03.2026", "occasion": "Ugadi [cite: 38]" },
+    {
+      "s_no": "16",
+      "date": "21.03.2026",
+      "occasion": "Eid ul Fitr [cite: 38]"
+    },
+    {
+      "s_no": "17",
+      "date": "03.04.2026",
+      "occasion": "Good Friday [cite: 38]"
+    },
+    {
+      "s_no": "18",
+      "date": "14.04.2026",
+      "occasion": "Tamil New Year [cite: 38]"
+    }
+  ],
+  "vacations": [
+    {
+      "term": "Term-1",
+      "dates": "2025-10-01:2025-10-11 [cite: 39]",
+      "applicable_to": "All classes"
+    },
+    {
+      "term": "Term-2",
+      "dates": "2025-12-22:2026-01-01 [cite: 39]",
+      "applicable_to": "All classes"
+    },
+    {
+      "term": "Summer Vacation",
+      "dates": "2026-04-13:2026-06-10 [cite: 39]",
+      "applicable_to": "KG"
+    },
+    {
+      "term": "Summer Vacation",
+      "dates": "2026-04-28:2026-06-04 [cite: 39]",
+      "applicable_to": "II-IX, XI"
+    },
+    {
+      "term": "Summer Vacation",
+      "dates": "2026-05-01:2026-05-31 [cite: 39]",
+      "applicable_to": "X & XII"
+    }
+  ]
+}
