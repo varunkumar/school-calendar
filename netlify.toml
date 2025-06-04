@@ -8,6 +8,10 @@
   CI = "false"
   GENERATE_SOURCEMAP = "false"
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [build.processing]
   skip_processing = false
