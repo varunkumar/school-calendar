@@ -1,0 +1,8 @@
+{
+  "short_name": "School Calendar",
+  "name": "Greenfield Chennai International School - Academic Calendar",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff"
+}
