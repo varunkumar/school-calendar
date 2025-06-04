@@ -1,7 +1,16 @@
 import { BookOpen, Calendar, Clock, MapPin, Users, X } from 'lucide-react';
 import moment from 'moment';
+import React from 'react';
+import { trackAcademicEngagement } from '../utils/analytics';
 
 const EventModal = ({ event, onClose }) => {
+  // Track when modal is opened (academic engagement)
+  React.useEffect(() => {
+    if (event) {
+      trackAcademicEngagement(event.category);
+    }
+  }, [event]);
+
   if (!event) return null;
 
   const getEventIcon = (type) => {
@@ -54,10 +63,10 @@ const EventModal = ({ event, onClose }) => {
           {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center">
-              {getEventIcon(event.type)}
+              {getEventIcon(event.category || event.type)}
               <div className="ml-3">
                 <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800 mb-2">
-                  {getEventTypeLabel(event.type)}
+                  {getEventTypeLabel(event.category || event.type)}
                 </span>
                 <h2 className="text-xl font-bold text-gray-900">
                   {event.title}

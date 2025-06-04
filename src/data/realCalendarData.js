@@ -148,11 +148,12 @@ const transformAcademicCalendar = () => {
       const date = parseDate(dayData.date, monthIndex, year);
 
       dayData.activity.forEach((activity) => {
+        const category = categorizeEvent(activity);
         events.push({
           id: eventId++,
           title: activity.replace(/\[cite:.*?\]/g, '').trim(),
           date: date,
-          category: categorizeEvent(activity),
+          category: category,
           description: `${dayData.date}, ${monthData.month_year}`,
           classes: extractClasses(activity),
           dayOfWeek: dayData.day,

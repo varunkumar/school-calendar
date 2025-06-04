@@ -1,4 +1,5 @@
 import { Calendar, GraduationCap, MapPin, Phone } from 'lucide-react';
+import config from '../config/appConfig';
 
 const Header = () => {
   const currentDate = new Date();
@@ -23,11 +24,12 @@ const Header = () => {
                 </div>
                 <div className="ml-4">
                   <h1 className="text-xl md:text-2xl font-bold text-gray-900 mobile-header-title">
-                    Greenfield Chennai International
+                    {config.school.name}
                   </h1>
                   <p className="text-xs md:text-sm text-gray-600 flex items-center mobile-header-subtitle">
                     <Calendar className="h-3 w-3 md:h-4 md:w-4 mr-1" />
-                    Academic Calendar • Academic Year 2025-2026
+                    Academic Calendar • Academic Year{' '}
+                    {config.school.academicYear}
                   </p>
                 </div>
               </div>

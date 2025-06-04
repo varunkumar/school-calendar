@@ -15,7 +15,7 @@ import {
   Zap,
 } from 'lucide-react';
 import moment from 'moment';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Dashboard from './components/Dashboard';
 import EventList from './components/EventList';
@@ -23,6 +23,17 @@ import EventModal from './components/EventModal';
 import Header from './components/Header';
 import SectionsView from './components/SectionsView';
 import { allCalendarEvents } from './data/realCalendarData';
+import {
+  initGA,
+  trackCalendarInteraction,
+  trackDashboardView,
+  trackEventView,
+  trackExportAction,
+  trackFilterUsage,
+  trackPageView,
+  trackSearchUsage,
+  trackViewModeChange,
+} from './utils/analytics';
 
 const localizer = momentLocalizer(moment);
 
@@ -35,6 +46,22 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [showDashboard, setShowDashboard] = useState(false);
   const [viewMode, setViewMode] = useState('calendar'); // 'calendar' or 'sections'
+
+  useEffect(() => {
+    initGA();
+    trackPageView();
+  }, []);
+
+  // Track search usage with debounce
+  useEffect(() => {
+    if (searchTerm) {
+      const timeoutId = setTimeout(() => {
+        trackSearchUsage(searchTerm);
+      }, 1000); // Debounce search tracking by 1 second
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [searchTerm]);
 
   // Filter events based on active filter and search term
   const filteredEvents = useMemo(() => {
@@ -107,6 +134,7 @@ function App() {
 
   const handleSelectEvent = (event) => {
     setSelectedEvent(event);
+    trackEventView(event.title, event.category);
   };
 
   const handleCloseModal = () => {
@@ -143,6 +171,8 @@ function App() {
     link.download = 'school-calendar.ics';
     link.click();
     URL.revokeObjectURL(url);
+
+    trackExportAction();
   };
 
   const filterButtons = [
@@ -200,7 +230,10 @@ function App() {
             <div className="flex gap-2 w-full sm:w-auto overflow-x-auto">
               <div className="flex bg-gray-100 rounded-lg p-1 flex-shrink-0">
                 <button
-                  onClick={() => setViewMode('calendar')}
+                  onClick={() => {
+                    setViewMode('calendar');
+                    trackViewModeChange('calendar');
+                  }}
                   className={`flex items-center px-2 md:px-3 py-1 rounded-md text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                     viewMode === 'calendar'
                       ? 'bg-white text-gray-900 shadow-sm'
@@ -211,7 +244,10 @@ function App() {
                   Calendar
                 </button>
                 <button
-                  onClick={() => setViewMode('sections')}
+                  onClick={() => {
+                    setViewMode('sections');
+                    trackViewModeChange('sections');
+                  }}
                   className={`flex items-center px-2 md:px-3 py-1 rounded-md text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                     viewMode === 'sections'
                       ? 'bg-white text-gray-900 shadow-sm'
@@ -224,7 +260,13 @@ function App() {
               </div>
 
               <button
-                onClick={() => setShowDashboard(!showDashboard)}
+                onClick={() => {
+                  const newShowDashboard = !showDashboard;
+                  setShowDashboard(newShowDashboard);
+                  if (newShowDashboard) {
+                    trackDashboardView();
+                  }
+                }}
                 className={`flex items-center px-3 md:px-4 py-2 rounded-lg text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0 ${
                   showDashboard
                     ? 'bg-primary-600 text-white'
@@ -250,7 +292,10 @@ function App() {
               {filterButtons.map(({ key, label, icon: Icon, color }) => (
                 <button
                   key={key}
-                  onClick={() => setActiveFilter(key)}
+                  onClick={() => {
+                    setActiveFilter(key);
+                    trackFilterUsage(key);
+                  }}
                   className={`flex items-center px-3 md:px-4 py-2 rounded-lg text-white text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                     activeFilter === key
                       ? `${color} shadow-lg scale-105`
@@ -289,9 +334,19 @@ function App() {
                       onSelectEvent={handleSelectEvent}
                       eventPropGetter={eventStyleGetter}
                       view={currentView}
-                      onView={setCurrentView}
+                      onView={(newView) => {
+                        setCurrentView(newView);
+                        trackCalendarInteraction('view_change', '', newView);
+                      }}
                       date={date}
-                      onNavigate={setDate}
+                      onNavigate={(newDate) => {
+                        setDate(newDate);
+                        trackCalendarInteraction(
+                          'date_navigation',
+                          '',
+                          moment(newDate).format('MMMM YYYY')
+                        );
+                      }}
                       popup
                       popupOffset={{ x: 30, y: 20 }}
                       className="mobile-friendly-calendar"

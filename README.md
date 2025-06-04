@@ -142,3 +142,60 @@ This project is licensed under the MIT License.
 ## Support
 
 For support or questions, please open an issue in the repository.
+
+## Analytics Setup
+
+This portal includes Google Analytics 4 (GA4) integration for tracking user engagement and usage patterns.
+
+### Setting Up Google Analytics
+
+1. **Create a Google Analytics Account**:
+
+   - Go to [Google Analytics](https://analytics.google.com/)
+   - Sign in with your Google account
+   - Create a new property for your school calendar
+
+2. **Get Your Measurement ID**:
+
+   - In your GA4 property, go to Admin > Property Settings > Data Streams
+   - Create a new Web stream for your domain
+   - Copy the Measurement ID (format: G-XXXXXXXXXX)
+
+3. **Configure Environment Variables**:
+
+   Create a `.env` file in the root directory:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   Edit `.env` and add your Measurement ID:
+
+   ```
+   REACT_APP_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+   ```
+
+4. **For Netlify Deployment**:
+   - In your Netlify dashboard, go to Site Settings > Environment Variables
+   - Add: `REACT_APP_GA_MEASUREMENT_ID` with your GA4 Measurement ID
+
+### Analytics Events Tracked
+
+The portal automatically tracks the following user interactions:
+
+- **Page Views**: Initial page load and navigation
+- **Event Interactions**: When users click on calendar events
+- **Filter Usage**: When users filter events by category
+- **Dashboard Views**: When users toggle the dashboard
+- **Calendar Navigation**: Date and view changes (month/week/day)
+- **Search Usage**: When users search for events
+- **Export Actions**: When users export calendar data
+- **View Mode Changes**: Switching between calendar and sections view
+- **Academic Engagement**: Event modal views and duration
+
+### Privacy Considerations
+
+- Analytics are only active when a valid Measurement ID is configured
+- No personally identifiable information is collected
+- All tracking follows Google Analytics data protection standards
+- Consider adding a privacy policy to your website
