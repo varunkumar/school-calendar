@@ -21,6 +21,7 @@ import Dashboard from './components/Dashboard';
 import EventList from './components/EventList';
 import EventModal from './components/EventModal';
 import Header from './components/Header';
+import MobileAgenda from './components/MobileAgenda';
 import SectionsView from './components/SectionsView';
 import { allCalendarEvents } from './data/realCalendarData';
 import {
@@ -318,13 +319,24 @@ function App() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {viewMode === 'calendar' ? (
             <>
               {/* Calendar Section */}
-              <div className="lg:col-span-3">
-                <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
-                  <div className="h-[500px] md:h-[600px] lg:h-[650px]">
+              <div className="col-span-1 lg:col-span-3">
+                {/* Mobile Agenda View (shown on small screens) */}
+                <div className="block md:hidden">
+                  <MobileAgenda
+                    events={filteredEvents}
+                    date={date}
+                    onDateChange={setDate}
+                    onEventClick={setSelectedEvent}
+                  />
+                </div>
+
+                {/* Desktop Calendar View (hidden on small screens) */}
+                <div className="hidden md:block bg-white rounded-xl shadow-lg p-2 sm:p-4 md:p-6">
+                  <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px]">
                     <Calendar
                       localizer={localizer}
                       events={filteredEvents}
@@ -350,13 +362,15 @@ function App() {
                       popup
                       popupOffset={{ x: 30, y: 20 }}
                       className="mobile-friendly-calendar"
+                      views={['month', 'week', 'day', 'agenda']}
+                      toolbar={true}
                     />
                   </div>
                 </div>
               </div>
 
-              {/* Events List Sidebar */}
-              <div className="lg:col-span-1 order-first lg:order-last">
+              {/* Events List Sidebar - Hidden on mobile since we have MobileAgenda */}
+              <div className="hidden md:block lg:col-span-1 order-first lg:order-last">
                 <EventList
                   events={filteredEvents}
                   onEventClick={setSelectedEvent}
