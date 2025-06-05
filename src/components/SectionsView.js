@@ -2,10 +2,30 @@ import { BookOpen, Clock, Home, Users } from 'lucide-react';
 import CategorySection from './CategorySection';
 
 const SectionsView = ({ events, onEventClick }) => {
-  const academicEvents = events.filter((e) => e.category === 'academic');
-  const assemblies = events.filter((e) => e.category === 'assembly');
-  const holidays = events.filter((e) => e.category === 'holiday');
-  const vacations = events.filter((e) => e.category === 'vacation');
+  // Get current date (start of today) to filter out past events
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Helper function to check if an event is upcoming (today or in the future)
+  const isUpcoming = (event) => {
+    const eventDate = new Date(event.date);
+    eventDate.setHours(0, 0, 0, 0);
+    return eventDate >= today;
+  };
+
+  // Filter events by category and only include upcoming events
+  const academicEvents = events.filter(
+    (e) => e.category === 'academic' && isUpcoming(e)
+  );
+  const assemblies = events.filter(
+    (e) => e.category === 'assembly' && isUpcoming(e)
+  );
+  const holidays = events.filter(
+    (e) => e.category === 'holiday' && isUpcoming(e)
+  );
+  const vacations = events.filter(
+    (e) => e.category === 'vacation' && isUpcoming(e)
+  );
 
   const sections = [
     {
