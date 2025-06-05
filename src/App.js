@@ -44,7 +44,7 @@ function App() {
   const [events] = useState(allCalendarEvents);
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [showDashboard, setShowDashboard] = useState(false);
+  const [showDashboard, setShowDashboard] = useState(true);
   const [viewMode, setViewMode] = useState('calendar'); // 'calendar' or 'sections'
 
   useEffect(() => {
