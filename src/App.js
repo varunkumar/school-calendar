@@ -20,6 +20,7 @@ import EventList from './components/EventList';
 import EventModal from './components/EventModal';
 import Header from './components/Header';
 import MobileAgenda from './components/MobileAgenda';
+import SearchModal from './components/SearchModal';
 import SectionsView from './components/SectionsView';
 import TimingsView from './components/TimingsView';
 import { allCalendarEvents } from './data/realCalendarData';
@@ -31,7 +32,6 @@ import {
   trackExportAction,
   trackFilterUsage,
   trackPageView,
-  trackSearchUsage,
   trackViewModeChange,
 } from './utils/analytics';
 
@@ -44,7 +44,7 @@ function App() {
   const [events] = useState(allCalendarEvents);
   const [activeFilter, setActiveFilter] = useState('all');
   const [activeClass, setActiveClass] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [showSearch, setShowSearch] = useState(false);
   const [showDashboard, setShowDashboard] = useState(true);
   const [viewMode, setViewMode] = useState('calendar'); // 'calendar' or 'sections'
 
@@ -53,18 +53,18 @@ function App() {
     trackPageView();
   }, []);
 
-  // Track search usage with debounce
   useEffect(() => {
-    if (searchTerm) {
-      const timeoutId = setTimeout(() => {
-        trackSearchUsage(searchTerm);
-      }, 1000); // Debounce search tracking by 1 second
+    const handler = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setShowSearch(true);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
 
-      return () => clearTimeout(timeoutId);
-    }
-  }, [searchTerm]);
-
-  // Filter events based on active filter and search term
+  // Filter events based on active filter and class
   const filteredEvents = useMemo(() => {
     let filtered = events.map((event) => ({
       ...event,
@@ -84,17 +84,8 @@ function App() {
       );
     }
 
-    if (searchTerm) {
-      filtered = filtered.filter(
-        (event) =>
-          event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          event.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          event.classes?.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
     return filtered;
-  }, [events, activeFilter, searchTerm]);
+  }, [events, activeFilter, activeClass]);
 
   // Custom event style getter
   const eventStyleGetter = (event) => {
@@ -178,16 +169,14 @@ function App() {
         <div className="mb-6 md:mb-8 space-y-4">
           {/* Search and Actions */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-start sm:items-center justify-between">
-            <div className="relative flex-1 max-w-md w-full sm:w-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 md:h-5 md:w-5" />
-              <input
-                type="text"
-                placeholder="Search events..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 md:pl-10 pr-4 py-2 md:py-2.5 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              />
-            </div>
+            <button
+              onClick={() => setShowSearch(true)}
+              className="relative flex items-center w-full max-w-md px-4 py-2 md:py-2.5 text-sm text-gray-400 bg-white border border-gray-300 rounded-lg hover:border-gray-400 transition-colors"
+            >
+              <Search className="h-4 w-4 mr-2 flex-shrink-0" />
+              <span>Search events…</span>
+              <span className="ml-auto text-xs bg-gray-100 px-1.5 py-0.5 rounded">⌘K</span>
+            </button>
 
             <div className="flex gap-2 w-full sm:w-auto overflow-x-auto">
               <div className="flex bg-gray-100 rounded-lg p-1 flex-shrink-0">
@@ -384,6 +373,15 @@ function App() {
       {/* Event Modal */}
       {selectedEvent && (
         <EventModal event={selectedEvent} onClose={handleCloseModal} />
+      )}
+
+      {/* Search Modal */}
+      {showSearch && (
+        <SearchModal
+          events={events}
+          onEventClick={(event) => { setSelectedEvent(event); }}
+          onClose={() => setShowSearch(false)}
+        />
       )}
     </div>
   );
