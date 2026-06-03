@@ -1,4 +1,4 @@
-import { BookOpen, Calendar, Clock, MapPin, Users, X } from 'lucide-react';
+import { BookOpen, Calendar, Clock, Download, MapPin, Users, X } from 'lucide-react';
 import moment from 'moment';
 import React from 'react';
 import { trackAcademicEngagement } from '../utils/analytics';
@@ -14,33 +14,29 @@ const EventModal = ({ event, onClose }) => {
   if (!event) return null;
 
   const getEventIcon = (type) => {
-    switch (type) {
-      case 'holiday':
-        return <Calendar className="h-6 w-6 text-red-500" />;
-      case 'assembly':
-        return <Users className="h-6 w-6 text-green-500" />;
-      case 'vacation':
-        return <Clock className="h-6 w-6 text-orange-500" />;
-      case 'academic':
-        return <BookOpen className="h-6 w-6 text-blue-500" />;
-      default:
-        return <Calendar className="h-6 w-6 text-gray-500" />;
-    }
+    const icons = {
+      holiday:  <Calendar className="h-6 w-6 text-red-500" />,
+      vacation: <Clock className="h-6 w-6 text-amber-500" />,
+      academic: <BookOpen className="h-6 w-6 text-blue-500" />,
+      exam:     <BookOpen className="h-6 w-6 text-violet-500" />,
+      activity: <Users className="h-6 w-6 text-cyan-500" />,
+      fee:      <Download className="h-6 w-6 text-red-600" />,
+      ptm:      <Users className="h-6 w-6 text-violet-700" />,
+    };
+    return icons[type] || <Calendar className="h-6 w-6 text-gray-500" />;
   };
 
   const getEventTypeLabel = (type) => {
-    switch (type) {
-      case 'holiday':
-        return 'Holiday';
-      case 'assembly':
-        return 'Special Assembly';
-      case 'vacation':
-        return 'Vacation';
-      case 'academic':
-        return 'Academic Event';
-      default:
-        return 'Event';
-    }
+    const labels = {
+      holiday:  'Holiday',
+      vacation: 'Vacation',
+      academic: 'Academic Event',
+      exam:     'Exam / Assessment',
+      activity: 'Activity',
+      fee:      'Fee Deadline',
+      ptm:      'Parent Meeting',
+    };
+    return labels[type] || 'Event';
   };
 
   const formatEventDate = (start, end) => {
@@ -130,6 +126,28 @@ const EventModal = ({ event, onClose }) => {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {event.notes}
                 </p>
+              </div>
+            )}
+
+            {event.category === 'fee' && (
+              <div className="mt-4 bg-red-50 rounded-lg p-4">
+                <h3 className="text-sm font-semibold text-red-900 mb-2">Fee Details</h3>
+                <div className="space-y-1 text-sm text-red-800">
+                  <p><span className="font-medium">Term:</span> {event.feeTerm}</p>
+                  <p><span className="font-medium">Classes:</span> {event.classes}</p>
+                  <p><span className="font-medium">Amount:</span> ₹{event.feeAmount?.toLocaleString('en-IN')}</p>
+                  <p><span className="font-medium">Payment window:</span> {event.feeCutoffStart} – {event.feeCutoffEnd}</p>
+                </div>
+              </div>
+            )}
+            {event.category === 'ptm' && (
+              <div className="mt-4 bg-violet-50 rounded-lg p-4">
+                <h3 className="text-sm font-semibold text-violet-900 mb-2">Meeting Details</h3>
+                <div className="space-y-1 text-sm text-violet-800">
+                  <p><span className="font-medium">Type:</span> {event.ptmType}</p>
+                  <p><span className="font-medium">Classes:</span> {event.classes}</p>
+                  {event.term && <p><span className="font-medium">Term:</span> {event.term}</p>}
+                </div>
               </div>
             )}
           </div>
