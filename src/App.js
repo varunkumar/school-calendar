@@ -8,9 +8,7 @@ import {
   Grid,
   Home,
   List,
-  MapPin,
   Search,
-  Trophy,
   Users,
   Zap,
 } from 'lucide-react';
@@ -23,6 +21,7 @@ import EventModal from './components/EventModal';
 import Header from './components/Header';
 import MobileAgenda from './components/MobileAgenda';
 import SectionsView from './components/SectionsView';
+import TimingsView from './components/TimingsView';
 import { allCalendarEvents } from './data/realCalendarData';
 import {
   initGA,
@@ -90,45 +89,19 @@ function App() {
 
   // Custom event style getter
   const eventStyleGetter = (event) => {
-    let backgroundColor = '#3b82f6';
-
-    switch (event.category) {
-      case 'holiday':
-        backgroundColor = '#ef4444';
-        break;
-      case 'assembly':
-        backgroundColor = '#10b981';
-        break;
-      case 'vacation':
-        backgroundColor = '#f59e0b';
-        break;
-      case 'academic':
-        backgroundColor = '#3b82f6';
-        break;
-      case 'exam':
-        backgroundColor = '#8b5cf6';
-        break;
-      case 'competition':
-        backgroundColor = '#f97316';
-        break;
-      case 'activity':
-        backgroundColor = '#06b6d4';
-        break;
-      case 'trip':
-        backgroundColor = '#84cc16';
-        break;
-      default:
-        backgroundColor = '#6b7280';
-    }
-
+    const colors = {
+      academic: '#3b82f6',
+      exam:     '#8b5cf6',
+      activity: '#06b6d4',
+      holiday:  '#ef4444',
+      vacation: '#f59e0b',
+      fee:      '#dc2626',
+      ptm:      '#7c3aed',
+    };
     return {
       style: {
-        backgroundColor,
-        borderRadius: '4px',
-        opacity: 0.8,
-        color: 'white',
-        border: '0px',
-        display: 'block',
+        backgroundColor: colors[event.category] || '#6b7280',
+        borderRadius: '4px', opacity: 0.8, color: 'white', border: '0px', display: 'block',
       },
     };
   };
@@ -177,35 +150,14 @@ function App() {
   };
 
   const filterButtons = [
-    {
-      key: 'all',
-      label: 'All Events',
-      icon: CalendarIcon,
-      color: 'bg-gray-500',
-    },
-    {
-      key: 'academic',
-      label: 'Academic',
-      icon: BookOpen,
-      color: 'bg-blue-500',
-    },
-    { key: 'holiday', label: 'Holidays', icon: Home, color: 'bg-red-500' },
-    { key: 'assembly', label: 'Assembly', icon: Users, color: 'bg-green-500' },
-    { key: 'vacation', label: 'Vacation', icon: Clock, color: 'bg-orange-500' },
-    {
-      key: 'exam',
-      label: 'Exams',
-      icon: GraduationCap,
-      color: 'bg-purple-500',
-    },
-    {
-      key: 'competition',
-      label: 'Competitions',
-      icon: Trophy,
-      color: 'bg-orange-600',
-    },
-    { key: 'activity', label: 'Activities', icon: Zap, color: 'bg-cyan-500' },
-    { key: 'trip', label: 'Trips', icon: MapPin, color: 'bg-lime-500' },
+    { key: 'all',      label: 'All',        icon: CalendarIcon,  color: 'bg-gray-500' },
+    { key: 'academic', label: 'Academic',   icon: BookOpen,      color: 'bg-blue-500' },
+    { key: 'exam',     label: 'Exams',      icon: GraduationCap, color: 'bg-violet-500' },
+    { key: 'activity', label: 'Activities', icon: Zap,           color: 'bg-cyan-500' },
+    { key: 'holiday',  label: 'Holidays',   icon: Home,          color: 'bg-red-500' },
+    { key: 'vacation', label: 'Vacation',   icon: Clock,         color: 'bg-amber-500' },
+    { key: 'fee',      label: 'Fee',        icon: Download,      color: 'bg-red-600' },
+    { key: 'ptm',      label: 'PTM',        icon: Users,         color: 'bg-violet-700' },
   ];
 
   return (
@@ -257,6 +209,17 @@ function App() {
                 >
                   <List size={14} className="mr-1" />
                   Sections
+                </button>
+                <button
+                  onClick={() => { setViewMode('timings'); trackViewModeChange('timings'); }}
+                  className={`flex items-center px-2 md:px-3 py-1 rounded-md text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                    viewMode === 'timings'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  <Clock size={14} className="mr-1" />
+                  Timings
                 </button>
               </div>
 
@@ -378,6 +341,10 @@ function App() {
                 />
               </div>
             </>
+          ) : viewMode === 'timings' ? (
+            <div className="lg:col-span-4">
+              <TimingsView />
+            </div>
           ) : (
             /* Sections View */
             <div className="lg:col-span-4">
