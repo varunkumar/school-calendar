@@ -43,6 +43,7 @@ function App() {
   const [date, setDate] = useState(new Date());
   const [events] = useState(allCalendarEvents);
   const [activeFilter, setActiveFilter] = useState('all');
+  const [activeClass, setActiveClass] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [showDashboard, setShowDashboard] = useState(true);
   const [viewMode, setViewMode] = useState('calendar'); // 'calendar' or 'sections'
@@ -73,6 +74,14 @@ function App() {
 
     if (activeFilter !== 'all') {
       filtered = filtered.filter((event) => event.category === activeFilter);
+    }
+
+    if (activeClass !== 'all') {
+      filtered = filtered.filter((event) =>
+        !event.classRange ||
+        event.classRange.length === 0 ||
+        event.classRange.includes(activeClass)
+      );
     }
 
     if (searchTerm) {
@@ -252,25 +261,40 @@ function App() {
 
           {/* Filter Buttons */}
           <div className="filter-container">
-            <div className="filter-buttons flex flex-wrap gap-2 md:gap-3">
-              {filterButtons.map(({ key, label, icon: Icon, color }) => (
-                <button
-                  key={key}
-                  onClick={() => {
-                    setActiveFilter(key);
-                    trackFilterUsage(key);
-                  }}
-                  className={`flex items-center px-3 md:px-4 py-2 rounded-lg text-white text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                    activeFilter === key
-                      ? `${color} shadow-lg scale-105`
-                      : 'bg-gray-400 hover:bg-gray-500'
-                  }`}
+            <div className="flex flex-wrap items-center gap-2 md:gap-3">
+              <div className="filter-buttons flex flex-wrap gap-2 md:gap-3">
+                {filterButtons.map(({ key, label, icon: Icon, color }) => (
+                  <button
+                    key={key}
+                    onClick={() => {
+                      setActiveFilter(key);
+                      trackFilterUsage(key);
+                    }}
+                    className={`flex items-center px-3 md:px-4 py-2 rounded-lg text-white text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                      activeFilter === key
+                        ? `${color} shadow-lg scale-105`
+                        : 'bg-gray-400 hover:bg-gray-500'
+                    }`}
+                  >
+                    <Icon size={14} className="mr-1 md:mr-2" />
+                    <span className="hidden sm:inline">{label}</span>
+                    <span className="sm:hidden">{label.split(' ')[0]}</span>
+                  </button>
+                ))}
+              </div>
+              <div className="flex items-center gap-2">
+                <label className="text-xs font-medium text-gray-500 whitespace-nowrap">My Class:</label>
+                <select
+                  value={activeClass}
+                  onChange={(e) => { setActiveClass(e.target.value); trackFilterUsage(`class:${e.target.value}`); }}
+                  className="text-sm border border-gray-300 rounded-lg px-3 py-1.5 bg-white text-gray-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
-                  <Icon size={14} className="mr-1 md:mr-2" />
-                  <span className="hidden sm:inline">{label}</span>
-                  <span className="sm:hidden">{label.split(' ')[0]}</span>
-                </button>
-              ))}
+                  <option value="all">All Classes</option>
+                  {['Pre-KG', 'LKG', 'UKG', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'].map((cls) => (
+                    <option key={cls} value={cls}>{cls === 'Pre-KG' ? 'Pre-KG' : cls === 'LKG' ? 'LKG' : cls === 'UKG' ? 'UKG' : `Class ${cls}`}</option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
         </div>
