@@ -58,22 +58,28 @@ const extractClasses = (text) => {
 let _id = 1;
 const nextId = () => _id++;
 
+// class_range is now an array of class tokens; join for display
+const classesLabel = (range) => {
+  if (Array.isArray(range)) return range.length ? range.join(', ') : 'All Classes';
+  return range || 'All Classes';
+};
+
 // --- Academic calendar ---
 const fromAcademicCalendar = () => {
   const events = [];
-  calendarData.academic_calendar.forEach(({ month_year, general_activities = [], daily_activities = [] }) => {
+  calendarData.academic_calendar.forEach(({ month_year, activities = [], daily_activities = [] }) => {
     const [monthName, yearStr] = month_year.split(' ');
     const year = parseInt(yearStr);
     const monthIndex = new Date(Date.parse(monthName + ' 1, 2000')).getMonth();
 
-    general_activities.forEach((act) => {
+    activities.forEach((act) => {
       events.push({
         id: nextId(),
-        title: act.replace(/\[cite:.*?\]/g, '').trim(),
+        title: act.name.replace(/\[cite:.*?\]/g, '').trim(),
         date: new Date(year, monthIndex, 1),
-        category: inferCategory(act),
+        category: act.category || inferCategory(act.name),
         description: `Monthly activity for ${month_year}`,
-        classes: extractClasses(act),
+        classes: classesLabel(act.class_range),
         isGeneralActivity: true,
       });
     });
@@ -116,8 +122,8 @@ const fromVacations = () =>
     date: parseISODate(v.start),
     endDate: parseISODate(v.end),
     category: 'vacation',
-    description: `Vacation for ${v.applicable_to}`,
-    classes: v.applicable_to,
+    description: `Vacation for ${classesLabel(v.class_range)}`,
+    classes: classesLabel(v.class_range),
   }));
 
 // --- Special assemblies → activity ---
@@ -141,8 +147,8 @@ const fromPTM = () => {
         title: p.type,
         date: parseISODate(d),
         category: 'ptm',
-        description: `Term ${p.term} — ${p.class_range}`,
-        classes: p.class_range,
+        description: `${p.term} — ${classesLabel(p.class_range)}`,
+        classes: classesLabel(p.class_range),
         ptmType: p.type,
         term: p.term,
       });
@@ -155,11 +161,11 @@ const fromPTM = () => {
 const fromFees = () =>
   calendarData.fee_schedule.map((f) => ({
     id: nextId(),
-    title: `Fee Deadline – ${f.term} (${f.class_range})`,
+    title: `Fee Deadline – ${f.term} (${classesLabel(f.class_range)})`,
     date: parseISODate(f.cutoff_end),
     category: 'fee',
     description: `${f.term} fee payment cutoff`,
-    classes: f.class_range,
+    classes: classesLabel(f.class_range),
     feeAmount: f.amount,
     feeTerm: f.term,
     feeCutoffStart: f.cutoff_start,
@@ -174,8 +180,8 @@ const fromExams = () =>
     date: parseISODate(e.date_start),
     endDate: parseISODate(e.date_end),
     category: 'exam',
-    description: `${e.assessment} — ${e.class_range}`,
-    classes: e.class_range,
+    description: `${e.assessment} — ${classesLabel(e.class_range)}`,
+    classes: classesLabel(e.class_range),
   }));
 
 export const schoolTimings = calendarData.school_timings;
