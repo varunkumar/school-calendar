@@ -11,20 +11,6 @@ const parseMonthDate = (dateStr, monthIndex, year) => {
   return new Date(year, monthIndex, day);
 };
 
-// Map old/verbose category strings to the 7 canonical categories
-const CATEGORY_MAP = {
-  assembly: 'activity',
-  competition: 'activity',
-  trip: 'activity',
-  academic: 'academic',
-  exam: 'exam',
-  holiday: 'holiday',
-  vacation: 'vacation',
-  fee: 'fee',
-  ptm: 'ptm',
-  activity: 'activity',
-};
-
 const inferCategory = (text) => {
   const t = text.toLowerCase();
   if (t.includes('holiday') || t.includes('bakrid') || t.includes('muharram') ||
@@ -46,13 +32,6 @@ const inferCategory = (text) => {
       t.includes('dance') || t.includes('excursion') || t.includes('ceremony') ||
       t.includes('investiture') || t.includes('graduation')) return 'activity';
   return 'academic';
-};
-
-const extractClasses = (text) => {
-  const m = text.match(/classes?\s+([IVX\-\d,\s&KG]+)/i);
-  if (m) return m[1].replace(/\s+/g, ' ').trim();
-  if (text.toLowerCase().includes('kg')) return 'KG';
-  return 'All Classes';
 };
 
 let _id = 1;
@@ -84,17 +63,18 @@ const fromAcademicCalendar = () => {
       });
     });
 
-    daily_activities.forEach(({ date: dateStr, day, activity: acts }) => {
+    daily_activities.forEach(({ date: dateStr, day, events: dayEvents = [] }) => {
       const date = parseMonthDate(dateStr, monthIndex, year);
       if (!date) return;
-      acts.forEach((act) => {
+      dayEvents.forEach((evt) => {
         events.push({
           id: nextId(),
-          title: act.replace(/\[cite:.*?\]/g, '').trim(),
+          title: evt.name,
           date,
-          category: inferCategory(act),
+          category: evt.category,
           description: `${dateStr} ${month_year}`,
-          classes: extractClasses(act),
+          classes: classesLabel(evt.class_range),
+          classRange: evt.class_range,
           dayOfWeek: day,
         });
       });
