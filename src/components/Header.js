@@ -1,7 +1,7 @@
-import { Calendar, GraduationCap, MapPin, Phone } from 'lucide-react';
+import { Bell, Calendar, GraduationCap, MapPin, Phone } from 'lucide-react';
 import config from '../config/appConfig';
 
-const Header = () => {
+const Header = ({ onBellClick }) => {
   const currentDate = new Date();
   const currentTerm =
     currentDate.getMonth() >= 5 || currentDate.getMonth() <= 9
@@ -52,6 +52,13 @@ const Header = () => {
                 <Phone className="h-4 w-4 mr-2 text-primary-600" />
                 <span>+91 97911 91397</span>
               </div>
+              <button
+                onClick={onBellClick}
+                className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors"
+                title="Notification settings"
+              >
+                <Bell className="h-5 w-5" />
+              </button>
             </div>
           </div>
         </div>

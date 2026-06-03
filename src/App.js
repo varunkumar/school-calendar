@@ -20,10 +20,12 @@ import EventList from './components/EventList';
 import EventModal from './components/EventModal';
 import Header from './components/Header';
 import MobileAgenda from './components/MobileAgenda';
+import NotificationSettings from './components/NotificationSettings';
 import SearchModal from './components/SearchModal';
 import SectionsView from './components/SectionsView';
 import TimingsView from './components/TimingsView';
 import { allCalendarEvents } from './data/realCalendarData';
+import { useNotifications } from './hooks/useNotifications';
 import {
   initGA,
   trackCalendarInteraction,
@@ -42,6 +44,8 @@ function App() {
   const [currentView, setCurrentView] = useState('month');
   const [date, setDate] = useState(new Date());
   const [events] = useState(allCalendarEvents);
+  const { prefs, updatePrefs, permissionStatus, requestPermission } = useNotifications(events);
+  const [showNotifSettings, setShowNotifSettings] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [activeClass, setActiveClass] = useState('all');
   const [showSearch, setShowSearch] = useState(false);
@@ -162,7 +166,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      <Header onBellClick={() => setShowNotifSettings(true)} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Control Bar */}
@@ -381,6 +385,17 @@ function App() {
           events={events}
           onEventClick={(event) => { setSelectedEvent(event); }}
           onClose={() => setShowSearch(false)}
+        />
+      )}
+
+      {/* Notification Settings Panel */}
+      {showNotifSettings && (
+        <NotificationSettings
+          prefs={prefs}
+          updatePrefs={updatePrefs}
+          permissionStatus={permissionStatus}
+          requestPermission={requestPermission}
+          onClose={() => setShowNotifSettings(false)}
         />
       )}
     </div>
