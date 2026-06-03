@@ -3,7 +3,7 @@ export const config = {
   // School Information
   school: {
     name: process.env.REACT_APP_SCHOOL_NAME || 'School Calendar Portal',
-    academicYear: process.env.REACT_APP_ACADEMIC_YEAR || '2025-2026',
+    academicYear: process.env.REACT_APP_ACADEMIC_YEAR || '2026-2027',
     contactEmail: process.env.REACT_APP_CONTACT_EMAIL || 'admin@school.edu',
   },
 
@@ -19,14 +19,13 @@ export const config = {
     primaryColor: process.env.REACT_APP_PRIMARY_COLOR || '#3b82f6',
     secondaryColor: process.env.REACT_APP_SECONDARY_COLOR || '#10b981',
     colors: {
-      academic: '#3b82f6',
-      holiday: '#ef4444',
-      assembly: '#10b981',
-      vacation: '#f59e0b',
-      exam: '#8b5cf6',
-      competition: '#ea580c',
-      activity: '#06b6d4',
-      trip: '#65a30d',
+      academic: '#3b82f6',   // blue-500
+      exam:     '#8b5cf6',   // violet-500
+      activity: '#06b6d4',   // cyan-500
+      holiday:  '#ef4444',   // red-500
+      vacation: '#f59e0b',   // amber-500
+      fee:      '#dc2626',   // red-600
+      ptm:      '#7c3aed',   // violet-700
     },
   },
 

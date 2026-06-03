@@ -44,13 +44,15 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      holiday: 'bg-red-100 text-red-800 border-red-200',
-      assembly: 'bg-green-100 text-green-800 border-green-200',
-      vacation: 'bg-orange-100 text-orange-800 border-orange-200',
+      holiday:  'bg-red-100 text-red-800 border-red-200',
+      vacation: 'bg-amber-100 text-amber-800 border-amber-200',
       academic: 'bg-blue-100 text-blue-800 border-blue-200',
-      default: 'bg-gray-100 text-gray-800 border-gray-200',
+      exam:     'bg-violet-100 text-violet-800 border-violet-200',
+      activity: 'bg-cyan-100 text-cyan-800 border-cyan-200',
+      fee:      'bg-red-200 text-red-900 border-red-300',
+      ptm:      'bg-violet-200 text-violet-900 border-violet-300',
     };
-    return colors[category] || colors.default;
+    return colors[category] || 'bg-gray-100 text-gray-800 border-gray-200';
   };
 
   return (

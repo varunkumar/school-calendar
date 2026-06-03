@@ -2,68 +2,45 @@ import {
   BookOpen,
   Calendar,
   Clock,
+  Download,
+  GraduationCap,
   Home,
   TrendingUp,
   Users,
+  Zap,
 } from 'lucide-react';
 import moment from 'moment';
 import { useMemo } from 'react';
 
 const Dashboard = ({ events }) => {
   const stats = useMemo(() => {
+    const count = (cat) => events.filter((e) => e.category === cat).length;
     const today = moment();
-    const thisMonth = moment().month();
-    const thisYear = moment().year();
 
-    // Count events by type
-    const academicEvents = events.filter(
-      (e) => e.category === 'academic'
+    const upcomingEvents = events.filter((e) =>
+      moment(e.date).isAfter(today) && moment(e.date).isBefore(moment().add(30, 'days'))
     ).length;
-    const assemblies = events.filter((e) => e.category === 'assembly').length;
-    const holidays = events.filter((e) => e.category === 'holiday').length;
-    const vacations = events.filter((e) => e.category === 'vacation').length;
-    const exams = events.filter((e) => e.category === 'exam').length;
-    const competitions = events.filter(
-      (e) => e.category === 'competition'
-    ).length;
-    const activities = events.filter((e) => e.category === 'activity').length;
-    const trips = events.filter((e) => e.category === 'trip').length;
 
-    // Upcoming events (next 30 days)
-    const upcomingEvents = events.filter((event) => {
-      const eventDate = moment(event.date);
-      return (
-        eventDate.isAfter(today) && eventDate.isBefore(moment().add(30, 'days'))
-      );
+    const thisMonthEvents = events.filter((e) => {
+      const d = moment(e.date);
+      return d.month() === today.month() && d.year() === today.year();
     }).length;
 
-    // This month's events
-    const thisMonthEvents = events.filter((event) => {
-      const eventDate = moment(event.date);
-      return eventDate.month() === thisMonth && eventDate.year() === thisYear;
-    }).length;
-
-    // Days until next vacation
     const nextVacation = events
       .filter((e) => e.category === 'vacation')
-      .find((event) => moment(event.date).isAfter(today));
-
-    const daysUntilVacation = nextVacation
-      ? moment(nextVacation.date).diff(today, 'days')
-      : null;
+      .find((e) => moment(e.date).isAfter(today));
 
     return {
-      academicEvents,
-      assemblies,
-      holidays,
-      vacations,
-      exams,
-      competitions,
-      activities,
-      trips,
+      academic:   count('academic'),
+      exams:      count('exam'),
+      activities: count('activity'),
+      holidays:   count('holiday'),
+      vacations:  count('vacation'),
+      fees:       count('fee'),
+      ptm:        count('ptm'),
       upcomingEvents,
       thisMonthEvents,
-      daysUntilVacation,
+      daysUntilVacation: nextVacation ? moment(nextVacation.date).diff(today, 'days') : null,
       nextVacation,
     };
   }, [events]);
@@ -71,19 +48,27 @@ const Dashboard = ({ events }) => {
   const statCards = [
     {
       title: 'Academic Events',
-      value: stats.academicEvents,
+      value: stats.academic,
       icon: BookOpen,
       color: 'bg-blue-500',
       bgColor: 'bg-blue-50',
       textColor: 'text-blue-700',
     },
     {
-      title: 'Special Assemblies',
-      value: stats.assemblies,
-      icon: Users,
-      color: 'bg-green-500',
-      bgColor: 'bg-green-50',
-      textColor: 'text-green-700',
+      title: 'Exams',
+      value: stats.exams,
+      icon: GraduationCap,
+      color: 'bg-violet-500',
+      bgColor: 'bg-violet-50',
+      textColor: 'text-violet-700',
+    },
+    {
+      title: 'Activities',
+      value: stats.activities,
+      icon: Zap,
+      color: 'bg-cyan-500',
+      bgColor: 'bg-cyan-50',
+      textColor: 'text-cyan-700',
     },
     {
       title: 'Holidays',
@@ -97,9 +82,25 @@ const Dashboard = ({ events }) => {
       title: 'Vacation Periods',
       value: stats.vacations,
       icon: Clock,
-      color: 'bg-orange-500',
-      bgColor: 'bg-orange-50',
-      textColor: 'text-orange-700',
+      color: 'bg-amber-500',
+      bgColor: 'bg-amber-50',
+      textColor: 'text-amber-700',
+    },
+    {
+      title: 'Fee Deadlines',
+      value: stats.fees,
+      icon: Download,
+      color: 'bg-red-600',
+      bgColor: 'bg-red-50',
+      textColor: 'text-red-800',
+    },
+    {
+      title: 'PTM',
+      value: stats.ptm,
+      icon: Users,
+      color: 'bg-violet-700',
+      bgColor: 'bg-violet-50',
+      textColor: 'text-violet-800',
     },
   ];
 
@@ -111,7 +112,7 @@ const Dashboard = ({ events }) => {
           Academic Calendar Overview
         </h2>
         <p className="text-gray-600 mt-2 text-sm md:text-base">
-          School year 2025-2026 statistics and insights
+          School year 2026-2027 statistics and insights
         </p>
       </div>
 

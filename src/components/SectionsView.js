@@ -1,4 +1,4 @@
-import { BookOpen, Clock, Home, Users } from 'lucide-react';
+import { BookOpen, Clock, Download, GraduationCap, Home, Users, Zap } from 'lucide-react';
 import CategorySection from './CategorySection';
 
 const SectionsView = ({ events, onEventClick }) => {
@@ -13,51 +13,14 @@ const SectionsView = ({ events, onEventClick }) => {
     return eventDate >= today;
   };
 
-  // Filter events by category and only include upcoming events
-  const academicEvents = events.filter(
-    (e) => e.category === 'academic' && isUpcoming(e)
-  );
-  const assemblies = events.filter(
-    (e) => e.category === 'assembly' && isUpcoming(e)
-  );
-  const holidays = events.filter(
-    (e) => e.category === 'holiday' && isUpcoming(e)
-  );
-  const vacations = events.filter(
-    (e) => e.category === 'vacation' && isUpcoming(e)
-  );
-
   const sections = [
-    {
-      title: 'Academic Events',
-      events: academicEvents,
-      icon: BookOpen,
-      color: 'bg-blue-600',
-      description:
-        'Important academic milestones, examinations, and educational activities',
-    },
-    {
-      title: 'Special Assembly Schedule',
-      events: assemblies,
-      icon: Users,
-      color: 'bg-green-600',
-      description:
-        'School-wide assemblies, presentations, and special programs',
-    },
-    {
-      title: 'Holidays',
-      events: holidays,
-      icon: Home,
-      color: 'bg-red-600',
-      description: 'Federal holidays and school closure days',
-    },
-    {
-      title: 'Vacations',
-      events: vacations,
-      icon: Clock,
-      color: 'bg-orange-600',
-      description: 'Extended breaks and vacation periods',
-    },
+    { title: 'Academic Events',  events: events.filter(e => e.category === 'academic'  && isUpcoming(e)), icon: BookOpen,      color: 'bg-blue-600',    description: 'Academic milestones and educational activities' },
+    { title: 'Exams',            events: events.filter(e => e.category === 'exam'       && isUpcoming(e)), icon: GraduationCap, color: 'bg-violet-500',  description: 'Tests, assessments and examinations' },
+    { title: 'Activities',       events: events.filter(e => e.category === 'activity'   && isUpcoming(e)), icon: Zap,           color: 'bg-cyan-500',    description: 'Competitions, assemblies, trips and clubs' },
+    { title: 'Holidays',         events: events.filter(e => e.category === 'holiday'    && isUpcoming(e)), icon: Home,          color: 'bg-red-500',     description: 'Public and school holidays' },
+    { title: 'Vacation',         events: events.filter(e => e.category === 'vacation'   && isUpcoming(e)), icon: Clock,         color: 'bg-amber-500',   description: 'Vacation periods' },
+    { title: 'Fee Deadlines',    events: events.filter(e => e.category === 'fee'        && isUpcoming(e)), icon: Download,      color: 'bg-red-600',     description: 'Fee payment cutoff dates' },
+    { title: 'PTM',              events: events.filter(e => e.category === 'ptm'        && isUpcoming(e)), icon: Users,         color: 'bg-violet-700',  description: 'Parent-teacher meetings' },
   ];
 
   return (
