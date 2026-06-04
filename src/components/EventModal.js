@@ -1,4 +1,4 @@
-import { BookOpen, Calendar, Clock, Download, MapPin, Users, X } from 'lucide-react';
+import { BookOpen, Calendar, Clock, CreditCard, MapPin, Plane, Users, X } from 'lucide-react';
 import moment from 'moment';
 import React from 'react';
 import { trackAcademicEngagement } from '../utils/analytics';
@@ -16,11 +16,11 @@ const EventModal = ({ event, onClose }) => {
   const getEventIcon = (type) => {
     const icons = {
       holiday:  <Calendar className="h-6 w-6 text-red-500" />,
-      vacation: <Clock className="h-6 w-6 text-amber-500" />,
+      vacation: <Plane className="h-6 w-6 text-amber-500" />,
       academic: <BookOpen className="h-6 w-6 text-blue-500" />,
       exam:     <BookOpen className="h-6 w-6 text-violet-500" />,
       activity: <Users className="h-6 w-6 text-cyan-500" />,
-      fee:      <Download className="h-6 w-6 text-red-600" />,
+      fee:      <CreditCard className="h-6 w-6 text-red-600" />,
       ptm:      <Users className="h-6 w-6 text-violet-700" />,
     };
     return icons[type] || <Calendar className="h-6 w-6 text-gray-500" />;
@@ -106,6 +106,13 @@ const EventModal = ({ event, onClose }) => {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {event.description}
                 </p>
+              </div>
+            )}
+
+            {event.classes && (
+              <div className="flex items-start text-gray-600">
+                <Users className="h-5 w-5 mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-sm">{event.classes}</span>
               </div>
             )}
 

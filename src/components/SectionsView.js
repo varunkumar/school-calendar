@@ -1,4 +1,4 @@
-import { BookOpen, Clock, Download, GraduationCap, Home, Users, Zap } from 'lucide-react';
+import { BookOpen, CreditCard, GraduationCap, Home, Plane, Users, Zap } from 'lucide-react';
 import CategorySection from './CategorySection';
 
 const SectionsView = ({ events, onEventClick }) => {
@@ -18,8 +18,8 @@ const SectionsView = ({ events, onEventClick }) => {
     { title: 'Exams',            events: events.filter(e => e.category === 'exam'       && isUpcoming(e)), icon: GraduationCap, color: 'bg-violet-500',  description: 'Tests, assessments and examinations' },
     { title: 'Activities',       events: events.filter(e => e.category === 'activity'   && isUpcoming(e)), icon: Zap,           color: 'bg-cyan-500',    description: 'Competitions, assemblies, trips and clubs' },
     { title: 'Holidays',         events: events.filter(e => e.category === 'holiday'    && isUpcoming(e)), icon: Home,          color: 'bg-red-500',     description: 'Public and school holidays' },
-    { title: 'Vacation',         events: events.filter(e => e.category === 'vacation'   && isUpcoming(e)), icon: Clock,         color: 'bg-amber-500',   description: 'Vacation periods' },
-    { title: 'Fee Deadlines',    events: events.filter(e => e.category === 'fee'        && isUpcoming(e)), icon: Download,      color: 'bg-red-600',     description: 'Fee payment cutoff dates' },
+    { title: 'Vacation',         events: events.filter(e => e.category === 'vacation'   && isUpcoming(e)), icon: Plane,         color: 'bg-amber-500',   description: 'Vacation periods' },
+    { title: 'Fee Deadlines',    events: events.filter(e => e.category === 'fee'        && isUpcoming(e)), icon: CreditCard,    color: 'bg-red-600',     description: 'Fee payment cutoff dates' },
     { title: 'PTM',              events: events.filter(e => e.category === 'ptm'        && isUpcoming(e)), icon: Users,         color: 'bg-violet-700',  description: 'Parent-teacher meetings' },
   ];
 
