@@ -56,3 +56,34 @@ Edit `src/data/data.json` — `realCalendarData.js` parses it automatically. The
 | `REACT_APP_ENABLE_SEARCH` | Set to `false` to hide Search |
 
 For Netlify deployment, set these in the Netlify dashboard under Site Settings > Environment Variables.
+
+## Deployment
+
+### Main site
+- Netlify site: `gcis-calendar` (branch: `main`)
+- Domains:
+  - `calendar.adhiyan.in` — DNS via Cloudflare (orange cloud, proxied). SSL mode: Full.
+  - `calendar.aganvee.in` — DNS managed directly by Netlify.
+- Default class selection is domain-driven (`App.js` → `getDomainDefaultClass`): `calendar.adhiyan.in` → Class VI, `calendar.aganvee.in` → Class I.
+
+### Archive (2025-26)
+- Netlify branch deploy: `archive/2025-26` → `https://archive-2025-26--gcis-calendar.netlify.app`
+- Accessible at: `calendar.adhiyan.in/archives/2025-26`
+- Cloudflare Worker: `school-diary-archive-2026-26` with route `calendar.adhiyan.in/archives/2025-26*`
+- Worker rewrites HTML asset paths (adds `/archives/2025-26` prefix) since the Netlify branch build does not include the `homepage` prefix.
+- The archive branch has `"homepage": "/archives/2025-26"` in `package.json` but it is not reflected in the Netlify build output — the worker compensates for this.
+
+### Debugging archive notifications (IndexedDB)
+```js
+const req = indexedDB.open('school_cal_notifs');
+req.onsuccess = e => {
+  const db = e.target.result;
+  const tx = db.transaction('scheduled', 'readonly');
+  tx.objectStore('scheduled').getAll().onsuccess = e => {
+    console.table(e.target.result.map(n => ({
+      title: n.title, body: n.body,
+      fireAt: new Date(n.fireAt).toLocaleString('en-IN')
+    })));
+  };
+};
+```
