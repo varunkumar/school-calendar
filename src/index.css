@@ -4,6 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* Prevent any element from causing horizontal page scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* React Big Calendar Styles */
 @import 'react-big-calendar/lib/css/react-big-calendar.css';
 
@@ -335,27 +341,21 @@
   @apply bg-gray-500;
 }
 
-/* Agenda view: collapse Time column. All events are all-day so time is always 12:00 am.
-   Use table-layout:fixed so width:0 actually collapses the column without breaking row alignment. */
-.rbc-agenda-view table.rbc-agenda-table {
-  table-layout: fixed;
-  width: 100%;
-}
-.rbc-agenda-view table.rbc-agenda-table thead tr th:nth-child(1),
-.rbc-agenda-view table.rbc-agenda-table tbody td.rbc-agenda-date-cell {
-  width: 110px;
-}
+/* Agenda view: collapse the Time column.
+   IMPORTANT: do NOT use table-layout:fixed here.
+   react-big-calendar uses rowspan on date cells, so continuation rows for the same date
+   only have 2 <td> elements (time + event). With fixed layout those cells land in the
+   wrong columns. With the default auto layout the browser uses rowspan semantics to
+   place them correctly, and setting width/padding to near-zero collapses the column. */
 .rbc-agenda-view table.rbc-agenda-table thead tr th:nth-child(2),
-.rbc-agenda-view table.rbc-agenda-table tbody td.rbc-agenda-time-cell {
-  width: 0;
-  max-width: 0;
-  padding: 0;
-  border: none;
+.rbc-agenda-view table.rbc-agenda-table .rbc-agenda-time-cell {
+  width: 1px !important;
+  min-width: 0 !important;
+  max-width: 1px !important;
+  padding: 0 !important;
+  border-left: none !important;
+  border-right: none !important;
   overflow: hidden;
-  white-space: nowrap;
-}
-.rbc-agenda-view table.rbc-agenda-table thead tr th:nth-child(3),
-.rbc-agenda-view table.rbc-agenda-table tbody td.rbc-agenda-event-cell {
-  /* Takes remaining width */
-  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
 }

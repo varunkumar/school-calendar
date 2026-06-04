@@ -1,14 +1,9 @@
 import {
-  BarChart3,
   BookOpen,
   Calendar as CalendarIcon,
-  Clock,
   CreditCard,
-  Download,
   GraduationCap,
-  Grid,
   Home,
-  List,
   Plane,
   Search,
   Users,
@@ -22,6 +17,7 @@ import EventList from './components/EventList';
 import FeesView from './components/FeesView';
 import EventModal from './components/EventModal';
 import Header from './components/Header';
+import AgendaView from './components/AgendaView';
 import MobileAgenda from './components/MobileAgenda';
 import NotificationSettings from './components/NotificationSettings';
 import SearchModal from './components/SearchModal';
@@ -210,105 +206,87 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header onBellClick={() => setShowNotifSettings(true)} onReset={handleReset} />
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
+      <Header
+        onBellClick={() => setShowNotifSettings(true)}
+        onReset={handleReset}
+        showDashboard={showDashboard}
+        onDashboardToggle={() => {
+          const next = !showDashboard;
+          setShowDashboard(next);
+          if (next) trackDashboardView();
+        }}
+        onExport={exportToICS}
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Control Bar */}
-        <div className="mb-6 md:mb-8 space-y-4">
-          {/* Search and Actions */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-start sm:items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+        {/* View Tabs */}
+        <div className="flex mb-4 border-b border-gray-200">
+          {[
+            { key: 'calendar', label: 'Calendar', Icon: CalendarIcon },
+            { key: 'sections', label: 'Sections',  Icon: GraduationCap },
+            { key: 'timings',  label: 'Timings',   Icon: BookOpen },
+            { key: 'fees',     label: 'Fees',      Icon: CreditCard },
+          ].map(({ key, label, Icon }) => (
             <button
-              onClick={() => setShowSearch(true)}
-              className="relative flex items-center w-full max-w-md px-4 py-2 md:py-2.5 text-sm text-gray-400 bg-white border border-gray-300 rounded-lg hover:border-gray-400 transition-colors"
+              key={key}
+              onClick={() => { setViewMode(key); trackViewModeChange(key); }}
+              className={`flex-1 flex flex-col sm:flex-row items-center justify-center gap-1 py-2.5 text-xs sm:text-sm font-medium border-b-2 transition-colors -mb-px ${
+                viewMode === key
+                  ? 'border-primary-600 text-primary-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
             >
-              <Search className="h-4 w-4 mr-2 flex-shrink-0" />
-              <span>Search events…</span>
-              <span className="ml-auto text-xs bg-gray-100 px-1.5 py-0.5 rounded">⌘K</span>
+              <Icon size={14} className="flex-shrink-0" />
+              {label}
             </button>
+          ))}
+        </div>
 
-            <div className="flex gap-2 w-full sm:w-auto overflow-x-auto">
-              <div className="flex-shrink-0">
-                <select
-                  value={viewMode}
-                  onChange={(e) => { setViewMode(e.target.value); trackViewModeChange(e.target.value); }}
-                  className="text-sm border border-gray-300 rounded-lg px-3 py-2 bg-white text-gray-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent font-medium"
-                >
-                  <option value="calendar">Calendar</option>
-                  <option value="sections">Sections</option>
-                  <option value="timings">Timings</option>
-                  <option value="fees">Fees</option>
-                </select>
-              </div>
+        {/* Search + Class row */}
+        <div className="flex gap-3 mb-3">
+          <button
+            onClick={() => setShowSearch(true)}
+            className="flex items-center flex-1 px-4 py-2 text-sm text-gray-400 bg-white border border-gray-200 rounded-lg hover:border-gray-400 transition-colors shadow-sm"
+          >
+            <Search className="h-4 w-4 mr-2 flex-shrink-0" />
+            <span>Search events…</span>
+            <span className="ml-auto text-xs bg-gray-100 px-1.5 py-0.5 rounded hidden sm:inline">⌘K</span>
+          </button>
+          <select
+            value={activeClass}
+            onChange={(e) => { setActiveClass(e.target.value); trackFilterUsage(`class:${e.target.value}`); }}
+            className="text-sm border border-gray-200 rounded-lg px-2 py-2 bg-white text-gray-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent shadow-sm flex-shrink-0 max-w-[130px]"
+          >
+            <option value="all">All Classes</option>
+            {['Pre-KG', 'LKG', 'UKG', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'].map((cls) => (
+              <option key={cls} value={cls}>
+                {['Pre-KG', 'LKG', 'UKG'].includes(cls) ? cls : `Class ${cls}`}
+              </option>
+            ))}
+          </select>
+        </div>
 
+        {/* Category chips — wraps to next line, hidden on Timings view */}
+        {viewMode !== 'timings' && (
+          <div className="flex flex-wrap gap-2 mb-6">
+            {filterButtons.map(({ key, label, icon: Icon, color }) => (
               <button
-                onClick={() => {
-                  const newShowDashboard = !showDashboard;
-                  setShowDashboard(newShowDashboard);
-                  if (newShowDashboard) {
-                    trackDashboardView();
-                  }
-                }}
-                className={`flex items-center px-3 md:px-4 py-2 rounded-lg text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0 ${
-                  showDashboard
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                key={key}
+                onClick={() => { setActiveFilter(key); trackFilterUsage(key); }}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                  activeFilter === key
+                    ? `${color} text-white shadow-md`
+                    : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
                 }`}
               >
-                <BarChart3 size={16} className="mr-1 md:mr-2" />
-                Dashboard
+                <Icon size={12} />
+                {label}
               </button>
-              <button
-                onClick={exportToICS}
-                className="flex items-center px-3 md:px-4 py-2 rounded-lg text-xs md:text-sm text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0"
-              >
-                <Download size={16} className="mr-1 md:mr-2" />
-                Export
-              </button>
-            </div>
+            ))}
           </div>
+        )}
 
-          {/* Filter Buttons */}
-          <div className="filter-container">
-            <div className="flex flex-wrap items-center gap-2 md:gap-3">
-              {viewMode !== 'timings' && (
-                <div className="filter-buttons flex flex-wrap gap-2 md:gap-3">
-                  {filterButtons.map(({ key, label, icon: Icon, color }) => (
-                    <button
-                      key={key}
-                      onClick={() => {
-                        setActiveFilter(key);
-                        trackFilterUsage(key);
-                      }}
-                      className={`flex items-center px-3 md:px-4 py-2 rounded-lg text-white text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                        activeFilter === key
-                          ? `${color} shadow-lg scale-105`
-                          : 'bg-gray-400 hover:bg-gray-500'
-                      }`}
-                    >
-                      <Icon size={14} className="mr-1 md:mr-2" />
-                      <span className="hidden sm:inline">{label}</span>
-                      <span className="sm:hidden">{label.split(' ')[0]}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-              <div className="flex items-center gap-2">
-                <label className="text-xs font-medium text-gray-500 whitespace-nowrap">My Class:</label>
-                <select
-                  value={activeClass}
-                  onChange={(e) => { setActiveClass(e.target.value); trackFilterUsage(`class:${e.target.value}`); }}
-                  className="text-sm border border-gray-300 rounded-lg px-3 py-1.5 bg-white text-gray-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                >
-                  <option value="all">All Classes</option>
-                  {['Pre-KG', 'LKG', 'UKG', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'].map((cls) => (
-                    <option key={cls} value={cls}>{cls === 'Pre-KG' ? 'Pre-KG' : cls === 'LKG' ? 'LKG' : cls === 'UKG' ? 'UKG' : `Class ${cls}`}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Dashboard */}
         {showDashboard && (
@@ -334,40 +312,62 @@ function App() {
 
                 {/* Desktop Calendar View (hidden on small screens) */}
                 <div className="hidden md:block bg-white rounded-xl shadow-lg p-2 sm:p-4 md:p-6">
-                  <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px]">
-                    <Calendar
-                      localizer={localizer}
-                      events={filteredEvents}
-                      startAccessor="start"
-                      endAccessor="end"
-                      style={{ height: '100%' }}
-                      onSelectEvent={handleSelectEvent}
-                      eventPropGetter={eventStyleGetter}
-                      view={currentView}
-                      onView={(newView) => {
-                        setCurrentView(newView);
-                        trackCalendarInteraction('view_change', '', newView);
-                      }}
-                      date={date}
-                      onNavigate={(newDate) => {
-                        setDate(newDate);
-                        trackCalendarInteraction(
-                          'date_navigation',
-                          '',
-                          moment(newDate).format('MMMM YYYY')
-                        );
-                      }}
-                      popup
-                      popupOffset={{ x: 30, y: 20 }}
-                      className="mobile-friendly-calendar"
-                      views={['month', 'week', 'day', 'agenda']}
-                      toolbar={true}
-                      formats={{
-                        agendaTimeFormat: () => '',
-                        agendaTimeRangeFormat: () => '',
-                      }}
-                    />
-                  </div>
+                  {currentView === 'agenda' ? (
+                    /* Custom agenda view — replaces rbc's broken table-rowspan agenda */
+                    <div>
+                      <div className="flex gap-2 mb-4 border-b border-gray-100 pb-3">
+                        {['month', 'week', 'day', 'agenda'].map((v) => (
+                          <button
+                            key={v}
+                            onClick={() => setCurrentView(v)}
+                            className={`px-3 py-1 rounded text-sm font-medium capitalize transition-colors ${
+                              currentView === v
+                                ? 'bg-primary-600 text-white'
+                                : 'text-gray-600 hover:bg-gray-100'
+                            }`}
+                          >
+                            {v}
+                          </button>
+                        ))}
+                      </div>
+                      <AgendaView
+                        events={filteredEvents}
+                        date={date}
+                        onEventClick={setSelectedEvent}
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px]">
+                      <Calendar
+                        localizer={localizer}
+                        events={filteredEvents}
+                        startAccessor="start"
+                        endAccessor="end"
+                        style={{ height: '100%' }}
+                        onSelectEvent={handleSelectEvent}
+                        eventPropGetter={eventStyleGetter}
+                        view={currentView}
+                        onView={(newView) => {
+                          setCurrentView(newView);
+                          trackCalendarInteraction('view_change', '', newView);
+                        }}
+                        date={date}
+                        onNavigate={(newDate) => {
+                          setDate(newDate);
+                          trackCalendarInteraction(
+                            'date_navigation',
+                            '',
+                            moment(newDate).format('MMMM YYYY')
+                          );
+                        }}
+                        popup
+                        popupOffset={{ x: 30, y: 20 }}
+                        className="mobile-friendly-calendar"
+                        views={['month', 'week', 'day', 'agenda']}
+                        toolbar={true}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
 

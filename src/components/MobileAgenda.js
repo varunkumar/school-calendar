@@ -94,7 +94,7 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
       </div>
 
       {/* Events List */}
-      <div className="max-h-96 overflow-y-auto">
+      <div className="max-h-96 overflow-y-auto overflow-x-hidden">
         {Object.entries(eventsByDay).map(([dayKey, dayEvents]) => {
           const day = moment(dayKey);
           const isToday = day.isSame(moment(), 'day');

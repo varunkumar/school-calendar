@@ -80,7 +80,7 @@ const Dashboard = ({ events }) => {
       <div className="mb-6 text-center md:text-left">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 flex items-center justify-center md:justify-start">
           <TrendingUp className="h-5 w-5 md:h-6 md:w-6 mr-2 md:mr-3 text-primary-600" />
-          Academic Calendar Overview
+          Overview
         </h2>
         <p className="text-gray-600 mt-2 text-sm md:text-base">
           School year 2026-2027 statistics and insights
