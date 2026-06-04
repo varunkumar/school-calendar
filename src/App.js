@@ -20,11 +20,13 @@ import Header from './components/Header';
 import AgendaView from './components/AgendaView';
 import MobileAgenda from './components/MobileAgenda';
 import NotificationSettings from './components/NotificationSettings';
+import OfflineIndicator from './components/OfflineIndicator';
 import SearchModal from './components/SearchModal';
 import SectionsView from './components/SectionsView';
 import TimingsView from './components/TimingsView';
 import { allCalendarEvents } from './data/realCalendarData';
 import { useNotifications } from './hooks/useNotifications';
+import { useTheme } from './hooks/useTheme';
 import {
   initGA,
   trackCalendarInteraction,
@@ -46,6 +48,7 @@ const getDomainDefaultClass = () => {
 };
 
 function App() {
+  const { isDark, toggleTheme } = useTheme();
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [currentView, setCurrentView] = useState('month');
   const [date, setDate] = useState(new Date());
@@ -206,7 +209,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
       <Header
         onBellClick={() => setShowNotifSettings(true)}
         onReset={handleReset}
@@ -217,11 +220,13 @@ function App() {
           if (next) trackDashboardView();
         }}
         onExport={exportToICS}
+        isDark={isDark}
+        onThemeToggle={toggleTheme}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8">
         {/* View Tabs */}
-        <div className="flex mb-4 border-b border-gray-200">
+        <div className="flex mb-4 border-b border-gray-200 dark:border-gray-700">
           {[
             { key: 'calendar', label: 'Calendar', Icon: CalendarIcon },
             { key: 'sections', label: 'Sections',  Icon: GraduationCap },
@@ -234,7 +239,7 @@ function App() {
               className={`flex-1 flex flex-col sm:flex-row items-center justify-center gap-1 py-2.5 text-xs sm:text-sm font-medium border-b-2 transition-colors -mb-px ${
                 viewMode === key
                   ? 'border-primary-600 text-primary-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:border-gray-600'
               }`}
             >
               <Icon size={14} className="flex-shrink-0" />
@@ -247,7 +252,7 @@ function App() {
         <div className="flex gap-3 mb-3">
           <button
             onClick={() => setShowSearch(true)}
-            className="flex items-center flex-1 px-4 py-2 text-sm text-gray-400 bg-white border border-gray-200 rounded-lg hover:border-gray-400 transition-colors shadow-sm"
+            className="flex items-center flex-1 px-4 py-2 text-sm text-gray-400 bg-white border border-gray-200 rounded-lg hover:border-gray-400 transition-colors shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-500"
           >
             <Search className="h-4 w-4 mr-2 flex-shrink-0" />
             <span>Search events…</span>
@@ -256,7 +261,7 @@ function App() {
           <select
             value={activeClass}
             onChange={(e) => { setActiveClass(e.target.value); trackFilterUsage(`class:${e.target.value}`); }}
-            className="text-sm border border-gray-200 rounded-lg px-2 py-2 bg-white text-gray-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent shadow-sm flex-shrink-0 max-w-[130px]"
+            className="text-sm border border-gray-200 rounded-lg px-2 py-2 bg-white text-gray-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent shadow-sm flex-shrink-0 max-w-[130px] dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
           >
             <option value="all">All Classes</option>
             {['Pre-KG', 'LKG', 'UKG', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'].map((cls) => (
@@ -277,7 +282,7 @@ function App() {
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                   activeFilter === key
                     ? `${color} text-white shadow-md`
-                    : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
+                    : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:border-gray-400'
                 }`}
               >
                 <Icon size={12} />
@@ -425,6 +430,8 @@ function App() {
           onClose={() => setShowNotifSettings(false)}
         />
       )}
+
+      <OfflineIndicator />
 
       {/* Footer */}
       <footer className="mt-12 border-t border-gray-200 py-4 text-center text-xs text-gray-400">

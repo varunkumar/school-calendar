@@ -1,5 +1,7 @@
 const DB_NAME = 'school_cal_notifs';
 const STORE_NAME = 'scheduled';
+const CACHE_NAME = 'school-cal-v1';
+const OFFLINE_URL = '/';
 
 const openDB = () =>
   new Promise((resolve, reject) => {
@@ -55,9 +57,24 @@ const firePending = async () => {
   }
 };
 
-self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then((cache) =>
+      cache.addAll([OFFLINE_URL, '/logo-school.png', '/logo192.png', '/favicon.ico'])
+        .catch(() => {}) // ignore missing files
+    ).then(() => self.skipWaiting())
+  );
+});
+
 self.addEventListener('activate', (e) => {
-  e.waitUntil(self.clients.claim().then(firePending));
+  e.waitUntil(
+    Promise.all([
+      self.clients.claim(),
+      caches.keys().then((keys) =>
+        Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
+      ),
+    ]).then(firePending)
+  );
 });
 
 self.addEventListener('message', async (e) => {
@@ -93,5 +110,31 @@ self.addEventListener('notificationclick', (e) => {
       if (focused) return focused.focus();
       return self.clients.openWindow('/');
     })
+  );
+});
+
+self.addEventListener('fetch', (e) => {
+  // Only handle GET requests for same-origin or CDN assets
+  if (e.request.method !== 'GET') return;
+
+  e.respondWith(
+    fetch(e.request)
+      .then((response) => {
+        // Cache successful responses for static assets
+        if (response.ok && (
+          e.request.url.includes('/static/') ||
+          e.request.url.endsWith('.png') ||
+          e.request.url.endsWith('.ico') ||
+          e.request.url.endsWith('.json')
+        )) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
+        }
+        return response;
+      })
+      .catch(() =>
+        // Network failed — serve from cache, fallback to offline page
+        caches.match(e.request).then((cached) => cached || caches.match(OFFLINE_URL))
+      )
   );
 });
