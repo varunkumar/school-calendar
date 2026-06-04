@@ -2,12 +2,10 @@ import {
   BookOpen,
   Calendar,
   Clock,
-  CreditCard,
   GraduationCap,
   Home,
   Plane,
   TrendingUp,
-  Users,
   Zap,
 } from 'lucide-react';
 import moment from 'moment';
@@ -37,8 +35,6 @@ const Dashboard = ({ events }) => {
       activities: count('activity'),
       holidays:   count('holiday'),
       vacations:  count('vacation'),
-      fees:       count('fee'),
-      ptm:        count('ptm'),
       upcomingEvents,
       thisMonthEvents,
       daysUntilVacation: nextVacation ? moment(nextVacation.date).diff(today, 'days') : null,
@@ -86,22 +82,6 @@ const Dashboard = ({ events }) => {
       color: 'bg-amber-500',
       bgColor: 'bg-amber-50',
       textColor: 'text-amber-700',
-    },
-    {
-      title: 'Fee Deadlines',
-      value: stats.fees,
-      icon: CreditCard,
-      color: 'bg-red-600',
-      bgColor: 'bg-red-50',
-      textColor: 'text-red-800',
-    },
-    {
-      title: 'PTM',
-      value: stats.ptm,
-      icon: Users,
-      color: 'bg-violet-700',
-      bgColor: 'bg-violet-50',
-      textColor: 'text-violet-800',
     },
   ];
 
