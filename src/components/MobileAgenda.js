@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Clock, MapPin } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Clock, School } from 'lucide-react';
 import moment from 'moment';
 import { useState } from 'react';
 
@@ -150,24 +150,26 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
                           event.category
                         )}`}
                       >
-                        <h5 className="font-medium text-sm mb-1">
-                          {event.title}
-                        </h5>
-
-                        <div className="space-y-1">
-                          {event.time && (
-                            <div className="flex items-center text-xs opacity-75">
-                              <Clock className="h-3 w-3 mr-1" />
-                              <span>{event.time}</span>
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 min-w-0">
+                            <h5 className="font-medium text-sm truncate">
+                              {event.title}
+                            </h5>
+                            <div className="flex items-center gap-2 mt-0.5">
+                              {event.time && (
+                                <div className="flex items-center text-xs opacity-75 flex-shrink-0">
+                                  <Clock className="h-3 w-3 mr-1" />
+                                  <span>{event.time}</span>
+                                </div>
+                              )}
+                              {event.classes && (
+                                <div className="flex items-center text-xs opacity-75 min-w-0">
+                                  <School className="h-3 w-3 mr-1 flex-shrink-0" />
+                                  <span className="truncate">{event.classes}</span>
+                                </div>
+                              )}
                             </div>
-                          )}
-
-                          {event.classes && (
-                            <div className="flex items-center text-xs opacity-75">
-                              <MapPin className="h-3 w-3 mr-1" />
-                              <span>{event.classes}</span>
-                            </div>
-                          )}
+                          </div>
                         </div>
 
                         {event.description && (

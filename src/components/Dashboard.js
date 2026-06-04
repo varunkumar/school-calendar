@@ -2,7 +2,6 @@ import {
   BookOpen,
   Calendar,
   Clock,
-  GraduationCap,
   Home,
   Plane,
   TrendingUp,
@@ -31,7 +30,6 @@ const Dashboard = ({ events }) => {
 
     return {
       academic:   count('academic'),
-      exams:      count('exam'),
       activities: count('activity'),
       holidays:   count('holiday'),
       vacations:  count('vacation'),
@@ -44,20 +42,12 @@ const Dashboard = ({ events }) => {
 
   const statCards = [
     {
-      title: 'Academic Events',
+      title: 'Academic',
       value: stats.academic,
       icon: BookOpen,
       color: 'bg-blue-500',
       bgColor: 'bg-blue-50',
       textColor: 'text-blue-700',
-    },
-    {
-      title: 'Exams',
-      value: stats.exams,
-      icon: GraduationCap,
-      color: 'bg-violet-500',
-      bgColor: 'bg-violet-50',
-      textColor: 'text-violet-700',
     },
     {
       title: 'Activities',
@@ -76,7 +66,7 @@ const Dashboard = ({ events }) => {
       textColor: 'text-red-700',
     },
     {
-      title: 'Vacation Periods',
+      title: 'Vacation',
       value: stats.vacations,
       icon: Plane,
       color: 'bg-amber-500',
