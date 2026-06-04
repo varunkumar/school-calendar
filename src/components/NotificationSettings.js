@@ -1,4 +1,5 @@
 import { Bell, BookOpen, CreditCard, GraduationCap, Home, Plane, Users, X, Zap } from 'lucide-react';
+import { useState } from 'react';
 
 const CATEGORIES = [
   { key: 'academic', label: 'Academic',   color: 'text-blue-500',   Icon: BookOpen },
@@ -18,6 +19,14 @@ const ADVANCE_OPTIONS = [
 ];
 
 const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPermission, clearAll, onClose }) => {
+  const [cleared, setCleared] = useState(false);
+
+  const handleClearAll = () => {
+    clearAll();
+    setCleared(true);
+    setTimeout(() => setCleared(false), 2000);
+  };
+
   const toggleCategory = (key) => {
     const cats = prefs.categories.includes(key)
       ? prefs.categories.filter((c) => c !== key)
@@ -125,10 +134,11 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
               Clears all upcoming notifications that are queued but not yet delivered. Already-delivered notifications can be dismissed from your device's notification centre.
             </p>
             <button
-              onClick={() => { clearAll(); }}
-              className="w-full text-sm text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800 rounded-lg py-1.5 hover:bg-red-50 transition-colors"
+              onClick={handleClearAll}
+              disabled={cleared}
+              className="w-full text-sm border rounded-lg py-1.5 transition-colors disabled:cursor-default text-red-600 dark:text-red-400 border-red-200 dark:border-red-800 hover:bg-red-50 dark:hover:bg-red-900/20 disabled:text-green-600 disabled:dark:text-green-400 disabled:border-green-200 disabled:dark:border-green-800"
             >
-              Clear all scheduled notifications
+              {cleared ? 'Cleared!' : 'Clear all scheduled notifications'}
             </button>
           </div>
         )}

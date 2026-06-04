@@ -127,6 +127,47 @@ src/
 └── index.css             # Global styles
 ```
 
+## Debugging Push Notifications
+
+### View scheduled notifications
+
+Open DevTools console and run:
+
+```js
+const req = indexedDB.open('school_cal_notifs');
+req.onsuccess = e => {
+  const db = e.target.result;
+  const tx = db.transaction('scheduled', 'readonly');
+  tx.objectStore('scheduled').getAll().onsuccess = e => {
+    console.table(e.target.result.map(n => ({
+      title: n.title,
+      body: n.body,
+      fireAt: new Date(n.fireAt).toLocaleString('en-IN')
+    })));
+  };
+};
+```
+
+### Fire a test notification immediately
+
+```js
+navigator.serviceWorker.ready.then(sw => {
+  sw.active.postMessage({
+    type: 'SCHEDULE',
+    title: 'Test Notification',
+    body: 'This is a test',
+    tag: 'test-' + Date.now(),
+    fireAt: Date.now() + 5000  // fires in 5 seconds
+  });
+});
+```
+
+### Notes
+
+- Notifications fire at **6 AM** on the scheduled day (or N days before the event)
+- The IndexedDB store is `school_cal_notifs` / object store `scheduled`
+- Changing any preference in the notification settings modal clears and re-schedules all notifications automatically
+
 ## Contributing
 
 1. Fork the repository
