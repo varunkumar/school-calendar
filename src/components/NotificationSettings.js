@@ -40,11 +40,11 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-xl shadow-2xl w-full max-w-sm p-5"
+        className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-sm p-5"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
             <Bell className="h-5 w-5 text-primary-600" /> Notifications
           </h2>
           <button onClick={onClose}>
@@ -71,7 +71,7 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
 
         {permissionStatus === 'granted' && (
           <label className="flex items-center justify-between mb-4 cursor-pointer">
-            <span className="text-sm font-medium text-gray-700">Notifications enabled</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Notifications enabled</span>
             <button
               onClick={() => updatePrefs({ enabled: !prefs.enabled })}
               className={`relative w-10 h-5 rounded-full transition-colors ${prefs.enabled ? 'bg-primary-600' : 'bg-gray-300'}`}
@@ -82,7 +82,7 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
         )}
 
         <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Categories</p>
+          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Categories</p>
           <div className="grid grid-cols-2 gap-2">
             {CATEGORIES.map(({ key, label, color, Icon }) => (
               <label key={key} className="flex items-center gap-2 cursor-pointer">
@@ -94,14 +94,14 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
                   className="rounded text-primary-600"
                 />
                 <Icon className={`h-4 w-4 flex-shrink-0 ${color}`} />
-                <span className="text-sm text-gray-700">{label}</span>
+                <span className="text-sm text-gray-700 dark:text-gray-200">{label}</span>
               </label>
             ))}
           </div>
         </div>
 
         <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">When to notify</p>
+          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">When to notify</p>
           <div className="space-y-2">
             {ADVANCE_OPTIONS.map(({ days, label }) => (
               <label key={days} className="flex items-center gap-2 cursor-pointer">
@@ -112,21 +112,21 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
                   disabled={isDisabled}
                   className="rounded text-primary-600"
                 />
-                <span className="text-sm text-gray-700">{label}</span>
+                <span className="text-sm text-gray-700 dark:text-gray-200">{label}</span>
               </label>
             ))}
           </div>
         </div>
 
         {permissionStatus === 'granted' && (
-          <div className="border-t border-gray-100 pt-3">
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Scheduled notifications</p>
-            <p className="text-xs text-gray-500 mb-2">
+          <div className="border-t border-gray-100 dark:border-gray-700 pt-3">
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Scheduled notifications</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
               Clears all upcoming notifications that are queued but not yet delivered. Already-delivered notifications can be dismissed from your device's notification centre.
             </p>
             <button
               onClick={() => { clearAll(); }}
-              className="w-full text-sm text-red-600 border border-red-200 rounded-lg py-1.5 hover:bg-red-50 transition-colors"
+              className="w-full text-sm text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800 rounded-lg py-1.5 hover:bg-red-50 transition-colors"
             >
               Clear all scheduled notifications
             </button>

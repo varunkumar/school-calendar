@@ -56,11 +56,11 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg">
       {/* Header */}
-      <div className="p-4 border-b border-gray-200">
+      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-gray-900">Weekly Agenda</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Weekly Agenda</h2>
           <button
             onClick={goToToday}
             className="px-3 py-1 text-sm bg-blue-500 text-white rounded-md hover:bg-blue-600"
@@ -102,8 +102,8 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
           return (
             <div
               key={dayKey}
-              className={`border-b border-gray-100 ${
-                isToday ? 'bg-blue-50' : ''
+              className={`border-b border-gray-100 dark:border-gray-700 ${
+                isToday ? 'bg-blue-50 dark:bg-blue-900/20' : 'dark:bg-gray-800'
               }`}
             >
               <div className="p-4">
@@ -112,7 +112,7 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
                     className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center ${
                       isToday
                         ? 'bg-blue-500 text-white'
-                        : 'bg-gray-100 text-gray-600'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
                     }`}
                   >
                     <div className="text-center">
@@ -127,19 +127,19 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
                   <div className="ml-3">
                     <h4
                       className={`font-medium ${
-                        isToday ? 'text-blue-900' : 'text-gray-900'
+                        isToday ? 'text-blue-900' : 'text-gray-900 dark:text-white'
                       }`}
                     >
                       {day.format('dddd')}
                     </h4>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
                       {day.format('MMMM Do, YYYY')}
                     </p>
                   </div>
                 </div>
 
                 {dayEvents.length === 0 ? (
-                  <p className="text-sm text-gray-400 ml-15">No events</p>
+                  <p className="text-sm text-gray-400 dark:text-gray-500 ml-15">No events</p>
                 ) : (
                   <div className="space-y-2 ml-15">
                     {dayEvents.map((event, index) => (

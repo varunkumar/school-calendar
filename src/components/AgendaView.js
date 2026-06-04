@@ -38,7 +38,7 @@ const AgendaView = ({ events, date, onEventClick }) => {
 
   if (sortedDates.length === 0) {
     return (
-      <div className="flex items-center justify-center h-40 text-gray-400 text-sm">
+      <div className="flex items-center justify-center h-40 text-gray-400 dark:text-gray-500 text-sm">
         No upcoming events from this date.
       </div>
     );
@@ -47,12 +47,12 @@ const AgendaView = ({ events, date, onEventClick }) => {
   return (
     <div className="overflow-y-auto" style={{ maxHeight: '650px' }}>
       <table className="w-full border-collapse text-sm">
-        <thead className="sticky top-0 bg-gray-50 z-10">
+        <thead className="sticky top-0 bg-gray-50 dark:bg-gray-700 z-10">
           <tr className="border-b border-gray-200">
-            <th className="text-left px-3 py-2 font-semibold text-gray-600 w-32">Date</th>
-            <th className="text-left px-3 py-2 font-semibold text-gray-600 w-24">Type</th>
-            <th className="text-left px-3 py-2 font-semibold text-gray-600">Event</th>
-            <th className="text-left px-3 py-2 font-semibold text-gray-600 hidden lg:table-cell w-40">Classes</th>
+            <th className="text-left px-3 py-2 font-semibold text-gray-600 dark:text-gray-300 w-32">Date</th>
+            <th className="text-left px-3 py-2 font-semibold text-gray-600 dark:text-gray-300 w-24">Type</th>
+            <th className="text-left px-3 py-2 font-semibold text-gray-600 dark:text-gray-300">Event</th>
+            <th className="text-left px-3 py-2 font-semibold text-gray-600 dark:text-gray-300 hidden lg:table-cell w-40">Classes</th>
           </tr>
         </thead>
         <tbody>
@@ -66,17 +66,17 @@ const AgendaView = ({ events, date, onEventClick }) => {
                 <tr
                   key={`${dateKey}-${idx}`}
                   onClick={() => onEventClick(event)}
-                  className="border-b border-gray-100 hover:bg-gray-50 cursor-pointer transition-colors"
+                  className="border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer transition-colors"
                 >
                   {/* Date — shown for every row of the group */}
-                  <td className={`px-3 py-2.5 align-top whitespace-nowrap font-medium ${isToday ? 'text-primary-600' : 'text-gray-700'}`}>
+                  <td className={`px-3 py-2.5 align-top whitespace-nowrap font-medium ${isToday ? 'text-primary-600' : 'text-gray-700 dark:text-gray-300'}`}>
                     {idx === 0 ? (
                       <span>
                         <span className="text-xs text-gray-400 block">{m.format('ddd')}</span>
                         <span className={`${isToday ? 'text-primary-600' : ''}`}>{m.format('D MMM YYYY')}</span>
                       </span>
                     ) : (
-                      <span className="text-gray-300 text-xs pl-1">↳</span>
+                      <span className="text-gray-300 dark:text-gray-600 text-xs pl-1">↳</span>
                     )}
                   </td>
 
@@ -88,12 +88,12 @@ const AgendaView = ({ events, date, onEventClick }) => {
                   </td>
 
                   {/* Title */}
-                  <td className="px-3 py-2.5 align-top text-gray-900">
+                  <td className="px-3 py-2.5 align-top text-gray-900 dark:text-white">
                     {event.title}
                   </td>
 
                   {/* Classes */}
-                  <td className="px-3 py-2.5 align-top text-gray-500 hidden lg:table-cell">
+                  <td className="px-3 py-2.5 align-top text-gray-500 dark:text-gray-400 hidden lg:table-cell">
                     {event.classes && (
                       <span className="flex items-center gap-1">
                         <School className="h-3 w-3 flex-shrink-0" />

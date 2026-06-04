@@ -68,11 +68,11 @@ const SearchModal = ({ events, onEventClick, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-xl shadow-2xl w-full max-w-xl flex flex-col max-h-[75vh]"
+        className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-xl flex flex-col max-h-[75vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Input */}
-        <div className="flex items-center px-4 py-3 border-b border-gray-200">
+        <div className="flex items-center px-4 py-3 border-b border-gray-200 dark:border-gray-700">
           <Search className="h-5 w-5 text-gray-400 mr-3 flex-shrink-0" />
           <input
             ref={inputRef}
@@ -81,7 +81,7 @@ const SearchModal = ({ events, onEventClick, onClose }) => {
             value={query}
             onChange={(e) => { setQuery(e.target.value); setHighlighted(0); }}
             onKeyDown={handleKey}
-            className="flex-1 text-base outline-none text-gray-900 placeholder-gray-400"
+            className="flex-1 text-base outline-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 bg-transparent"
           />
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 ml-2">
             <X size={18} />
@@ -98,7 +98,7 @@ const SearchModal = ({ events, onEventClick, onClose }) => {
           )}
           {grouped.map(([month, monthEvents]) => (
             <div key={month}>
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider px-4 py-2 bg-gray-50 sticky top-0">
+              <p className="text-xs font-semibold text-gray-400 dark:text-gray-400 uppercase tracking-wider px-4 py-2 bg-gray-50 dark:bg-gray-700/50 sticky top-0">
                 {month}
               </p>
               {monthEvents.map((event) => {
@@ -110,14 +110,14 @@ const SearchModal = ({ events, onEventClick, onClose }) => {
                     onClick={() => { onEventClick(event); onClose(); }}
                     onMouseEnter={() => setHighlighted(idx)}
                     className={`w-full text-left flex items-center gap-3 px-4 py-2.5 transition-colors ${
-                      isHighlighted ? 'bg-primary-50' : 'hover:bg-gray-50'
+                      isHighlighted ? 'bg-primary-50 dark:bg-primary-900/30' : 'hover:bg-gray-50 dark:hover:bg-gray-700'
                     }`}
                   >
                     <span className={`w-2 h-2 rounded-full flex-shrink-0 ${CATEGORY_COLORS[event.category] || 'bg-gray-400'}`} />
-                    <span className="text-xs text-gray-400 w-24 flex-shrink-0">
+                    <span className="text-xs text-gray-400 dark:text-gray-500 w-24 flex-shrink-0">
                       {moment(event.date).format('ddd D MMM')}
                     </span>
-                    <span className="text-sm text-gray-900 truncate">{event.title}</span>
+                    <span className="text-sm text-gray-900 dark:text-white truncate">{event.title}</span>
                   </button>
                 );
               })}
@@ -127,7 +127,7 @@ const SearchModal = ({ events, onEventClick, onClose }) => {
 
         {/* Footer hint */}
         {results.length > 0 && (
-          <div className="px-4 py-2 border-t border-gray-100 flex gap-4 text-xs text-gray-400">
+          <div className="px-4 py-2 border-t border-gray-100 dark:border-gray-700 flex gap-4 text-xs text-gray-400 dark:text-gray-500">
             <span>↑↓ navigate</span><span>↵ open</span><span>esc close</span>
           </div>
         )}
