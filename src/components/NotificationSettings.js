@@ -62,7 +62,16 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
         </div>
 
         {permissionStatus === 'unsupported' && (
-          <p className="text-sm text-red-600 mb-4">Your browser doesn't support notifications.</p>
+          <div className="mb-4 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg text-sm text-amber-800 dark:text-amber-200 space-y-2">
+            <p className="font-medium">Notifications not supported in this browser.</p>
+            <p>On iPhone, notifications work only when this site is added to your Home Screen via Safari:</p>
+            <ol className="list-decimal list-inside space-y-1 text-xs">
+              <li>Open this site in <strong>Safari</strong></li>
+              <li>Tap the Share button (box with arrow)</li>
+              <li>Tap <strong>Add to Home Screen</strong></li>
+              <li>Open the app from your Home Screen and enable notifications</li>
+            </ol>
+          </div>
         )}
         {permissionStatus === 'denied' && (
           <p className="text-sm text-red-600 mb-4">
