@@ -162,16 +162,30 @@ const fromFees = () =>
 
 // --- Exam schedule ---
 const fromExams = () =>
-  calendarData.exam_schedule.map((e) => ({
-    id: nextId(),
-    title: e.assessment,
-    date: parseISODate(e.date_start),
-    endDate: parseISODate(e.date_end),
-    category: 'exam',
-    description: `${e.assessment} — ${classesLabel(e.class_range)}`,
-    classes: classesLabel(e.class_range),
-    classRange: e.class_range,
-  }));
+  calendarData.exam_schedule.flatMap((e) => {
+    const events = [{
+      id: nextId(),
+      title: e.assessment,
+      date: parseISODate(e.date_start),
+      endDate: parseISODate(e.date_end),
+      category: 'exam',
+      description: `${e.assessment} — ${classesLabel(e.class_range)}`,
+      classes: classesLabel(e.class_range),
+      classRange: e.class_range,
+    }];
+    if (e.result_date) {
+      events.push({
+        id: nextId(),
+        title: `${e.assessment} — Results`,
+        date: parseISODate(e.result_date),
+        category: 'exam',
+        description: `Results: ${e.assessment} — ${classesLabel(e.class_range)}`,
+        classes: classesLabel(e.class_range),
+        classRange: e.class_range,
+      });
+    }
+    return events;
+  });
 
 export const schoolTimings = calendarData.school_timings;
 
