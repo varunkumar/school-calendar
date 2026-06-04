@@ -1,4 +1,5 @@
 import calendarData from './data.json';
+import { compressClassRange } from '../utils/classRange';
 
 const parseISODate = (str) => {
   const [y, m, d] = str.split('-').map(Number);
@@ -37,11 +38,8 @@ const inferCategory = (text) => {
 let _id = 1;
 const nextId = () => _id++;
 
-// class_range is now an array of class tokens; join for display
-const classesLabel = (range) => {
-  if (Array.isArray(range)) return range.length ? range.join(', ') : 'All Classes';
-  return range || 'All Classes';
-};
+// class_range is now an array of class tokens; compress for display
+const classesLabel = (arr) => compressClassRange(arr);
 
 // --- Academic calendar ---
 const fromAcademicCalendar = () => {

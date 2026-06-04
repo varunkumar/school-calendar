@@ -41,6 +41,13 @@ import {
 
 const localizer = momentLocalizer(moment);
 
+const getDomainDefaultClass = () => {
+  const hostname = window.location.hostname;
+  if (hostname === 'calendar.aganvee.in') return 'I';
+  if (hostname === 'calendar.adhiyan.in') return 'VI';
+  return 'all';
+};
+
 function App() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [currentView, setCurrentView] = useState('month');
@@ -48,11 +55,19 @@ function App() {
   const [events] = useState(allCalendarEvents);
   const { prefs, updatePrefs, permissionStatus, requestPermission } = useNotifications(events);
   const [showNotifSettings, setShowNotifSettings] = useState(false);
-  const [activeFilter, setActiveFilter] = useState('all');
-  const [activeClass, setActiveClass] = useState('all');
+  const [activeFilter, setActiveFilter] = useState(
+    () => localStorage.getItem('cal_activeFilter') || 'all'
+  );
+  const [activeClass, setActiveClass] = useState(() => {
+    return localStorage.getItem('cal_activeClass') || getDomainDefaultClass();
+  });
   const [showSearch, setShowSearch] = useState(false);
-  const [showDashboard, setShowDashboard] = useState(true);
-  const [viewMode, setViewMode] = useState('calendar'); // 'calendar' or 'sections'
+  const [showDashboard, setShowDashboard] = useState(
+    () => localStorage.getItem('cal_showDashboard') !== 'false'
+  );
+  const [viewMode, setViewMode] = useState(
+    () => localStorage.getItem('cal_viewMode') || 'calendar'
+  );
 
   useEffect(() => {
     initGA();
@@ -69,6 +84,22 @@ function App() {
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('cal_activeFilter', activeFilter);
+  }, [activeFilter]);
+
+  useEffect(() => {
+    localStorage.setItem('cal_viewMode', viewMode);
+  }, [viewMode]);
+
+  useEffect(() => {
+    localStorage.setItem('cal_showDashboard', String(showDashboard));
+  }, [showDashboard]);
+
+  useEffect(() => {
+    localStorage.setItem('cal_activeClass', activeClass);
+  }, [activeClass]);
 
   // Filter events based on active filter and class
   const filteredEvents = useMemo(() => {
@@ -123,9 +154,13 @@ function App() {
 
   const handleReset = () => {
     setActiveFilter('all');
-    setActiveClass('all');
     setViewMode('calendar');
     setShowDashboard(true);
+    setActiveClass(getDomainDefaultClass());
+    localStorage.removeItem('cal_activeFilter');
+    localStorage.removeItem('cal_viewMode');
+    localStorage.removeItem('cal_showDashboard');
+    localStorage.removeItem('cal_activeClass');
   };
 
   const exportToICS = () => {
