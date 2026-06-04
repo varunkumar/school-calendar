@@ -81,7 +81,7 @@ const EventModal = ({ event, onClose }) => {
           <div className="space-y-4">
             <div className="flex items-center text-gray-600 dark:text-gray-300">
               <Calendar className="h-5 w-5 mr-3" />
-              <span>{formatEventDate(event.start, event.end)}</span>
+              <span>{formatEventDate(event.start, event.endDate || event.end)}</span>
             </div>
 
             {event.time && (

@@ -107,7 +107,9 @@ function App() {
     let filtered = events.map((event) => ({
       ...event,
       start: event.date,
-      end: event.endDate || event.date,
+      end: event.endDate
+        ? moment(event.endDate).add(1, 'day').toDate()
+        : event.date,
     }));
 
     if (activeFilter !== 'all') {
