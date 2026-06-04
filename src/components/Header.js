@@ -1,4 +1,4 @@
-import { Bell, Calendar, GraduationCap, MapPin, Phone } from 'lucide-react';
+import { Bell, Calendar, MapPin, Phone } from 'lucide-react';
 import config from '../config/appConfig';
 
 const Header = ({ onBellClick, onReset }) => {
@@ -9,10 +9,12 @@ const Header = ({ onBellClick, onReset }) => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <button onClick={onReset} className="flex items-center hover:opacity-80 transition-opacity text-left">
-                <div className="bg-primary-600 rounded-xl p-2">
-                  <GraduationCap className="h-8 w-8 text-white" />
-                </div>
-                <div className="ml-4">
+                <img
+                  src="/logo-school.png"
+                  alt="Greenfield Chennai International School"
+                  className="h-14 w-auto object-contain"
+                />
+                <div className="ml-3">
                   <h1 className="text-xl md:text-2xl font-bold text-gray-900 mobile-header-title">
                     {config.school.name}
                   </h1>
