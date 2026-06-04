@@ -307,12 +307,17 @@ function App() {
               {/* Calendar Section */}
               <div className="col-span-1 lg:col-span-3">
                 {/* Mobile Agenda View (shown on small screens) */}
-                <div className="block md:hidden">
+                <div className="block md:hidden space-y-4">
                   <MobileAgenda
                     events={filteredEvents}
                     date={date}
                     onDateChange={setDate}
                     onEventClick={setSelectedEvent}
+                  />
+                  <EventList
+                    events={filteredEvents}
+                    onEventClick={setSelectedEvent}
+                    activeFilter={activeFilter}
                   />
                 </div>
 
