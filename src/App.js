@@ -54,7 +54,7 @@ function App() {
   const [currentView, setCurrentView] = useState('month');
   const [date, setDate] = useState(new Date());
   const [events] = useState(allCalendarEvents);
-  const { prefs, updatePrefs, permissionStatus, requestPermission } = useNotifications(events);
+  const { prefs, updatePrefs, permissionStatus, requestPermission, clearAll } = useNotifications(events);
   const [showNotifSettings, setShowNotifSettings] = useState(false);
   const [activeFilter, setActiveFilter] = useState(
     () => localStorage.getItem('cal_activeFilter') || 'all'
@@ -417,9 +417,18 @@ function App() {
           updatePrefs={updatePrefs}
           permissionStatus={permissionStatus}
           requestPermission={requestPermission}
+          clearAll={clearAll}
           onClose={() => setShowNotifSettings(false)}
         />
       )}
+
+      {/* Footer */}
+      <footer className="mt-12 border-t border-gray-200 py-4 text-center text-xs text-gray-400">
+        Built with ♥ by{' '}
+        <a href="https://twitter.com/varunkumar" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">@varunkumar</a>
+        {' · '}
+        <a href="https://instagram.com/varunkumar" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">Instagram</a>
+      </footer>
     </div>
   );
 }

@@ -100,5 +100,12 @@ export const useNotifications = (events) => {
     savePrefs(newPrefs);
   }, [prefs]);
 
-  return { prefs, updatePrefs, permissionStatus, requestPermission };
+  const clearAll = useCallback(async () => {
+    const reg = await registerSW();
+    if (reg?.active) {
+      reg.active.postMessage({ type: 'CLEAR_ALL' });
+    }
+  }, []);
+
+  return { prefs, updatePrefs, permissionStatus, requestPermission, clearAll };
 };

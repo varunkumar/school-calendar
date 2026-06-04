@@ -1,13 +1,13 @@
-import { Bell, X } from 'lucide-react';
+import { Bell, BookOpen, CreditCard, GraduationCap, Home, Plane, Users, X, Zap } from 'lucide-react';
 
 const CATEGORIES = [
-  { key: 'academic', label: 'Academic',   color: 'bg-blue-500' },
-  { key: 'exam',     label: 'Exams',      color: 'bg-violet-500' },
-  { key: 'activity', label: 'Activities', color: 'bg-cyan-500' },
-  { key: 'holiday',  label: 'Holidays',   color: 'bg-red-500' },
-  { key: 'vacation', label: 'Vacation',   color: 'bg-amber-500' },
-  { key: 'fee',      label: 'Fee',        color: 'bg-red-600' },
-  { key: 'ptm',      label: 'PTM',        color: 'bg-violet-700' },
+  { key: 'academic', label: 'Academic',   color: 'text-blue-500',   Icon: BookOpen },
+  { key: 'exam',     label: 'Exams',      color: 'text-violet-500', Icon: GraduationCap },
+  { key: 'activity', label: 'Activities', color: 'text-cyan-500',   Icon: Zap },
+  { key: 'holiday',  label: 'Holidays',   color: 'text-red-500',    Icon: Home },
+  { key: 'vacation', label: 'Vacation',   color: 'text-amber-500',  Icon: Plane },
+  { key: 'fee',      label: 'Fee',        color: 'text-red-600',    Icon: CreditCard },
+  { key: 'ptm',      label: 'PTM',        color: 'text-violet-700', Icon: Users },
 ];
 
 const ADVANCE_OPTIONS = [
@@ -17,7 +17,7 @@ const ADVANCE_OPTIONS = [
   { days: 7, label: '1 week before' },
 ];
 
-const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPermission, onClose }) => {
+const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPermission, clearAll, onClose }) => {
   const toggleCategory = (key) => {
     const cats = prefs.categories.includes(key)
       ? prefs.categories.filter((c) => c !== key)
@@ -84,7 +84,7 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
         <div className="mb-4">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Categories</p>
           <div className="grid grid-cols-2 gap-2">
-            {CATEGORIES.map(({ key, label, color }) => (
+            {CATEGORIES.map(({ key, label, color, Icon }) => (
               <label key={key} className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
@@ -93,14 +93,14 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
                   disabled={isDisabled}
                   className="rounded text-primary-600"
                 />
-                <span className={`w-2 h-2 rounded-full ${color}`} />
+                <Icon className={`h-4 w-4 flex-shrink-0 ${color}`} />
                 <span className="text-sm text-gray-700">{label}</span>
               </label>
             ))}
           </div>
         </div>
 
-        <div>
+        <div className="mb-4">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">When to notify</p>
           <div className="space-y-2">
             {ADVANCE_OPTIONS.map(({ days, label }) => (
@@ -117,6 +117,21 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
             ))}
           </div>
         </div>
+
+        {permissionStatus === 'granted' && (
+          <div className="border-t border-gray-100 pt-3">
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Scheduled notifications</p>
+            <p className="text-xs text-gray-500 mb-2">
+              Clears all upcoming notifications that are queued but not yet delivered. Already-delivered notifications can be dismissed from your device's notification centre.
+            </p>
+            <button
+              onClick={() => { clearAll(); }}
+              className="w-full text-sm text-red-600 border border-red-200 rounded-lg py-1.5 hover:bg-red-50 transition-colors"
+            >
+              Clear all scheduled notifications
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
