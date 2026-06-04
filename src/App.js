@@ -19,6 +19,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Dashboard from './components/Dashboard';
 import EventList from './components/EventList';
+import FeesView from './components/FeesView';
 import EventModal from './components/EventModal';
 import Header from './components/Header';
 import MobileAgenda from './components/MobileAgenda';
@@ -227,46 +228,17 @@ function App() {
             </button>
 
             <div className="flex gap-2 w-full sm:w-auto overflow-x-auto">
-              <div className="flex bg-gray-100 rounded-lg p-1 flex-shrink-0">
-                <button
-                  onClick={() => {
-                    setViewMode('calendar');
-                    trackViewModeChange('calendar');
-                  }}
-                  className={`flex items-center px-2 md:px-3 py-1 rounded-md text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                    viewMode === 'calendar'
-                      ? 'bg-white text-gray-900 shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
+              <div className="flex-shrink-0">
+                <select
+                  value={viewMode}
+                  onChange={(e) => { setViewMode(e.target.value); trackViewModeChange(e.target.value); }}
+                  className="text-sm border border-gray-300 rounded-lg px-3 py-2 bg-white text-gray-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent font-medium"
                 >
-                  <Grid size={14} className="mr-1" />
-                  Calendar
-                </button>
-                <button
-                  onClick={() => {
-                    setViewMode('sections');
-                    trackViewModeChange('sections');
-                  }}
-                  className={`flex items-center px-2 md:px-3 py-1 rounded-md text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                    viewMode === 'sections'
-                      ? 'bg-white text-gray-900 shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  <List size={14} className="mr-1" />
-                  Sections
-                </button>
-                <button
-                  onClick={() => { setViewMode('timings'); trackViewModeChange('timings'); }}
-                  className={`flex items-center px-2 md:px-3 py-1 rounded-md text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                    viewMode === 'timings'
-                      ? 'bg-white text-gray-900 shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  <Clock size={14} className="mr-1" />
-                  Timings
-                </button>
+                  <option value="calendar">Calendar</option>
+                  <option value="sections">Sections</option>
+                  <option value="timings">Timings</option>
+                  <option value="fees">Fees</option>
+                </select>
               </div>
 
               <button
@@ -299,26 +271,28 @@ function App() {
           {/* Filter Buttons */}
           <div className="filter-container">
             <div className="flex flex-wrap items-center gap-2 md:gap-3">
-              <div className="filter-buttons flex flex-wrap gap-2 md:gap-3">
-                {filterButtons.map(({ key, label, icon: Icon, color }) => (
-                  <button
-                    key={key}
-                    onClick={() => {
-                      setActiveFilter(key);
-                      trackFilterUsage(key);
-                    }}
-                    className={`flex items-center px-3 md:px-4 py-2 rounded-lg text-white text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                      activeFilter === key
-                        ? `${color} shadow-lg scale-105`
-                        : 'bg-gray-400 hover:bg-gray-500'
-                    }`}
-                  >
-                    <Icon size={14} className="mr-1 md:mr-2" />
-                    <span className="hidden sm:inline">{label}</span>
-                    <span className="sm:hidden">{label.split(' ')[0]}</span>
-                  </button>
-                ))}
-              </div>
+              {viewMode !== 'timings' && (
+                <div className="filter-buttons flex flex-wrap gap-2 md:gap-3">
+                  {filterButtons.map(({ key, label, icon: Icon, color }) => (
+                    <button
+                      key={key}
+                      onClick={() => {
+                        setActiveFilter(key);
+                        trackFilterUsage(key);
+                      }}
+                      className={`flex items-center px-3 md:px-4 py-2 rounded-lg text-white text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                        activeFilter === key
+                          ? `${color} shadow-lg scale-105`
+                          : 'bg-gray-400 hover:bg-gray-500'
+                      }`}
+                    >
+                      <Icon size={14} className="mr-1 md:mr-2" />
+                      <span className="hidden sm:inline">{label}</span>
+                      <span className="sm:hidden">{label.split(' ')[0]}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
               <div className="flex items-center gap-2">
                 <label className="text-xs font-medium text-gray-500 whitespace-nowrap">My Class:</label>
                 <select
@@ -339,7 +313,7 @@ function App() {
         {/* Dashboard */}
         {showDashboard && (
           <div className="mb-8">
-            <Dashboard events={events} />
+            <Dashboard events={filteredEvents} />
           </div>
         )}
 
@@ -405,6 +379,10 @@ function App() {
           ) : viewMode === 'timings' ? (
             <div className="lg:col-span-4">
               <TimingsView />
+            </div>
+          ) : viewMode === 'fees' ? (
+            <div className="lg:col-span-4">
+              <FeesView activeClass={activeClass} />
             </div>
           ) : (
             /* Sections View */
