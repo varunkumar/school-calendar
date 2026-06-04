@@ -316,11 +316,11 @@ function App() {
                 </div>
 
                 {/* Desktop Calendar View (hidden on small screens) */}
-                <div className="hidden md:block bg-white rounded-xl shadow-lg p-2 sm:p-4 md:p-6">
+                <div className="hidden md:block bg-white dark:bg-gray-800 rounded-xl shadow-lg p-2 sm:p-4 md:p-6">
                   {currentView === 'agenda' ? (
                     /* Custom agenda view — replaces rbc's broken table-rowspan agenda */
                     <div>
-                      <div className="flex gap-2 mb-4 border-b border-gray-100 pb-3">
+                      <div className="flex gap-2 mb-4 border-b border-gray-100 dark:border-gray-700 pb-3">
                         {['month', 'week', 'day', 'agenda'].map((v) => (
                           <button
                             key={v}
@@ -328,7 +328,7 @@ function App() {
                             className={`px-3 py-1 rounded text-sm font-medium capitalize transition-colors ${
                               currentView === v
                                 ? 'bg-primary-600 text-white'
-                                : 'text-gray-600 hover:bg-gray-100'
+                                : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
                             }`}
                           >
                             {v}
@@ -434,7 +434,7 @@ function App() {
       <OfflineIndicator />
 
       {/* Footer */}
-      <footer className="mt-12 border-t border-gray-200 py-4 text-center text-xs text-gray-400">
+      <footer className="mt-12 border-t border-gray-200 dark:border-gray-700 py-4 text-center text-xs text-gray-400 dark:text-gray-500">
         Built with ♥ by{' '}
         <a href="https://twitter.com/varunkumar" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">@varunkumar</a>
         {' · '}

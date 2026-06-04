@@ -1,9 +1,9 @@
-import { BarChart3, Bell, Calendar, Download, MapPin, Phone } from 'lucide-react';
+import { BarChart3, Bell, Calendar, Download, MapPin, Moon, Phone, Sun } from 'lucide-react';
 import config from '../config/appConfig';
 
-const Header = ({ onBellClick, onReset, showDashboard, onDashboardToggle, onExport }) => {
+const Header = ({ onBellClick, onReset, showDashboard, onDashboardToggle, onExport, isDark, onThemeToggle }) => {
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
+    <header className="bg-white shadow-sm border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
 
@@ -18,10 +18,10 @@ const Header = ({ onBellClick, onReset, showDashboard, onDashboardToggle, onExpo
               className="h-10 sm:h-14 w-auto object-contain flex-shrink-0"
             />
             <div className="ml-2 sm:ml-3 min-w-0">
-              <h1 className="text-sm sm:text-lg md:text-2xl font-bold text-gray-900 leading-tight truncate">
+              <h1 className="text-sm sm:text-lg md:text-2xl font-bold text-gray-900 dark:text-white leading-tight truncate">
                 {config.school.name}
               </h1>
-              <p className="text-xs text-gray-500 flex items-center mt-0.5">
+              <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center mt-0.5">
                 <Calendar className="h-3 w-3 mr-1 flex-shrink-0" />
                 <span className="truncate">AY {config.school.academicYear}</span>
               </p>
@@ -32,11 +32,11 @@ const Header = ({ onBellClick, onReset, showDashboard, onDashboardToggle, onExpo
           <div className="flex items-center gap-0.5 sm:gap-1 flex-shrink-0">
             {/* Desktop: location + phone */}
             <div className="hidden lg:flex items-center gap-3 mr-2">
-              <span className="flex items-center text-sm text-gray-500">
+              <span className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                 <MapPin className="h-4 w-4 mr-1 text-primary-500" />
                 Madhavaram, Chennai
               </span>
-              <span className="flex items-center text-sm text-gray-500">
+              <span className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                 <Phone className="h-4 w-4 mr-1 text-primary-500" />
                 +91 97911 91397
               </span>
@@ -48,8 +48,8 @@ const Header = ({ onBellClick, onReset, showDashboard, onDashboardToggle, onExpo
               title="Toggle dashboard"
               className={`p-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
                 showDashboard
-                  ? 'bg-primary-100 text-primary-700'
-                  : 'text-gray-500 hover:bg-gray-100'
+                  ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300'
+                  : 'text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700'
               }`}
             >
               <BarChart3 className="h-4 w-4 flex-shrink-0" />
@@ -60,17 +60,26 @@ const Header = ({ onBellClick, onReset, showDashboard, onDashboardToggle, onExpo
             <button
               onClick={onExport}
               title="Export calendar"
-              className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors flex items-center gap-1"
+              className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition-colors flex items-center gap-1"
             >
               <Download className="h-4 w-4 flex-shrink-0" />
               <span className="hidden md:inline text-sm">Export</span>
+            </button>
+
+            {/* Theme toggle */}
+            <button
+              onClick={onThemeToggle}
+              title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition-colors"
+            >
+              {isDark ? <Sun className="h-4 w-4 sm:h-5 sm:w-5" /> : <Moon className="h-4 w-4 sm:h-5 sm:w-5" />}
             </button>
 
             {/* Bell */}
             <button
               onClick={onBellClick}
               title="Notification settings"
-              className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors"
+              className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition-colors"
             >
               <Bell className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>

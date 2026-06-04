@@ -46,32 +46,32 @@ const Dashboard = ({ events }) => {
       value: stats.academic,
       icon: BookOpen,
       color: 'bg-blue-500',
-      bgColor: 'bg-blue-50',
-      textColor: 'text-blue-700',
+      bgColor: 'bg-blue-50 dark:bg-blue-900/30',
+      textColor: 'text-blue-700 dark:text-blue-300',
     },
     {
       title: 'Activity',
       value: stats.activities,
       icon: Zap,
       color: 'bg-cyan-500',
-      bgColor: 'bg-cyan-50',
-      textColor: 'text-cyan-700',
+      bgColor: 'bg-cyan-50 dark:bg-cyan-900/30',
+      textColor: 'text-cyan-700 dark:text-cyan-300',
     },
     {
       title: 'Holiday',
       value: stats.holidays,
       icon: Home,
       color: 'bg-red-500',
-      bgColor: 'bg-red-50',
-      textColor: 'text-red-700',
+      bgColor: 'bg-red-50 dark:bg-red-900/30',
+      textColor: 'text-red-700 dark:text-red-300',
     },
     {
       title: 'Vacation',
       value: stats.vacations,
       icon: Plane,
       color: 'bg-amber-500',
-      bgColor: 'bg-amber-50',
-      textColor: 'text-amber-700',
+      bgColor: 'bg-amber-50 dark:bg-amber-900/30',
+      textColor: 'text-amber-700 dark:text-amber-300',
     },
   ];
 
@@ -117,56 +117,56 @@ const Dashboard = ({ events }) => {
 
       {/* Additional Insights */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-        <div className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl p-4 md:p-6 border border-primary-200">
+        <div className="bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/40 dark:to-primary-800/40 rounded-xl p-4 md:p-6 border border-primary-200 dark:border-primary-700">
           <div className="flex items-center mb-3">
-            <Calendar className="h-4 w-4 md:h-5 md:w-5 text-primary-600 mr-2" />
-            <h3 className="font-semibold text-primary-900 text-sm md:text-base">
+            <Calendar className="h-4 w-4 md:h-5 md:w-5 text-primary-600 dark:text-primary-400 mr-2" />
+            <h3 className="font-semibold text-primary-900 dark:text-primary-200 text-sm md:text-base">
               This Month
             </h3>
           </div>
-          <p className="text-xl md:text-2xl font-bold text-primary-800">
+          <p className="text-xl md:text-2xl font-bold text-primary-800 dark:text-primary-200">
             {stats.thisMonthEvents}
           </p>
-          <p className="text-xs md:text-sm text-primary-600 mt-1">
+          <p className="text-xs md:text-sm text-primary-600 dark:text-primary-400 mt-1">
             Events in {moment().format('MMMM')}
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 md:p-6 border border-green-200">
+        <div className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/40 dark:to-green-800/40 rounded-xl p-4 md:p-6 border border-green-200 dark:border-green-700">
           <div className="flex items-center mb-3">
-            <TrendingUp className="h-4 w-4 md:h-5 md:w-5 text-green-600 mr-2" />
-            <h3 className="font-semibold text-green-900 text-sm md:text-base">
+            <TrendingUp className="h-4 w-4 md:h-5 md:w-5 text-green-600 dark:text-green-400 mr-2" />
+            <h3 className="font-semibold text-green-900 dark:text-green-200 text-sm md:text-base">
               Next 30 Days
             </h3>
           </div>
-          <p className="text-xl md:text-2xl font-bold text-green-800">
+          <p className="text-xl md:text-2xl font-bold text-green-800 dark:text-green-200">
             {stats.upcomingEvents}
           </p>
-          <p className="text-xs md:text-sm text-green-600 mt-1">
+          <p className="text-xs md:text-sm text-green-600 dark:text-green-400 mt-1">
             Upcoming events
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl p-4 md:p-6 border border-orange-200">
+        <div className="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/40 dark:to-orange-800/40 rounded-xl p-4 md:p-6 border border-orange-200 dark:border-orange-700">
           <div className="flex items-center mb-3">
-            <Clock className="h-4 w-4 md:h-5 md:w-5 text-orange-600 mr-2" />
-            <h3 className="font-semibold text-orange-900 text-sm md:text-base">
+            <Clock className="h-4 w-4 md:h-5 md:w-5 text-orange-600 dark:text-orange-400 mr-2" />
+            <h3 className="font-semibold text-orange-900 dark:text-orange-200 text-sm md:text-base">
               Next Break
             </h3>
           </div>
           {stats.daysUntilVacation !== null ? (
             <>
-              <p className="text-xl md:text-2xl font-bold text-orange-800">
+              <p className="text-xl md:text-2xl font-bold text-orange-800 dark:text-orange-200">
                 {stats.daysUntilVacation}
               </p>
-              <p className="text-xs md:text-sm text-orange-600 mt-1">
+              <p className="text-xs md:text-sm text-orange-600 dark:text-orange-400 mt-1">
                 Days until {stats.nextVacation?.title}
               </p>
             </>
           ) : (
             <>
-              <p className="text-xl md:text-2xl font-bold text-orange-800">-</p>
-              <p className="text-xs md:text-sm text-orange-600 mt-1">
+              <p className="text-xl md:text-2xl font-bold text-orange-800 dark:text-orange-200">-</p>
+              <p className="text-xs md:text-sm text-orange-600 dark:text-orange-400 mt-1">
                 No upcoming breaks
               </p>
             </>

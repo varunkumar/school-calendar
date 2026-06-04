@@ -44,15 +44,15 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      holiday:  'bg-red-100 text-red-800 border-red-200',
-      vacation: 'bg-amber-100 text-amber-800 border-amber-200',
-      academic: 'bg-blue-100 text-blue-800 border-blue-200',
-      exam:     'bg-violet-100 text-violet-800 border-violet-200',
-      activity: 'bg-cyan-100 text-cyan-800 border-cyan-200',
-      fee:      'bg-red-200 text-red-900 border-red-300',
-      ptm:      'bg-violet-200 text-violet-900 border-violet-300',
+      holiday:  'bg-red-100 text-red-800 border-red-200 dark:bg-red-900/30 dark:text-red-200 dark:border-red-800',
+      vacation: 'bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900/30 dark:text-amber-200 dark:border-amber-800',
+      academic: 'bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/30 dark:text-blue-200 dark:border-blue-800',
+      exam:     'bg-violet-100 text-violet-800 border-violet-200 dark:bg-violet-900/30 dark:text-violet-200 dark:border-violet-800',
+      activity: 'bg-cyan-100 text-cyan-800 border-cyan-200 dark:bg-cyan-900/30 dark:text-cyan-200 dark:border-cyan-800',
+      fee:      'bg-red-200 text-red-900 border-red-300 dark:bg-red-900/40 dark:text-red-100 dark:border-red-700',
+      ptm:      'bg-violet-200 text-violet-900 border-violet-300 dark:bg-violet-900/40 dark:text-violet-100 dark:border-violet-700',
     };
-    return colors[category] || 'bg-gray-100 text-gray-800 border-gray-200';
+    return colors[category] || 'bg-gray-100 text-gray-800 border-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600';
   };
 
   return (
@@ -72,13 +72,13 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
         <div className="flex items-center justify-between">
           <button
             onClick={goToPreviousWeek}
-            className="p-2 hover:bg-gray-100 rounded-md"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md text-gray-700 dark:text-gray-300"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
 
           <div className="text-center">
-            <h3 className="font-medium text-gray-900">
+            <h3 className="font-medium text-gray-900 dark:text-white">
               {startOfWeek.format('MMM Do')} -{' '}
               {endOfWeek.format('MMM Do, YYYY')}
             </h3>
@@ -86,7 +86,7 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
 
           <button
             onClick={goToNextWeek}
-            className="p-2 hover:bg-gray-100 rounded-md"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md text-gray-700 dark:text-gray-300"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -127,7 +127,7 @@ const MobileAgenda = ({ events, date, onDateChange, onEventClick }) => {
                   <div className="ml-3">
                     <h4
                       className={`font-medium ${
-                        isToday ? 'text-blue-900' : 'text-gray-900 dark:text-white'
+                        isToday ? 'text-blue-900 dark:text-blue-100' : 'text-gray-900 dark:text-white'
                       }`}
                     >
                       {day.format('dddd')}

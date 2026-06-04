@@ -12,15 +12,15 @@ const EventList = ({ events, onEventClick, activeFilter }) => {
 
   const getEventColor = (category) => {
     const styles = {
-      holiday:  'border-l-red-500 bg-red-50',
-      vacation: 'border-l-amber-500 bg-amber-50',
-      academic: 'border-l-blue-500 bg-blue-50',
-      exam:     'border-l-violet-500 bg-violet-50',
-      activity: 'border-l-cyan-500 bg-cyan-50',
-      fee:      'border-l-red-600 bg-red-100',
-      ptm:      'border-l-violet-700 bg-violet-50',
+      holiday:  'border-l-red-500 bg-red-50 dark:bg-red-900/20',
+      vacation: 'border-l-amber-500 bg-amber-50 dark:bg-amber-900/20',
+      academic: 'border-l-blue-500 bg-blue-50 dark:bg-blue-900/20',
+      exam:     'border-l-violet-500 bg-violet-50 dark:bg-violet-900/20',
+      activity: 'border-l-cyan-500 bg-cyan-50 dark:bg-cyan-900/20',
+      fee:      'border-l-red-600 bg-red-100 dark:bg-red-900/30',
+      ptm:      'border-l-violet-700 bg-violet-50 dark:bg-violet-900/20',
     };
-    return styles[category] || 'border-l-gray-400 bg-gray-50';
+    return styles[category] || 'border-l-gray-400 bg-gray-50 dark:bg-gray-700/30';
   };
 
   const getEventTypeLabel = (category) => {
