@@ -3,11 +3,13 @@ import {
   BookOpen,
   Calendar as CalendarIcon,
   Clock,
+  CreditCard,
   Download,
   GraduationCap,
   Grid,
   Home,
   List,
+  Plane,
   Search,
   Users,
   Zap,
@@ -119,6 +121,13 @@ function App() {
     setSelectedEvent(null);
   };
 
+  const handleReset = () => {
+    setActiveFilter('all');
+    setActiveClass('all');
+    setViewMode('calendar');
+    setShowDashboard(true);
+  };
+
   const exportToICS = () => {
     // Simple ICS export functionality
     let icsContent = 'BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:School Calendar\n';
@@ -159,14 +168,14 @@ function App() {
     { key: 'exam',     label: 'Exams',      icon: GraduationCap, color: 'bg-violet-500' },
     { key: 'activity', label: 'Activities', icon: Zap,           color: 'bg-cyan-500' },
     { key: 'holiday',  label: 'Holidays',   icon: Home,          color: 'bg-red-500' },
-    { key: 'vacation', label: 'Vacation',   icon: Clock,         color: 'bg-amber-500' },
-    { key: 'fee',      label: 'Fee',        icon: Download,      color: 'bg-red-600' },
+    { key: 'vacation', label: 'Vacation',   icon: Plane,         color: 'bg-amber-500' },
+    { key: 'fee',      label: 'Fee',        icon: CreditCard,    color: 'bg-red-600' },
     { key: 'ptm',      label: 'PTM',        icon: Users,         color: 'bg-violet-700' },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header onBellClick={() => setShowNotifSettings(true)} />
+      <Header onBellClick={() => setShowNotifSettings(true)} onReset={handleReset} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Control Bar */}

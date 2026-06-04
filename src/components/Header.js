@@ -1,24 +1,14 @@
 import { Bell, Calendar, GraduationCap, MapPin, Phone } from 'lucide-react';
 import config from '../config/appConfig';
 
-const Header = ({ onBellClick }) => {
-  const currentDate = new Date();
-  const currentTerm =
-    currentDate.getMonth() >= 5 || currentDate.getMonth() <= 9
-      ? 'Term 1'
-      : 'Term 2';
-  const currentYear =
-    currentDate.getMonth() >= 8
-      ? currentDate.getFullYear() + 1
-      : currentDate.getFullYear();
-
+const Header = ({ onBellClick, onReset }) => {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="flex items-center">
+              <button onClick={onReset} className="flex items-center hover:opacity-80 transition-opacity text-left">
                 <div className="bg-primary-600 rounded-xl p-2">
                   <GraduationCap className="h-8 w-8 text-white" />
                 </div>
@@ -32,18 +22,12 @@ const Header = ({ onBellClick }) => {
                     {config.school.academicYear}
                   </p>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
 
           <div className="hidden lg:block">
             <div className="flex items-center space-x-6">
-              <div className="flex items-center text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
-                <Calendar className="h-4 w-4 mr-2 text-primary-600" />
-                <span className="font-medium">
-                  Current Term: {currentTerm} {currentYear}
-                </span>
-              </div>
               <div className="flex items-center text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
                 <MapPin className="h-4 w-4 mr-2 text-primary-600" />
                 <span>Madhavaram, Chennai</span>
@@ -66,12 +50,6 @@ const Header = ({ onBellClick }) => {
         {/* Mobile details row */}
         <div className="lg:hidden pb-4">
           <div className="flex flex-col space-y-2">
-            <div className="flex items-center text-sm text-gray-600">
-              <Calendar className="h-4 w-4 mr-2 text-primary-600" />
-              <span>
-                Current Term: {currentTerm} {currentYear}
-              </span>
-            </div>
             <div className="flex items-center text-sm text-gray-600">
               <MapPin className="h-4 w-4 mr-2 text-primary-600" />
               <span>Madhavaram, Chennai</span>
