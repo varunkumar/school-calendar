@@ -25,16 +25,7 @@ const SectionsView = ({ events, onEventClick }) => {
 
   return (
     <div className="space-y-8">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Academic Calendar Sections
-        </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Explore our comprehensive academic calendar organized by categories.
-          Click on any section to view detailed information about upcoming
-          events.
-        </p>
-      </div>
+
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {sections.map((section, index) => (

@@ -4,6 +4,7 @@ import {
   CreditCard,
   GraduationCap,
   Home,
+  LayoutList,
   Plane,
   Search,
   Users,
@@ -229,7 +230,7 @@ function App() {
         <div className="flex mb-4 border-b border-gray-200 dark:border-gray-700">
           {[
             { key: 'calendar', label: 'Calendar', Icon: CalendarIcon },
-            { key: 'sections', label: 'Sections',  Icon: GraduationCap },
+            { key: 'sections', label: 'Browse',    Icon: LayoutList },
             { key: 'timings',  label: 'Timings',   Icon: BookOpen },
             { key: 'fees',     label: 'Fees',      Icon: CreditCard },
           ].map(({ key, label, Icon }) => (
