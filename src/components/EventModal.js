@@ -28,11 +28,11 @@ const EventModal = ({ event, onClose }) => {
 
   const getEventTypeLabel = (type) => {
     const labels = {
-      holiday:  'Holidays',
+      holiday:  'Holiday',
       vacation: 'Vacation',
       academic: 'Academic',
-      exam:     'Exams',
-      activity: 'Activities',
+      exam:     'Exam',
+      activity: 'Activity',
       fee:      'Fee',
       ptm:      'PTM',
     };

@@ -15,9 +15,9 @@ const SectionsView = ({ events, onEventClick }) => {
 
   const sections = [
     { title: 'Academic',         events: events.filter(e => e.category === 'academic'  && isUpcoming(e)), icon: BookOpen,      color: 'bg-blue-600',    description: 'Academic milestones and educational activities' },
-    { title: 'Exams',            events: events.filter(e => e.category === 'exam'       && isUpcoming(e)), icon: GraduationCap, color: 'bg-violet-500',  description: 'Tests, assessments and examinations' },
-    { title: 'Activities',       events: events.filter(e => e.category === 'activity'   && isUpcoming(e)), icon: Zap,           color: 'bg-cyan-500',    description: 'Competitions, assemblies, trips and clubs' },
-    { title: 'Holidays',         events: events.filter(e => e.category === 'holiday'    && isUpcoming(e)), icon: Home,          color: 'bg-red-500',     description: 'Public and school holidays' },
+    { title: 'Exam',            events: events.filter(e => e.category === 'exam'       && isUpcoming(e)), icon: GraduationCap, color: 'bg-violet-500',  description: 'Tests, assessments and examinations' },
+    { title: 'Activity',       events: events.filter(e => e.category === 'activity'   && isUpcoming(e)), icon: Zap,           color: 'bg-cyan-500',    description: 'Competitions, assemblies, trips and clubs' },
+    { title: 'Holiday',         events: events.filter(e => e.category === 'holiday'    && isUpcoming(e)), icon: Home,          color: 'bg-red-500',     description: 'Public and school holidays' },
     { title: 'Vacation',         events: events.filter(e => e.category === 'vacation'   && isUpcoming(e)), icon: Plane,         color: 'bg-amber-500',   description: 'Vacation periods' },
     { title: 'Fee',              events: events.filter(e => e.category === 'fee'        && isUpcoming(e)), icon: CreditCard,    color: 'bg-red-600',     description: 'Fee payment cutoff dates' },
     { title: 'PTM',              events: events.filter(e => e.category === 'ptm'        && isUpcoming(e)), icon: Users,         color: 'bg-violet-700',  description: 'Parent-teacher meetings' },

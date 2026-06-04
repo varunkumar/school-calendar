@@ -201,9 +201,9 @@ function App() {
   const filterButtons = [
     { key: 'all',      label: 'All',        icon: CalendarIcon,  color: 'bg-gray-500' },
     { key: 'academic', label: 'Academic',   icon: BookOpen,      color: 'bg-blue-500' },
-    { key: 'exam',     label: 'Exams',      icon: GraduationCap, color: 'bg-violet-500' },
-    { key: 'activity', label: 'Activities', icon: Zap,           color: 'bg-cyan-500' },
-    { key: 'holiday',  label: 'Holidays',   icon: Home,          color: 'bg-red-500' },
+    { key: 'exam',     label: 'Exam',      icon: GraduationCap, color: 'bg-violet-500' },
+    { key: 'activity', label: 'Activity', icon: Zap,           color: 'bg-cyan-500' },
+    { key: 'holiday',  label: 'Holiday',   icon: Home,          color: 'bg-red-500' },
     { key: 'vacation', label: 'Vacation',   icon: Plane,         color: 'bg-amber-500' },
     { key: 'fee',      label: 'Fee',        icon: CreditCard,    color: 'bg-red-600' },
     { key: 'ptm',      label: 'PTM',        icon: Users,         color: 'bg-violet-700' },

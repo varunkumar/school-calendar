@@ -2,9 +2,9 @@ import { Bell, BookOpen, CreditCard, GraduationCap, Home, Plane, Users, X, Zap }
 
 const CATEGORIES = [
   { key: 'academic', label: 'Academic',   color: 'text-blue-500',   Icon: BookOpen },
-  { key: 'exam',     label: 'Exams',      color: 'text-violet-500', Icon: GraduationCap },
-  { key: 'activity', label: 'Activities', color: 'text-cyan-500',   Icon: Zap },
-  { key: 'holiday',  label: 'Holidays',   color: 'text-red-500',    Icon: Home },
+  { key: 'exam',     label: 'Exam',      color: 'text-violet-500', Icon: GraduationCap },
+  { key: 'activity', label: 'Activity', color: 'text-cyan-500',   Icon: Zap },
+  { key: 'holiday',  label: 'Holiday',   color: 'text-red-500',    Icon: Home },
   { key: 'vacation', label: 'Vacation',   color: 'text-amber-500',  Icon: Plane },
   { key: 'fee',      label: 'Fee',        color: 'text-red-600',    Icon: CreditCard },
   { key: 'ptm',      label: 'PTM',        color: 'text-violet-700', Icon: Users },

@@ -50,7 +50,7 @@ const Dashboard = ({ events }) => {
       textColor: 'text-blue-700',
     },
     {
-      title: 'Activities',
+      title: 'Activity',
       value: stats.activities,
       icon: Zap,
       color: 'bg-cyan-500',
@@ -58,7 +58,7 @@ const Dashboard = ({ events }) => {
       textColor: 'text-cyan-700',
     },
     {
-      title: 'Holidays',
+      title: 'Holiday',
       value: stats.holidays,
       icon: Home,
       color: 'bg-red-500',

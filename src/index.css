@@ -334,3 +334,14 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-500;
 }
+
+/* Agenda view: hide Time column since all events are all-day (stored at midnight) */
+.rbc-agenda-view table.rbc-agenda-table .rbc-agenda-time-cell {
+  display: none;
+}
+.rbc-agenda-view table.rbc-agenda-table thead tr th:nth-child(2) {
+  display: none;
+}
+.rbc-agenda-view table.rbc-agenda-table .rbc-agenda-event-cell {
+  padding-left: 8px;
+}
