@@ -362,6 +362,10 @@ function App() {
                       className="mobile-friendly-calendar"
                       views={['month', 'week', 'day', 'agenda']}
                       toolbar={true}
+                      formats={{
+                        agendaTimeFormat: () => '',
+                        agendaTimeRangeFormat: () => '',
+                      }}
                     />
                   </div>
                 </div>

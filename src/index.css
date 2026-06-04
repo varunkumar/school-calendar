@@ -335,13 +335,27 @@
   @apply bg-gray-500;
 }
 
-/* Agenda view: hide Time column since all events are all-day (stored at midnight) */
-.rbc-agenda-view table.rbc-agenda-table .rbc-agenda-time-cell {
-  display: none;
+/* Agenda view: collapse Time column. All events are all-day so time is always 12:00 am.
+   Use table-layout:fixed so width:0 actually collapses the column without breaking row alignment. */
+.rbc-agenda-view table.rbc-agenda-table {
+  table-layout: fixed;
+  width: 100%;
 }
-.rbc-agenda-view table.rbc-agenda-table thead tr th:nth-child(2) {
-  display: none;
+.rbc-agenda-view table.rbc-agenda-table thead tr th:nth-child(1),
+.rbc-agenda-view table.rbc-agenda-table tbody td.rbc-agenda-date-cell {
+  width: 110px;
 }
-.rbc-agenda-view table.rbc-agenda-table .rbc-agenda-event-cell {
-  padding-left: 8px;
+.rbc-agenda-view table.rbc-agenda-table thead tr th:nth-child(2),
+.rbc-agenda-view table.rbc-agenda-table tbody td.rbc-agenda-time-cell {
+  width: 0;
+  max-width: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.rbc-agenda-view table.rbc-agenda-table thead tr th:nth-child(3),
+.rbc-agenda-view table.rbc-agenda-table tbody td.rbc-agenda-event-cell {
+  /* Takes remaining width */
+  overflow: hidden;
 }
