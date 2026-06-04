@@ -50,13 +50,16 @@ const fromAcademicCalendar = () => {
     const monthIndex = new Date(Date.parse(monthName + ' 1, 2000')).getMonth();
 
     activities.forEach((act) => {
+      const category = act.category || inferCategory(act.name);
+      if (category === 'holiday' || category === 'vacation') return; // handled by dedicated sources
       events.push({
         id: nextId(),
         title: act.name.replace(/\[cite:.*?\]/g, '').trim(),
         date: new Date(year, monthIndex, 1),
-        category: act.category || inferCategory(act.name),
+        category,
         description: `Monthly activity for ${month_year}`,
         classes: classesLabel(act.class_range),
+        classRange: act.class_range,
         isGeneralActivity: true,
       });
     });
@@ -65,11 +68,13 @@ const fromAcademicCalendar = () => {
       const date = parseMonthDate(dateStr, monthIndex, year);
       if (!date) return;
       dayEvents.forEach((evt) => {
+        const category = evt.category || inferCategory(evt.name);
+        if (category === 'holiday' || category === 'vacation') return; // handled by dedicated sources
         events.push({
           id: nextId(),
           title: evt.name,
           date,
-          category: evt.category,
+          category,
           description: `${dateStr} ${month_year}`,
           classes: classesLabel(evt.class_range),
           classRange: evt.class_range,
@@ -90,6 +95,7 @@ const fromHolidays = () =>
     category: 'holiday',
     description: 'Public Holiday',
     classes: 'All Classes',
+    classRange: [],
   }));
 
 // --- Vacations ---
@@ -102,6 +108,7 @@ const fromVacations = () =>
     category: 'vacation',
     description: `Vacation for ${classesLabel(v.class_range)}`,
     classes: classesLabel(v.class_range),
+    classRange: v.class_range,
   }));
 
 // --- Special assemblies → activity ---
@@ -113,6 +120,7 @@ const fromAssemblies = () =>
     category: 'activity',
     description: 'Special Assembly',
     classes: 'All Classes',
+    classRange: [],
   }));
 
 // --- PTM schedule ---
@@ -127,6 +135,7 @@ const fromPTM = () => {
         category: 'ptm',
         description: `${p.term} — ${classesLabel(p.class_range)}`,
         classes: classesLabel(p.class_range),
+        classRange: p.class_range,
         ptmType: p.type,
         term: p.term,
       });
@@ -144,6 +153,7 @@ const fromFees = () =>
     category: 'fee',
     description: `${f.term} fee payment cutoff`,
     classes: classesLabel(f.class_range),
+    classRange: f.class_range,
     feeAmount: f.amount,
     feeTerm: f.term,
     feeCutoffStart: f.cutoff_start,
@@ -160,6 +170,7 @@ const fromExams = () =>
     category: 'exam',
     description: `${e.assessment} — ${classesLabel(e.class_range)}`,
     classes: classesLabel(e.class_range),
+    classRange: e.class_range,
   }));
 
 export const schoolTimings = calendarData.school_timings;
