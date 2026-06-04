@@ -11,7 +11,7 @@ const CATEGORIES = [
 ];
 
 const ADVANCE_OPTIONS = [
-  { days: 0, label: 'Day of (8 AM)' },
+  { days: 0, label: 'Day of (6 AM)' },
   { days: 1, label: '1 day before' },
   { days: 3, label: '3 days before' },
   { days: 7, label: '1 week before' },
@@ -32,7 +32,7 @@ const NotificationSettings = ({ prefs, updatePrefs, permissionStatus, requestPer
     updatePrefs({ advanceDays: adv });
   };
 
-  const isDisabled = !prefs.enabled || permissionStatus !== 'granted';
+  const isDisabled = permissionStatus !== 'granted';
 
   return (
     <div

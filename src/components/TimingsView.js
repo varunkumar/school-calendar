@@ -25,13 +25,22 @@ const TimingCard = ({ group }) => (
   </div>
 );
 
-const TimingsView = () => {
-  const mainGroups = schoolTimings.filter(
-    (g) => !g.group.startsWith('Office') && !g.group.startsWith('After')
-  );
-  const infoGroups = schoolTimings.filter(
-    (g) => g.group.startsWith('Office') || g.group.startsWith('After')
-  );
+const TimingsView = ({ activeClass = 'all' }) => {
+  const allGroups = schoolTimings;
+
+  const mainGroups = allGroups.filter((g) => {
+    if (g.group.startsWith('Office') || g.group.startsWith('After')) return false;
+    if (activeClass === 'all') return true;
+    return !g.class_range || g.class_range.length === 0 || g.class_range.includes(activeClass);
+  });
+
+  const infoGroups = allGroups.filter((g) => {
+    if (!g.group.startsWith('Office') && !g.group.startsWith('After')) return false;
+    if (activeClass === 'all') return true;
+    // After School Activity applies to classes I–XII
+    if (g.group.startsWith('After')) return g.class_range?.includes(activeClass) ?? true;
+    return true; // Office hours always shown
+  });
 
   return (
     <div className="space-y-6">

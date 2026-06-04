@@ -378,7 +378,7 @@ function App() {
             </>
           ) : viewMode === 'timings' ? (
             <div className="lg:col-span-4">
-              <TimingsView />
+              <TimingsView activeClass={activeClass} />
             </div>
           ) : viewMode === 'fees' ? (
             <div className="lg:col-span-4">

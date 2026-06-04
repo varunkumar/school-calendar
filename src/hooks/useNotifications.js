@@ -22,12 +22,12 @@ const savePrefs = (prefs) => localStorage.setItem(PREFS_KEY, JSON.stringify(pref
 const getFireTime = (eventDate, advanceDays) => {
   const d = new Date(eventDate);
   d.setDate(d.getDate() - advanceDays);
-  d.setHours(8, 0, 0, 0);
+  d.setHours(6, 0, 0, 0);
   return d.getTime();
 };
 
 const bodyText = (advanceDays, dateStr) => {
-  if (advanceDays === 0) return `Today — ${dateStr}`;
+  if (advanceDays === 0) return `Today (6 AM) — ${dateStr}`;
   if (advanceDays === 1) return `Tomorrow — ${dateStr}`;
   return `In ${advanceDays} days — ${dateStr}`;
 };

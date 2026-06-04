@@ -2,6 +2,7 @@
   "school_timings": [
     {
       "group": "Pre-KG",
+      "class_range": ["Pre-KG"],
       "days": "Monday–Friday",
       "start": "9:30 AM",
       "end": "1:00 PM",
@@ -50,6 +51,7 @@
     },
     {
       "group": "LKG & UKG",
+      "class_range": ["LKG", "UKG"],
       "days": "Monday–Friday",
       "start": "8:45 AM",
       "end": "1:00 PM",
@@ -106,6 +108,7 @@
     },
     {
       "group": "Class I & II",
+      "class_range": ["I", "II"],
       "days": "Monday–Friday",
       "start": "8:20 AM",
       "end": "3:10 PM",
@@ -174,6 +177,7 @@
     },
     {
       "group": "Class III–XII",
+      "class_range": ["III","IV","V","VI","VII","VIII","IX","X","XI","XII"],
       "days": "Monday–Friday",
       "start": "8:20 AM",
       "end": "3:35 PM",
@@ -242,6 +246,7 @@
     },
     {
       "group": "Class III–XII (Saturday)",
+      "class_range": ["III","IV","V","VI","VII","VIII","IX","X","XI","XII"],
       "days": "Saturday",
       "start": "8:20 AM",
       "end": "1:00 PM",
@@ -290,6 +295,7 @@
     },
     {
       "group": "Office Hours",
+      "class_range": [],
       "days": "Monday–Friday",
       "start": "9:00 AM",
       "end": "5:00 PM",
@@ -297,6 +303,7 @@
     },
     {
       "group": "Office Hours (Saturday)",
+      "class_range": [],
       "days": "Saturday",
       "start": "9:00 AM",
       "end": "1:00 PM",
@@ -304,6 +311,7 @@
     },
     {
       "group": "After School Activity (ASA)",
+      "class_range": ["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"],
       "days": "Monday–Friday",
       "start": "3:45 PM",
       "end": "4:45 PM",
