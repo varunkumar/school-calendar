@@ -54,24 +54,24 @@ const EventModal = ({ event, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
         <div className="p-6">
           {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center">
               {getEventIcon(event.category || event.type)}
               <div className="ml-3">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800 mb-2">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 mb-2">
                   {getEventTypeLabel(event.category || event.type)}
                 </span>
-                <h2 className="text-xl font-bold text-gray-900">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                   {event.title}
                 </h2>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 transition-colors"
+              className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             >
               <X size={24} />
             </button>
@@ -79,20 +79,20 @@ const EventModal = ({ event, onClose }) => {
 
           {/* Event Details */}
           <div className="space-y-4">
-            <div className="flex items-center text-gray-600">
+            <div className="flex items-center text-gray-600 dark:text-gray-300">
               <Calendar className="h-5 w-5 mr-3" />
               <span>{formatEventDate(event.start, event.end)}</span>
             </div>
 
             {event.time && (
-              <div className="flex items-center text-gray-600">
+              <div className="flex items-center text-gray-600 dark:text-gray-300">
                 <Clock className="h-5 w-5 mr-3" />
                 <span>{event.time}</span>
               </div>
             )}
 
             {event.location && (
-              <div className="flex items-center text-gray-600">
+              <div className="flex items-center text-gray-600 dark:text-gray-300">
                 <MapPin className="h-5 w-5 mr-3" />
                 <span>{event.location}</span>
               </div>
@@ -100,17 +100,17 @@ const EventModal = ({ event, onClose }) => {
 
             {event.description && (
               <div className="mt-4">
-                <h3 className="text-sm font-semibold text-gray-900 mb-2">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                   Description
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                   {event.description}
                 </p>
               </div>
             )}
 
             {event.classes && (
-              <div className="flex items-start text-gray-600">
+              <div className="flex items-start text-gray-600 dark:text-gray-300">
                 <School className="h-5 w-5 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-sm">{event.classes}</span>
               </div>
@@ -118,26 +118,26 @@ const EventModal = ({ event, onClose }) => {
 
             {event.participants && (
               <div className="mt-4">
-                <h3 className="text-sm font-semibold text-gray-900 mb-2">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                   Participants
                 </h3>
-                <p className="text-gray-600 text-sm">{event.participants}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">{event.participants}</p>
               </div>
             )}
 
             {event.notes && (
               <div className="mt-4">
-                <h3 className="text-sm font-semibold text-gray-900 mb-2">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                   Additional Notes
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                   {event.notes}
                 </p>
               </div>
             )}
 
             {event.category === 'fee' && (
-              <div className="mt-4 bg-red-50 rounded-lg p-4">
+              <div className="mt-4 bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
                 <h3 className="text-sm font-semibold text-red-900 mb-2">Fee Details</h3>
                 <div className="space-y-1 text-sm text-red-800">
                   <p><span className="font-medium">Term:</span> {event.feeTerm}</p>
@@ -148,7 +148,7 @@ const EventModal = ({ event, onClose }) => {
               </div>
             )}
             {event.category === 'ptm' && (
-              <div className="mt-4 bg-violet-50 rounded-lg p-4">
+              <div className="mt-4 bg-violet-50 dark:bg-violet-900/20 rounded-lg p-4">
                 <h3 className="text-sm font-semibold text-violet-900 mb-2">Meeting Details</h3>
                 <div className="space-y-1 text-sm text-violet-800">
                   <p><span className="font-medium">Type:</span> {event.ptmType}</p>
@@ -160,7 +160,7 @@ const EventModal = ({ event, onClose }) => {
           </div>
 
           {/* Footer */}
-          <div className="mt-6 pt-4 border-t border-gray-200">
+          <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
             <button
               onClick={onClose}
               className="w-full bg-primary-600 text-white py-2 px-4 rounded-lg hover:bg-primary-700 transition-colors font-medium"

@@ -47,8 +47,8 @@ const EventList = ({ events, onEventClick, activeFilter }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
-      <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+      <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center">
         <Calendar className="h-5 w-5 mr-2 text-primary-600" />
         Upcoming Events
       </h2>
@@ -56,7 +56,7 @@ const EventList = ({ events, onEventClick, activeFilter }) => {
       {upcomingEvents.length === 0 ? (
         <div className="text-center py-8">
           <Calendar className="h-12 w-12 text-gray-300 mx-auto mb-3" />
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
             No upcoming events
             {activeFilter !== 'all' && ` for ${activeFilter}`}
           </p>
@@ -74,29 +74,29 @@ const EventList = ({ events, onEventClick, activeFilter }) => {
               <div className="flex items-start justify-between">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center mb-1">
-                    <span className="inline-block px-2 py-1 rounded text-xs font-medium bg-white text-gray-700 mr-2">
+                    <span className="inline-block px-2 py-1 rounded text-xs font-medium bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 mr-2">
                       {getEventTypeLabel(event.category)}
                     </span>
                   </div>
 
-                  <h3 className="text-sm font-semibold text-gray-900 truncate mb-1">
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white truncate mb-1">
                     {event.title}
                   </h3>
 
-                  <div className="flex items-center text-xs text-gray-600 mb-1">
+                  <div className="flex items-center text-xs text-gray-600 dark:text-gray-300 mb-1">
                     <Calendar className="h-3 w-3 mr-1" />
                     <span>{formatEventDate(event.date)}</span>
                   </div>
 
                   {event.time && (
-                    <div className="flex items-center text-xs text-gray-600 mb-1">
+                    <div className="flex items-center text-xs text-gray-600 dark:text-gray-300 mb-1">
                       <Clock className="h-3 w-3 mr-1" />
                       <span>{event.time}</span>
                     </div>
                   )}
 
                   {event.classes && (
-                    <div className="flex items-center text-xs text-gray-600">
+                    <div className="flex items-center text-xs text-gray-600 dark:text-gray-300">
                       <School className="h-3 w-3 mr-1" />
                       <span className="truncate">{event.classes}</span>
                     </div>
@@ -111,8 +111,8 @@ const EventList = ({ events, onEventClick, activeFilter }) => {
       )}
 
       {upcomingEvents.length > 0 && (
-        <div className="mt-4 pt-4 border-t border-gray-200">
-          <p className="text-xs text-gray-500 text-center">
+        <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
             Showing next {upcomingEvents.length} events
           </p>
         </div>

@@ -76,13 +76,13 @@ const Dashboard = ({ events }) => {
   ];
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mx-auto max-w-7xl">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 md:p-6 mx-auto max-w-7xl">
       <div className="mb-6 text-center md:text-left">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900 flex items-center justify-center md:justify-start">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white flex items-center justify-center md:justify-start">
           <TrendingUp className="h-5 w-5 md:h-6 md:w-6 mr-2 md:mr-3 text-primary-600" />
           Overview
         </h2>
-        <p className="text-gray-600 mt-2 text-sm md:text-base">
+        <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm md:text-base">
           School year 2026-2027 statistics and insights
         </p>
       </div>
@@ -92,7 +92,7 @@ const Dashboard = ({ events }) => {
         {statCards.map((stat, index) => (
           <div
             key={index}
-            className={`${stat.bgColor} rounded-xl p-4 md:p-6 border border-gray-100`}
+            className={`${stat.bgColor} rounded-xl p-4 md:p-6 border border-gray-100 dark:border-gray-700`}
           >
             <div className="flex items-center justify-between">
               <div className="min-w-0 flex-1">
@@ -101,7 +101,7 @@ const Dashboard = ({ events }) => {
                 >
                   {stat.title}
                 </p>
-                <p className="text-2xl md:text-3xl font-bold text-gray-900 mt-1 md:mt-2">
+                <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mt-1 md:mt-2">
                   {stat.value}
                 </p>
               </div>

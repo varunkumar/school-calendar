@@ -35,7 +35,7 @@ const CategorySection = ({
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
       <div
         className={`${color} px-6 py-4 cursor-pointer`}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -61,7 +61,7 @@ const CategorySection = ({
           {events.length === 0 ? (
             <div className="text-center py-8">
               <Icon className="h-12 w-12 text-gray-300 mx-auto mb-3" />
-              <p className="text-gray-500">No events in this category</p>
+              <p className="text-gray-500 dark:text-gray-400">No events in this category</p>
             </div>
           ) : (
             <div className="space-y-4">
@@ -69,16 +69,16 @@ const CategorySection = ({
                 <div
                   key={index}
                   onClick={() => onEventClick(event)}
-                  className="p-4 border border-gray-200 rounded-lg hover:shadow-md cursor-pointer transition-all duration-200 hover:border-gray-300"
+                  className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md cursor-pointer transition-all duration-200 hover:border-gray-300 dark:hover:border-gray-600"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 mb-2">
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
                         {event.title}
                       </h4>
 
                       <div className="space-y-1">
-                        <div className="flex items-center text-sm text-gray-600">
+                        <div className="flex items-center text-sm text-gray-600 dark:text-gray-300">
                           <Calendar className="h-4 w-4 mr-2" />
                           <span>
                             {formatEventDate(event.date, event.endDate)}
@@ -86,14 +86,14 @@ const CategorySection = ({
                         </div>
 
                         {event.time && (
-                          <div className="flex items-center text-sm text-gray-600">
+                          <div className="flex items-center text-sm text-gray-600 dark:text-gray-300">
                             <Clock className="h-4 w-4 mr-2" />
                             <span>{event.time}</span>
                           </div>
                         )}
 
                         {event.classes && (
-                          <div className="flex items-center text-sm text-gray-600">
+                          <div className="flex items-center text-sm text-gray-600 dark:text-gray-300">
                             <School className="h-4 w-4 mr-2" />
                             <span>{event.classes}</span>
                           </div>
@@ -101,7 +101,7 @@ const CategorySection = ({
                       </div>
 
                       {event.description && (
-                        <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 line-clamp-2">
                           {event.description}
                         </p>
                       )}
@@ -111,8 +111,8 @@ const CategorySection = ({
               ))}
 
               {events.length > 5 && (
-                <div className="text-center pt-4 border-t border-gray-200">
-                  <p className="text-sm text-gray-500">
+                <div className="text-center pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
                     ... and {events.length - 5} more events
                   </p>
                 </div>

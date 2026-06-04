@@ -26,10 +26,10 @@ const SectionsView = ({ events, onEventClick }) => {
   return (
     <div className="space-y-8">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
           Academic Calendar Sections
         </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           Explore our comprehensive academic calendar organized by categories.
           Click on any section to view detailed information about upcoming
           events.
@@ -40,7 +40,7 @@ const SectionsView = ({ events, onEventClick }) => {
         {sections.map((section, index) => (
           <div key={index}>
             <div className="mb-4">
-              <p className="text-sm text-gray-600">{section.description}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{section.description}</p>
             </div>
             <CategorySection
               title={section.title}
