@@ -3,7 +3,7 @@ import {
   ChevronDown,
   ChevronRight,
   Clock,
-  MapPin,
+  School,
 } from 'lucide-react';
 import moment from 'moment';
 import { useState } from 'react';
@@ -94,7 +94,7 @@ const CategorySection = ({
 
                         {event.classes && (
                           <div className="flex items-center text-sm text-gray-600">
-                            <MapPin className="h-4 w-4 mr-2" />
+                            <School className="h-4 w-4 mr-2" />
                             <span>{event.classes}</span>
                           </div>
                         )}

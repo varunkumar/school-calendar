@@ -1,4 +1,4 @@
-import { Calendar, ChevronRight, Clock, MapPin } from 'lucide-react';
+import { Calendar, ChevronRight, Clock, School } from 'lucide-react';
 import moment from 'moment';
 
 const EventList = ({ events, onEventClick, activeFilter }) => {
@@ -117,7 +117,7 @@ const EventList = ({ events, onEventClick, activeFilter }) => {
 
                   {event.classes && (
                     <div className="flex items-center text-xs text-gray-600">
-                      <MapPin className="h-3 w-3 mr-1" />
+                      <School className="h-3 w-3 mr-1" />
                       <span className="truncate">{event.classes}</span>
                     </div>
                   )}

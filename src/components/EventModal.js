@@ -1,4 +1,4 @@
-import { BookOpen, Calendar, Clock, CreditCard, GraduationCap, MapPin, Plane, Users, X } from 'lucide-react';
+import { BookOpen, Calendar, Clock, CreditCard, MapPin, Plane, School, Users, X } from 'lucide-react';
 import moment from 'moment';
 import React from 'react';
 import { trackAcademicEngagement } from '../utils/analytics';
@@ -111,7 +111,7 @@ const EventModal = ({ event, onClose }) => {
 
             {event.classes && (
               <div className="flex items-start text-gray-600">
-                <GraduationCap className="h-5 w-5 mr-3 mt-0.5 flex-shrink-0" />
+                <School className="h-5 w-5 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-sm">{event.classes}</span>
               </div>
             )}
