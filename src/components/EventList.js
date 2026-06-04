@@ -11,49 +11,29 @@ const EventList = ({ events, onEventClick, activeFilter }) => {
     .slice(0, 10);
 
   const getEventColor = (category) => {
-    switch (category) {
-      case 'holiday':
-        return 'border-l-red-500 bg-red-50';
-      case 'assembly':
-        return 'border-l-green-500 bg-green-50';
-      case 'vacation':
-        return 'border-l-orange-500 bg-orange-50';
-      case 'academic':
-        return 'border-l-blue-500 bg-blue-50';
-      case 'exam':
-        return 'border-l-purple-500 bg-purple-50';
-      case 'competition':
-        return 'border-l-orange-600 bg-orange-50';
-      case 'activity':
-        return 'border-l-cyan-500 bg-cyan-50';
-      case 'trip':
-        return 'border-l-lime-500 bg-lime-50';
-      default:
-        return 'border-l-gray-500 bg-gray-50';
-    }
+    const styles = {
+      holiday:  'border-l-red-500 bg-red-50',
+      vacation: 'border-l-amber-500 bg-amber-50',
+      academic: 'border-l-blue-500 bg-blue-50',
+      exam:     'border-l-violet-500 bg-violet-50',
+      activity: 'border-l-cyan-500 bg-cyan-50',
+      fee:      'border-l-red-600 bg-red-100',
+      ptm:      'border-l-violet-700 bg-violet-50',
+    };
+    return styles[category] || 'border-l-gray-400 bg-gray-50';
   };
 
   const getEventTypeLabel = (category) => {
-    switch (category) {
-      case 'holiday':
-        return 'Holiday';
-      case 'assembly':
-        return 'Assembly';
-      case 'vacation':
-        return 'Vacation';
-      case 'academic':
-        return 'Academic';
-      case 'exam':
-        return 'Exam';
-      case 'competition':
-        return 'Competition';
-      case 'activity':
-        return 'Activity';
-      case 'trip':
-        return 'Trip';
-      default:
-        return 'Event';
-    }
+    const labels = {
+      holiday:  'Holidays',
+      vacation: 'Vacation',
+      academic: 'Academic',
+      exam:     'Exams',
+      activity: 'Activities',
+      fee:      'Fee',
+      ptm:      'PTM',
+    };
+    return labels[category] || 'Event';
   };
 
   const formatEventDate = (date) => {
