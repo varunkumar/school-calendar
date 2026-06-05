@@ -177,7 +177,18 @@
     },
     {
       "group": "Class III–XII",
-      "class_range": ["III","IV","V","VI","VII","VIII","IX","X","XI","XII"],
+      "class_range": [
+        "III",
+        "IV",
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX",
+        "X",
+        "XI",
+        "XII"
+      ],
       "days": "Monday–Friday",
       "start": "8:20 AM",
       "end": "3:35 PM",
@@ -195,11 +206,11 @@
           "time": "8:45 AM – 9:25 AM"
         },
         {
-          "label": "2nd Periods",
+          "label": "2nd Period",
           "time": "9:25 AM – 10:05 AM"
         },
         {
-          "label": "3rd Periods",
+          "label": "3rd Period",
           "time": "10:05 AM – 10:45 AM"
         },
         {
@@ -246,7 +257,18 @@
     },
     {
       "group": "Class III–XII (Saturday)",
-      "class_range": ["III","IV","V","VI","VII","VIII","IX","X","XI","XII"],
+      "class_range": [
+        "III",
+        "IV",
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX",
+        "X",
+        "XI",
+        "XII"
+      ],
       "days": "Saturday",
       "start": "8:20 AM",
       "end": "1:00 PM",
@@ -264,11 +286,11 @@
           "time": "8:45 AM – 9:25 AM"
         },
         {
-          "label": "2nd Periods",
+          "label": "2nd Period",
           "time": "9:25 AM – 10:05 AM"
         },
         {
-          "label": "3rd Periods",
+          "label": "3rd Period",
           "time": "10:05 AM – 10:45 AM"
         },
         {
@@ -311,7 +333,20 @@
     },
     {
       "group": "After School Activity (ASA)",
-      "class_range": ["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"],
+      "class_range": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX",
+        "X",
+        "XI",
+        "XII"
+      ],
       "days": "Monday–Friday",
       "start": "3:45 PM",
       "end": "4:45 PM",
@@ -321,189 +356,140 @@
   "fee_schedule": [
     {
       "term": "Term 1",
-      "class_range": [
-        "Pre-KG"
-      ],
+      "class_range": ["Pre-KG"],
       "amount": 34700,
       "cutoff_start": "2026-04-01",
       "cutoff_end": "2026-04-12"
     },
     {
       "term": "Term 1",
-      "class_range": [
-        "LKG",
-        "UKG"
-      ],
+      "class_range": ["LKG", "UKG"],
       "amount": 44700,
       "cutoff_start": "2026-04-01",
       "cutoff_end": "2026-04-12"
     },
     {
       "term": "Term 1",
-      "class_range": [
-        "I",
-        "II"
-      ],
+      "class_range": ["I", "II"],
       "amount": 48700,
       "cutoff_start": "2026-03-02",
       "cutoff_end": "2026-03-14"
     },
     {
       "term": "Term 1",
-      "class_range": [
-        "III",
-        "IV",
-        "V"
-      ],
+      "class_range": ["III", "IV", "V"],
       "amount": 48950,
       "cutoff_start": "2026-03-02",
       "cutoff_end": "2026-03-14"
     },
     {
       "term": "Term 1",
-      "class_range": [
-        "VI",
-        "VII",
-        "VIII"
-      ],
+      "class_range": ["VI", "VII", "VIII"],
       "amount": 50950,
       "cutoff_start": "2026-03-02",
       "cutoff_end": "2026-03-14"
     },
     {
       "term": "Term 1",
-      "class_range": [
-        "IX",
-        "X"
-      ],
+      "class_range": ["IX"],
       "amount": 51000,
       "cutoff_start": "2026-03-02",
       "cutoff_end": "2026-03-14"
     },
     {
       "term": "Term 1",
-      "class_range": [
-        "XI",
-        "XII"
-      ],
+      "class_range": ["X"],
+      "amount": 51000,
+      "cutoff_start": "2026-02-13",
+      "cutoff_end": "2026-02-25"
+    },
+    {
+      "term": "Term 1",
+      "class_range": ["XI"],
       "amount": 51700,
       "cutoff_start": "2026-03-02",
       "cutoff_end": "2026-03-14"
     },
     {
+      "term": "Term 1",
+      "class_range": ["XII"],
+      "amount": 51700,
+      "cutoff_start": "2026-02-13",
+      "cutoff_end": "2026-02-25"
+    },
+    {
       "term": "Term 2",
-      "class_range": [
-        "Pre-KG"
-      ],
+      "class_range": ["Pre-KG"],
       "amount": 34700,
       "cutoff_start": "2026-10-01",
       "cutoff_end": "2026-10-12"
     },
     {
       "term": "Term 2",
-      "class_range": [
-        "LKG",
-        "UKG"
-      ],
+      "class_range": ["LKG", "UKG"],
       "amount": 44700,
       "cutoff_start": "2026-10-01",
       "cutoff_end": "2026-10-12"
     },
     {
       "term": "Term 2",
-      "class_range": [
-        "I",
-        "II"
-      ],
+      "class_range": ["I", "II"],
       "amount": 48700,
       "cutoff_start": "2026-10-01",
       "cutoff_end": "2026-10-12"
     },
     {
       "term": "Term 2",
-      "class_range": [
-        "III",
-        "IV",
-        "V"
-      ],
+      "class_range": ["III", "IV", "V"],
       "amount": 48950,
       "cutoff_start": "2026-10-01",
       "cutoff_end": "2026-10-12"
     },
     {
       "term": "Term 2",
-      "class_range": [
-        "VI",
-        "VII",
-        "VIII"
-      ],
+      "class_range": ["VI", "VII", "VIII"],
       "amount": 50950,
       "cutoff_start": "2026-10-01",
       "cutoff_end": "2026-10-12"
     },
     {
       "term": "Term 2",
-      "class_range": [
-        "IX",
-        "X"
-      ],
+      "class_range": ["IX", "X"],
       "amount": 51000,
       "cutoff_start": "2026-10-01",
       "cutoff_end": "2026-10-12"
     },
     {
       "term": "Term 2",
-      "class_range": [
-        "XI",
-        "XII"
-      ],
+      "class_range": ["XI", "XII"],
       "amount": 51700,
       "cutoff_start": "2026-10-01",
       "cutoff_end": "2026-10-12"
     },
     {
       "term": "Books & Uniforms",
-      "class_range": [
-        "Pre-KG"
-      ],
+      "class_range": ["Pre-KG"],
       "amount": 11500,
       "cutoff_start": "2027-02-01",
       "cutoff_end": "2027-02-12"
     },
     {
       "term": "Books & Uniforms",
-      "class_range": [
-        "LKG",
-        "UKG"
-      ],
+      "class_range": ["LKG", "UKG"],
       "amount": 18700,
       "cutoff_start": "2027-02-01",
       "cutoff_end": "2027-02-12"
     },
     {
       "term": "Books & Uniforms",
-      "class_range": [
-        "I",
-        "II",
-        "III",
-        "IV",
-        "V",
-        "VI",
-        "VII",
-        "VIII"
-      ],
+      "class_range": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"],
       "amount": 19200,
       "cutoff_start": "2027-02-01",
       "cutoff_end": "2027-02-12"
     },
     {
       "term": "Books & Uniforms",
-      "class_range": [
-        "IX",
-        "X",
-        "XI",
-        "XII"
-      ],
+      "class_range": ["IX", "X", "XI", "XII"],
       "amount": 19700,
       "cutoff_start": "2027-02-01",
       "cutoff_end": "2027-02-12"
@@ -530,21 +516,13 @@
         "XI",
         "XII"
       ],
-      "dates": [
-        "2026-07-31",
-        "2026-08-01"
-      ]
+      "dates": ["2026-07-31", "2026-08-01"]
     },
     {
       "type": "Custodian Meeting",
       "term": "Term 1",
-      "class_range": [
-        "X",
-        "XII"
-      ],
-      "dates": [
-        "2026-09-26"
-      ]
+      "class_range": ["X", "XII"],
+      "dates": ["2026-09-26"]
     },
     {
       "type": "Parent Teacher Meeting",
@@ -566,21 +544,13 @@
         "XI",
         "XII"
       ],
-      "dates": [
-        "2026-10-30",
-        "2026-10-31"
-      ]
+      "dates": ["2026-10-30", "2026-10-31"]
     },
     {
       "type": "Custodian Meeting",
       "term": "Term 1",
-      "class_range": [
-        "X",
-        "XII"
-      ],
-      "dates": [
-        "2026-11-28"
-      ]
+      "class_range": ["X", "XII"],
+      "dates": ["2026-11-28"]
     },
     {
       "type": "Parent Interactive Meeting",
@@ -602,10 +572,7 @@
         "XI",
         "XII"
       ],
-      "dates": [
-        "2026-12-11",
-        "2026-12-12"
-      ]
+      "dates": ["2026-12-11", "2026-12-12"]
     },
     {
       "type": "Parent Teacher Meeting",
@@ -622,346 +589,228 @@
         "IX",
         "XI"
       ],
-      "dates": [
-        "2027-02-26",
-        "2027-02-27"
-      ]
+      "dates": ["2027-02-26", "2027-02-27"]
     },
     {
       "type": "Parent Teacher Meeting",
       "term": "Term 2",
-      "class_range": [
-        "Pre-KG",
-        "LKG",
-        "UKG"
-      ],
-      "dates": [
-        "2027-04-15"
-      ]
+      "class_range": ["Pre-KG", "LKG", "UKG"],
+      "dates": ["2027-04-15"]
     }
   ],
   "exam_schedule": [
     {
       "assessment": "PA 1",
-      "class_range": [
-        "X"
-      ],
+      "class_range": ["X"],
       "date_start": "2026-04-08",
       "date_end": "2026-04-17",
       "result_date": "2026-04-24"
     },
     {
       "assessment": "Unit Test 1",
-      "class_range": [
-        "XII"
-      ],
+      "class_range": ["XII"],
       "date_start": "2026-04-08",
       "date_end": "2026-04-17",
       "result_date": "2026-04-24"
     },
     {
       "assessment": "Diagnostic Assessment",
-      "class_range": [
-        "I",
-        "II"
-      ],
+      "class_range": ["I", "II"],
       "date_start": "2026-07-08",
       "date_end": "2026-07-15",
       "result_date": "2026-07-22"
     },
     {
       "assessment": "FA 1",
-      "class_range": [
-        "III",
-        "IV",
-        "V"
-      ],
+      "class_range": ["III", "IV", "V"],
       "date_start": "2026-07-08",
       "date_end": "2026-07-15",
       "result_date": "2026-07-22"
     },
     {
       "assessment": "PA 1",
-      "class_range": [
-        "VI",
-        "VII",
-        "VIII",
-        "IX"
-      ],
+      "class_range": ["VI", "VII", "VIII", "IX"],
       "date_start": "2026-07-08",
       "date_end": "2026-07-15",
       "result_date": "2026-07-22"
     },
     {
       "assessment": "PA 2",
-      "class_range": [
-        "X"
-      ],
+      "class_range": ["X"],
       "date_start": "2026-07-08",
       "date_end": "2026-07-15",
       "result_date": "2026-07-22"
     },
     {
       "assessment": "Unit Test 1",
-      "class_range": [
-        "XI"
-      ],
+      "class_range": ["XI"],
       "date_start": "2026-07-08",
       "date_end": "2026-07-15",
       "result_date": "2026-07-22"
     },
     {
       "assessment": "Unit Test 2",
-      "class_range": [
-        "XII"
-      ],
+      "class_range": ["XII"],
       "date_start": "2026-07-08",
       "date_end": "2026-07-15",
       "result_date": "2026-07-22"
     },
     {
       "assessment": "Diagnostic Assessment",
-      "class_range": [
-        "I",
-        "II"
-      ],
+      "class_range": ["I", "II"],
       "date_start": "2026-08-17",
       "date_end": "2026-08-25",
       "result_date": "2026-09-01"
     },
     {
       "assessment": "FA 2",
-      "class_range": [
-        "III",
-        "IV",
-        "V"
-      ],
+      "class_range": ["III", "IV", "V"],
       "date_start": "2026-08-17",
       "date_end": "2026-08-25",
       "result_date": "2026-09-01"
     },
     {
       "assessment": "PA 2",
-      "class_range": [
-        "VI",
-        "VII",
-        "VIII",
-        "IX"
-      ],
+      "class_range": ["VI", "VII", "VIII", "IX"],
       "date_start": "2026-08-17",
       "date_end": "2026-08-25",
       "result_date": "2026-09-01"
     },
     {
       "assessment": "PA 3",
-      "class_range": [
-        "X"
-      ],
+      "class_range": ["X"],
       "date_start": "2026-08-17",
       "date_end": "2026-08-25",
       "result_date": "2026-09-01"
     },
     {
       "assessment": "Unit Test 2",
-      "class_range": [
-        "XI"
-      ],
+      "class_range": ["XI"],
       "date_start": "2026-08-17",
       "date_end": "2026-08-25",
       "result_date": "2026-09-01"
     },
     {
       "assessment": "Unit Test 3",
-      "class_range": [
-        "XII"
-      ],
+      "class_range": ["XII"],
       "date_start": "2026-08-17",
       "date_end": "2026-08-25",
       "result_date": "2026-09-01"
     },
     {
       "assessment": "Diagnostic Assessment",
-      "class_range": [
-        "Pre-KG",
-        "LKG",
-        "UKG",
-        "I",
-        "II"
-      ],
+      "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
       "date_start": "2026-10-05",
       "date_end": "2026-10-16",
       "result_date": "2026-10-29"
     },
     {
       "assessment": "SA 1",
-      "class_range": [
-        "III",
-        "IV",
-        "V",
-        "VI",
-        "VII"
-      ],
+      "class_range": ["III", "IV", "V", "VI", "VII"],
       "date_start": "2026-10-05",
       "date_end": "2026-10-16",
       "result_date": "2026-10-29"
     },
     {
       "assessment": "Mid Term Exam",
-      "class_range": [
-        "IX",
-        "X",
-        "XI",
-        "XII"
-      ],
+      "class_range": ["IX", "X", "XI", "XII"],
       "date_start": "2026-10-05",
       "date_end": "2026-10-16",
       "result_date": "2026-10-29"
     },
     {
       "assessment": "Revision Exam 1",
-      "class_range": [
-        "X",
-        "XII"
-      ],
+      "class_range": ["X", "XII"],
       "date_start": "2026-11-11",
       "date_end": "2026-11-20",
       "result_date": "2026-11-26"
     },
     {
       "assessment": "Diagnostic Assessment",
-      "class_range": [
-        "I",
-        "II"
-      ],
+      "class_range": ["I", "II"],
       "date_start": "2026-11-24",
       "date_end": "2026-12-02",
       "result_date": "2026-12-09"
     },
     {
       "assessment": "FA 3",
-      "class_range": [
-        "III",
-        "IV",
-        "V"
-      ],
+      "class_range": ["III", "IV", "V"],
       "date_start": "2026-11-24",
       "date_end": "2026-12-02",
       "result_date": "2026-12-09"
     },
     {
       "assessment": "PA 3",
-      "class_range": [
-        "VI",
-        "VII",
-        "VIII",
-        "IX"
-      ],
+      "class_range": ["VI", "VII", "VIII", "IX"],
       "date_start": "2026-11-24",
       "date_end": "2026-12-02",
       "result_date": "2026-12-09"
     },
     {
       "assessment": "Unit Test 3",
-      "class_range": [
-        "XI"
-      ],
+      "class_range": ["XI"],
       "date_start": "2026-11-24",
       "date_end": "2026-12-02",
       "result_date": "2026-12-09"
     },
     {
       "assessment": "Revision Exam 2",
-      "class_range": [
-        "X",
-        "XII"
-      ],
+      "class_range": ["X", "XII"],
       "date_start": "2026-12-01",
       "date_end": "2026-12-10",
       "result_date": "2026-12-16"
     },
     {
       "assessment": "Model Practical",
-      "class_range": [
-        "X",
-        "XII"
-      ],
+      "class_range": ["X", "XII"],
       "date_start": "2026-12-25",
-      "date_end": "2027-01-15"
+      "date_end": "2027-01-05"
     },
     {
       "assessment": "Diagnostic Assessment",
-      "class_range": [
-        "I",
-        "II"
-      ],
+      "class_range": ["I", "II"],
       "date_start": "2027-02-08",
       "date_end": "2027-02-16",
       "result_date": "2027-02-23"
     },
     {
       "assessment": "FA 4",
-      "class_range": [
-        "III",
-        "IV",
-        "V"
-      ],
+      "class_range": ["III", "IV", "V"],
       "date_start": "2027-02-08",
       "date_end": "2027-02-16",
       "result_date": "2027-02-23"
     },
     {
       "assessment": "PA 4",
-      "class_range": [
-        "VI",
-        "VII",
-        "VIII",
-        "IX"
-      ],
+      "class_range": ["VI", "VII", "VIII"],
       "date_start": "2027-02-08",
       "date_end": "2027-02-16",
       "result_date": "2027-02-23"
     },
     {
       "assessment": "Year End Exam",
-      "class_range": [
-        "IX",
-        "XI"
-      ],
+      "class_range": ["IX", "XI"],
       "date_start": "2027-02-11",
       "date_end": "2027-02-22",
       "result_date": "2027-02-27"
     },
     {
       "assessment": "Diagnostic Assessment",
-      "class_range": [
-        "I",
-        "II"
-      ],
+      "class_range": ["I", "II"],
       "date_start": "2027-03-11",
       "date_end": "2027-03-22",
       "result_date": "2027-03-29"
     },
     {
       "assessment": "SA 2",
-      "class_range": [
-        "III",
-        "IV",
-        "V",
-        "VI",
-        "VII",
-        "VIII"
-      ],
+      "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
       "date_start": "2027-03-11",
       "date_end": "2027-03-22",
       "result_date": "2027-03-29"
     },
     {
       "assessment": "Diagnostic Assessment",
-      "class_range": [
-        "Pre-KG",
-        "LKG",
-        "UKG"
-      ],
+      "class_range": ["Pre-KG", "LKG", "UKG"],
       "date_start": "2027-03-31",
       "date_end": "2027-04-07"
     }
@@ -982,6 +831,10 @@
     {
       "name": "Krishna Jayanti",
       "date": "2026-09-04"
+    },
+    {
+      "name": "Ganesh Chaturthi",
+      "date": "2026-09-14"
     },
     {
       "name": "Gandhi Jayanthi",
@@ -1042,7 +895,7 @@
   ],
   "vacations": [
     {
-      "name": "Term 1 Holiday",
+      "name": "Term 1 Holidays",
       "start": "2026-10-17",
       "end": "2026-10-25",
       "class_range": [
@@ -1064,7 +917,7 @@
       ]
     },
     {
-      "name": "Term 2 Holiday",
+      "name": "Term 2 Holidays",
       "start": "2026-12-23",
       "end": "2027-01-03",
       "class_range": [
@@ -1089,35 +942,19 @@
       "name": "Summer Vacation",
       "start": "2027-04-17",
       "end": "2027-06-08",
-      "class_range": [
-        "Pre-KG",
-        "LKG",
-        "UKG"
-      ]
+      "class_range": ["Pre-KG", "LKG", "UKG"]
     },
     {
       "name": "Summer Vacation",
       "start": "2027-04-28",
       "end": "2027-06-03",
-      "class_range": [
-        "II",
-        "III",
-        "IV",
-        "V",
-        "VI",
-        "VII",
-        "VIII",
-        "IX"
-      ]
+      "class_range": ["II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
     },
     {
       "name": "Summer Vacation",
       "start": "2027-05-01",
       "end": "2027-06-03",
-      "class_range": [
-        "X",
-        "XII"
-      ]
+      "class_range": ["X", "XII"]
     }
   ],
   "special_assemblies": [
@@ -1275,42 +1112,22 @@
         },
         {
           "name": "Class Competition – Choral Recitation English",
-          "class_range": [
-            "I",
-            "II",
-            "III",
-            "IV",
-            "V"
-          ],
+          "class_range": ["I", "II", "III", "IV", "V"],
           "category": "activity"
         },
         {
           "name": "Class Competition – Poster Making",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII"
-          ],
+          "class_range": ["VI", "VII", "VIII"],
           "category": "activity"
         },
         {
           "name": "Class Competition – Think Tank",
-          "class_range": [
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["IX", "X", "XI", "XII"],
           "category": "activity"
         },
         {
           "name": "Field Trip",
-          "class_range": [
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["IX", "X", "XI", "XII"],
           "category": "activity"
         }
       ],
@@ -1341,10 +1158,7 @@
           "events": [
             {
               "name": "School Reopens",
-              "class_range": [
-                "I",
-                "II"
-              ],
+              "class_range": ["I", "II"],
               "category": "academic"
             }
           ]
@@ -1377,31 +1191,17 @@
           "events": [
             {
               "name": "School Reopens UKG",
-              "class_range": [
-                "UKG"
-              ],
+              "class_range": ["UKG"],
               "category": "academic"
             },
             {
               "name": "Assignment Submission Term 1",
-              "class_range": [
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["II", "III", "IV", "V", "VI", "VII", "VIII"],
               "category": "academic"
             },
             {
               "name": "Record & Project Submission",
-              "class_range": [
-                "IX",
-                "X",
-                "XII"
-              ],
+              "class_range": ["IX", "X", "XII"],
               "category": "academic"
             }
           ]
@@ -1411,9 +1211,7 @@
           "events": [
             {
               "name": "School Reopens LKG",
-              "class_range": [
-                "LKG"
-              ],
+              "class_range": ["LKG"],
               "category": "academic"
             }
           ]
@@ -1423,15 +1221,7 @@
           "events": [
             {
               "name": "Nominations of Students Council",
-              "class_range": [
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
+              "class_range": ["VI", "VII", "VIII", "IX", "X", "XI", "XII"],
               "category": "academic"
             }
           ]
@@ -1441,39 +1231,13 @@
           "events": [
             {
               "name": "School Reopens Pre-KG",
-              "class_range": [
-                "Pre-KG"
-              ],
+              "class_range": ["Pre-KG"],
               "category": "academic"
             },
             {
               "name": "Term 1 PBL Commences",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "16",
-          "events": [
-            {
-              "name": "Term 1 PBL Commences",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "exam"
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "academic"
             }
           ]
         },
@@ -1503,14 +1267,7 @@
             },
             {
               "name": "Club Activities",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "activity"
             }
           ]
@@ -1562,11 +1319,7 @@
           "events": [
             {
               "name": "KG - Class Activity: Rainbow Week (Red & Orange)",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "activity"
             }
           ]
@@ -1576,11 +1329,7 @@
           "events": [
             {
               "name": "KG - Class Activity: Rainbow Week (Blue / Indigo / Violet)",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "activity"
             }
           ]
@@ -1590,11 +1339,7 @@
           "events": [
             {
               "name": "KG - Class Activity: Rainbow Week (Yellow)",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "activity"
             }
           ]
@@ -1604,11 +1349,7 @@
           "events": [
             {
               "name": "KG - Class Activity: Rainbow Week (Green)",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "activity"
             },
             {
@@ -1631,32 +1372,6 @@
                 "XII"
               ],
               "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "26",
-          "events": [
-            {
-              "name": "Holiday - Muharram",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
             }
           ]
         },
@@ -1693,14 +1408,7 @@
       "activities": [
         {
           "name": "Field Trip",
-          "class_range": [
-            "Pre-KG",
-            "LKG",
-            "UKG",
-            "III",
-            "IV",
-            "V"
-          ],
+          "class_range": ["Pre-KG", "LKG", "UKG", "III", "IV", "V"],
           "category": "activity"
         },
         {
@@ -1726,53 +1434,27 @@
         },
         {
           "name": "Inter House Competition – Skit",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "X", "XI", "XII"],
           "category": "activity"
         },
         {
           "name": "Inter House Competition – Cricket",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "X", "XI", "XII"],
           "category": "activity"
         }
       ],
       "daily_activities": [
         {
-          "date": "01",
+          "date": "03",
           "events": [
             {
               "name": "No Bag Day",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "activity"
             },
             {
               "name": "Class Activity: Talent Show",
-              "class_range": [
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["LKG", "UKG"],
               "category": "activity"
             }
           ]
@@ -1798,29 +1480,37 @@
             },
             {
               "name": "Term 1 PBL Display",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "exam"
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "academic"
             }
           ]
         },
         {
-          "date": "08",
+          "date": "10",
           "events": [
             {
-              "name": "FA/PA/Unit Test Commences",
+              "name": "Class Event: I, Me, Myself",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "16",
+          "events": [
+            {
+              "name": "Class Activity: Home Sweet Home",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "academic"
+            }
+          ]
+        },
+        {
+          "date": "18",
+          "events": [
+            {
+              "name": "Working Day",
               "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
                 "III",
                 "IV",
                 "V",
@@ -1831,48 +1521,18 @@
                 "X",
                 "XI",
                 "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "13",
-          "events": [
-            {
-              "name": "KG - Class Activity: Home Sweet Home",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
               ],
               "category": "academic"
             }
           ]
         },
         {
-          "date": "17",
+          "date": "20",
           "events": [
             {
-              "name": "FA/PA1 Unit Test Ends",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
+              "name": "Health Check-up",
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
+              "category": "academic"
             }
           ]
         },
@@ -1881,21 +1541,12 @@
           "events": [
             {
               "name": "Health Check-up",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
               "category": "academic"
             },
             {
               "name": "No Bag Day",
-              "class_range": [
-                "I",
-                "II"
-              ],
+              "class_range": ["I", "II"],
               "category": "activity"
             }
           ]
@@ -1905,14 +1556,7 @@
           "events": [
             {
               "name": "Health Check-up",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "III",
-                "IV",
-                "V"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG", "III", "IV", "V"],
               "category": "academic"
             }
           ]
@@ -1922,14 +1566,7 @@
           "events": [
             {
               "name": "Health Check-up",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "academic"
             }
           ]
@@ -1938,78 +1575,19 @@
           "date": "24",
           "events": [
             {
-              "name": "Result Publication FA/PA / Unit Test",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "25",
-          "events": [
+              "name": "Health Check-up",
+              "class_range": ["VI", "VII", "VIII", "IX", "X", "XI", "XII"],
+              "category": "academic"
+            },
             {
               "name": "KG Colouring Competition - Vivid Splendour",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "activity"
             },
             {
               "name": "Club Activities",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "activity"
-            }
-          ]
-        },
-        {
-          "day": "Sun",
-          "date": "26",
-          "events": [
-            {
-              "name": "Holiday - Muharram",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
             }
           ]
         },
@@ -2018,9 +1596,7 @@
           "events": [
             {
               "name": "LKG - Field Trip",
-              "class_range": [
-                "LKG"
-              ],
+              "class_range": ["LKG"],
               "category": "activity"
             }
           ]
@@ -2030,9 +1606,7 @@
           "events": [
             {
               "name": "UKG - Field Trip",
-              "class_range": [
-                "UKG"
-              ],
+              "class_range": ["UKG"],
               "category": "activity"
             }
           ]
@@ -2042,9 +1616,7 @@
           "events": [
             {
               "name": "Pre-KG - Field Trip - Joy Ride",
-              "class_range": [
-                "Pre-KG"
-              ],
+              "class_range": ["Pre-KG"],
               "category": "activity"
             }
           ]
@@ -2054,50 +1626,8 @@
           "events": [
             {
               "name": "Class Activity: Fun Games",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "31",
-          "events": [
-            {
-              "name": "Term 1 - Parent Interactive Meeting (PIM) - KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "ptm"
             }
           ]
         }
@@ -2108,69 +1638,21 @@
       "activities": [
         {
           "name": "Field Trip",
-          "class_range": [
-            "I",
-            "II",
-            "VI",
-            "VII",
-            "VIII"
-          ],
+          "class_range": ["I", "II", "VI", "VII", "VIII"],
           "category": "activity"
         },
         {
           "name": "Inter House Competition – Patriotic Group Song",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "X", "XI", "XII"],
           "category": "activity"
         },
         {
           "name": "Inter House Competition – Basketball",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "X", "XI", "XII"],
           "category": "activity"
         }
       ],
       "daily_activities": [
-        {
-          "date": "01",
-          "events": [
-            {
-              "name": "Term 1 - Parent Interactive Meeting (PIM) - KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "ptm"
-            }
-          ]
-        },
         {
           "date": "03",
           "events": [
@@ -2202,12 +1684,7 @@
           "events": [
             {
               "name": "No Bag Day",
-              "class_range": [
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
+              "class_range": ["IX", "X", "XI", "XII"],
               "category": "activity"
             }
           ]
@@ -2217,14 +1694,7 @@
           "events": [
             {
               "name": "No Bag Day",
-              "class_range": [
-                "I",
-                "II",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
+              "class_range": ["I", "II", "IX", "X", "XI", "XII"],
               "category": "activity"
             }
           ]
@@ -2233,30 +1703,8 @@
           "date": "08",
           "events": [
             {
-              "name": "Holiday",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "holiday"
-            },
-            {
               "name": "Working Day UKG - Awards Day",
-              "class_range": [
-                "UKG",
-                "I",
-                "II",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
+              "class_range": ["UKG", "I", "II", "IX", "X", "XI", "XII"],
               "category": "academic"
             }
           ]
@@ -2266,14 +1714,7 @@
           "events": [
             {
               "name": "No Bag Day",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "activity"
             }
           ]
@@ -2283,64 +1724,8 @@
           "events": [
             {
               "name": "KG Class Activity - People who help us",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "15",
-          "events": [
-            {
-              "name": "Holiday - Independence Day",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "17",
-          "events": [
-            {
-              "name": "FA/PA/UT Commences",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
             }
           ]
         },
@@ -2349,9 +1734,7 @@
           "events": [
             {
               "name": "Pre-KG - Class Activity: Talent Show",
-              "class_range": [
-                "Pre-KG"
-              ],
+              "class_range": ["Pre-KG"],
               "category": "activity"
             }
           ]
@@ -2360,11 +1743,8 @@
           "date": "22",
           "events": [
             {
-              "name": "Holiday KG, Working Day",
+              "name": "Working Day",
               "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
                 "I",
                 "II",
                 "III",
@@ -2378,7 +1758,7 @@
                 "XI",
                 "XII"
               ],
-              "category": "holiday"
+              "category": "academic"
             }
           ]
         },
@@ -2387,9 +1767,7 @@
           "events": [
             {
               "name": "UKG Class Competition - Show and Tell - Puppet Talk",
-              "class_range": [
-                "UKG"
-              ],
+              "class_range": ["UKG"],
               "category": "activity"
             }
           ]
@@ -2399,57 +1777,8 @@
           "events": [
             {
               "name": "LKG Class Competition - Show and Tell - Puppet Talk",
-              "class_range": [
-                "LKG"
-              ],
+              "class_range": ["LKG"],
               "category": "activity"
-            },
-            {
-              "name": "FA/PA/UT Ends",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "26",
-          "events": [
-            {
-              "name": "Holiday - Onam / Milad-un-Nabi",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
             }
           ]
         },
@@ -2458,21 +1787,13 @@
           "events": [
             {
               "name": "Pre KG Class Competition - Show and Tell - Puppet Talk",
-              "class_range": [
-                "Pre-KG"
-              ],
+              "class_range": ["Pre-KG"],
               "category": "activity"
             },
             {
-              "name": "Term 1 PBL Commences KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
-              "category": "exam"
+              "name": "Term 1 PBL Commences",
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
+              "category": "academic"
             }
           ]
         },
@@ -2481,41 +1802,8 @@
           "events": [
             {
               "name": "Club Activities",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "29",
-          "events": [
-            {
-              "name": "Holiday",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
             }
           ]
         }
@@ -2526,20 +1814,12 @@
       "activities": [
         {
           "name": "Inter House Competition – Debate",
-          "class_range": [
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["IX", "X", "XI", "XII"],
           "category": "activity"
         },
         {
           "name": "Inter House Competition – Tennikoit",
-          "class_range": [
-            "I",
-            "II"
-          ],
+          "class_range": ["I", "II"],
           "category": "activity"
         },
         {
@@ -2560,32 +1840,6 @@
         }
       ],
       "daily_activities": [
-        {
-          "date": "01",
-          "events": [
-            {
-              "name": "Result Publication FA/PA/UT",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
         {
           "date": "02",
           "events": [
@@ -2611,20 +1865,6 @@
               "category": "academic"
             },
             {
-              "name": "KG Class Competition - Storytelling",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "04",
-          "events": [
-            {
               "name": "No Bag Day",
               "class_range": [
                 "I",
@@ -2645,10 +1885,10 @@
           ]
         },
         {
-          "date": "05",
+          "date": "03",
           "events": [
             {
-              "name": "Holiday - Krishna Jayanthi",
+              "name": "Art Fest 2026",
               "class_range": [
                 "Pre-KG",
                 "LKG",
@@ -2666,7 +1906,49 @@
                 "XI",
                 "XII"
               ],
-              "category": "holiday"
+              "category": "academic"
+            },
+            {
+              "name": "Teacher's Day Celebrations",
+              "class_range": [
+                "Pre-KG",
+                "LKG",
+                "UKG",
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V",
+                "VI",
+                "VII",
+                "VIII",
+                "IX",
+                "X",
+                "XI",
+                "XII"
+              ],
+              "category": "activity"
+            },
+            {
+              "name": "No Bag Day",
+              "class_range": [
+                "Pre-KG",
+                "LKG",
+                "UKG",
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V",
+                "VI",
+                "VII",
+                "VIII",
+                "IX",
+                "X",
+                "XI",
+                "XII"
+              ],
+              "category": "activity"
             }
           ]
         },
@@ -2674,10 +1956,8 @@
           "date": "08",
           "events": [
             {
-              "name": "UKG Class Competition - Rhythm and Rhymes",
-              "class_range": [
-                "UKG"
-              ],
+              "name": "UKG Class Competition - Storytelling",
+              "class_range": ["UKG"],
               "category": "activity"
             }
           ]
@@ -2687,9 +1967,7 @@
           "events": [
             {
               "name": "LKG Class Competition - Rhythm and Rhymes",
-              "class_range": [
-                "LKG"
-              ],
+              "class_range": ["LKG"],
               "category": "activity"
             }
           ]
@@ -2699,41 +1977,13 @@
           "events": [
             {
               "name": "Pre KG Class Competition - Rhythm and Rhymes",
-              "class_range": [
-                "Pre-KG"
-              ],
+              "class_range": ["Pre-KG"],
               "category": "activity"
             }
           ]
         },
         {
-          "date": "14",
-          "events": [
-            {
-              "name": "Holiday",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "15",
+          "date": "16",
           "events": [
             {
               "name": "Annual Athletic Meet",
@@ -2759,10 +2009,10 @@
           ]
         },
         {
-          "date": "16",
+          "date": "19",
           "events": [
             {
-              "name": "Holiday - Ganesh Chaturthi",
+              "name": "Working Day",
               "class_range": [
                 "Pre-KG",
                 "LKG",
@@ -2780,7 +2030,33 @@
                 "XI",
                 "XII"
               ],
-              "category": "holiday"
+              "category": "academic"
+            },
+            {
+              "name": "Term 1 PBL Display",
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
+              "category": "academic"
+            },
+            {
+              "name": "Portion Completion for SA 1 and Mid Term Exams",
+              "class_range": [
+                "Pre-KG",
+                "LKG",
+                "UKG",
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V",
+                "VI",
+                "VII",
+                "VIII",
+                "IX",
+                "X",
+                "XI",
+                "XII"
+              ],
+              "category": "academic"
             }
           ]
         },
@@ -2788,39 +2064,7 @@
           "date": "21",
           "events": [
             {
-              "name": "Working Day KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
-              "category": "academic"
-            },
-            {
-              "name": "Working Day",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "22",
-          "events": [
-            {
-              "name": "Revision Commences for Diagnostic Assessment, SA 1 & Mid Term Exam",
+              "name": "Revision commences for exams",
               "class_range": [
                 "Pre-KG",
                 "LKG",
@@ -2838,7 +2082,7 @@
                 "XI",
                 "XII"
               ],
-              "category": "exam"
+              "category": "academic"
             }
           ]
         },
@@ -2847,40 +2091,22 @@
           "events": [
             {
               "name": "Assignment Topic - Term 2 All Subjects",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"],
               "category": "academic"
             },
             {
               "name": "Project Topics",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "academic"
             },
             {
               "name": "Club Activities",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "activity"
+            },
+            {
+              "name": "KG Class Competition - Clay Modelling",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "activity"
             }
           ]
@@ -2889,63 +2115,7 @@
           "date": "26",
           "events": [
             {
-              "name": "Custodian Meeting",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII"
-              ],
-              "category": "ptm"
-            },
-            {
-              "name": "Custodian Meeting",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "ptm"
-            },
-            {
               "name": "Working Day",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "28",
-          "events": [
-            {
-              "name": "Holiday - KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
-              "category": "holiday"
-            },
-            {
-              "name": "Working Day",
-              "class_range": [
-                "I",
-                "II"
-              ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "29",
-          "events": [
-            {
-              "name": "Clay Modelling",
               "class_range": [
                 "III",
                 "IV",
@@ -2959,19 +2129,6 @@
                 "XII"
               ],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "30",
-          "events": [
-            {
-              "name": "Custodian Meeting",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "ptm"
             }
           ]
         }
@@ -2982,176 +2139,18 @@
       "activities": [
         {
           "name": "Leadership Camp",
-          "class_range": [
-            "VIII",
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["VIII", "IX", "X", "XI", "XII"],
           "category": "academic"
         },
         {
           "name": "Inter House Football",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "X",
-            "XI",
-            "XII"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "X", "XI", "XII"],
           "category": "activity"
         }
       ],
       "daily_activities": [
         {
-          "date": "01",
-          "events": [
-            {
-              "name": "Holiday - KG, Working Day",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "02",
-          "events": [
-            {
-              "name": "SA / Mid Term Exam Ends - KG - Ends",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I"
-              ],
-              "category": "exam"
-            },
-            {
-              "name": "Diagnostics Assessment for Students",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "05",
-          "events": [
-            {
-              "name": "SA / Mid Term Exam Ends - KG - Ends",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "12",
-          "events": [
-            {
-              "name": "Term Holiday Commences for KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "20",
-          "events": [
-            {
-              "name": "Holiday - Ayudha Pooja",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "21",
-          "events": [
-            {
-              "name": "Holiday - Vijaya Dashami",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "22",
+          "date": "26",
           "events": [
             {
               "name": "School Reopens - Term 2 Commences",
@@ -3177,73 +2176,27 @@
           ]
         },
         {
-          "date": "24",
+          "date": "28",
           "events": [
             {
               "name": "KG Class Event - Grandparents Day",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "26",
-          "events": [
+            },
             {
               "name": "Assignment Submission",
-              "class_range": [
-                "IX",
-                "XI"
-              ],
+              "class_range": ["I", "II", "III", "IV", "V", "VI"],
               "category": "academic"
             },
             {
               "name": "Final Project Submission",
-              "class_range": [
-                "IX",
-                "X",
-                "XII"
-              ],
+              "class_range": ["IX", "XI"],
               "category": "academic"
             },
             {
               "name": "Final Record Submission",
-              "class_range": [
-                "IX",
-                "X",
-                "XII"
-              ],
+              "class_range": ["X", "XII"],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "27",
-          "events": [
-            {
-              "name": "Result Publication SA / Mid Term Exam 1",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
             }
           ]
         },
@@ -3252,76 +2205,13 @@
           "events": [
             {
               "name": "Club Activities",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "30",
-          "events": [
-            {
-              "name": "KG Class Activity: Halloween",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "academic"
             },
             {
-              "name": "Term 1 Parent Teacher Meeting (PTM) - KG and",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "ptm"
-            }
-          ]
-        },
-        {
-          "date": "31",
-          "events": [
-            {
-              "name": "Term 1 Parent Teacher Meeting (PTM) - KG and",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "ptm"
+              "name": "KG Class Activity: Halloween",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "academic"
             }
           ]
         }
@@ -3350,36 +2240,27 @@
         },
         {
           "name": "Inter House Competition – Group Dance",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "XI"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "XI"],
           "category": "activity"
         },
         {
           "name": "Inter House Competition – Kho–Kho",
-          "class_range": [
-            "III",
-            "IV",
-            "V"
-          ],
+          "class_range": ["III", "IV", "V"],
           "category": "activity"
         }
       ],
       "daily_activities": [
         {
-          "date": "03",
+          "date": "02",
           "events": [
             {
-              "name": "KG Class Activity - Fresco Cooking",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "name": "Mom & Me program commences for KG",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "academic"
+            },
+            {
+              "name": "Term 2 PBL commences",
+              "class_range": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"],
               "category": "academic"
             }
           ]
@@ -3389,20 +2270,26 @@
           "events": [
             {
               "name": "KG Class Activity - Sparkling Diya",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "academic"
             }
           ]
         },
         {
-          "date": "07",
+          "date": "13",
           "events": [
             {
-              "name": "Holiday",
+              "name": "KG Class Activity - Fireless Cooking",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "academic"
+            }
+          ]
+        },
+        {
+          "date": "14",
+          "events": [
+            {
+              "name": "Cultural Fest 2026",
               "class_range": [
                 "Pre-KG",
                 "LKG",
@@ -3420,26 +2307,8 @@
                 "XI",
                 "XII"
               ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "11",
-          "events": [
-            {
-              "name": "Revision Exam - I Commences",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "12",
-          "events": [
+              "category": "activity"
+            },
             {
               "name": "Working Day",
               "class_range": [
@@ -3455,15 +2324,12 @@
                 "VII",
                 "VIII",
                 "IX",
-                "XI"
+                "X",
+                "XI",
+                "XII"
               ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "13",
-          "events": [
+              "category": "activity"
+            },
             {
               "name": "No Bag Day",
               "class_range": [
@@ -3486,33 +2352,56 @@
           ]
         },
         {
-          "date": "14",
+          "date": "16",
+          "events": [
+            {
+              "name": "UKG Dance Competition - Twist n Turn",
+              "class_range": ["UKG"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "17",
+          "events": [
+            {
+              "name": "LKG Dance Competition - Twist n Turn",
+              "class_range": ["LKG"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "18",
+          "events": [
+            {
+              "name": "Pre KG Dance Competition - Twist n Turn",
+              "class_range": ["Pre-KG"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "20",
           "events": [
             {
               "name": "KG Class Activity - Wonderful Creatures - Birds",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "academic"
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "activity"
             },
             {
-              "name": "Revision Exam Ends",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
-            },
+              "name": "No Bag Day",
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "21",
+          "events": [
             {
-              "name": "Term 2 Exhibition Display",
+              "name": "Working Day",
               "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
                 "III",
                 "IV",
                 "V",
@@ -3524,48 +2413,17 @@
                 "XI",
                 "XII"
               ],
-              "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "16",
-          "events": [
+              "category": "academic"
+            },
             {
-              "name": "UKG Dance Competition - Twist n Turn",
-              "class_range": [
-                "UKG"
-              ],
-              "category": "activity"
+              "name": "Term 2 PBL Display",
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "academic"
             }
           ]
         },
         {
-          "date": "17",
-          "events": [
-            {
-              "name": "LKG Dance Competition - Twist n Turn",
-              "class_range": [
-                "LKG"
-              ],
-              "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "18",
-          "events": [
-            {
-              "name": "Pre KG Dance Competition - Twist n Turn",
-              "class_range": [
-                "Pre-KG"
-              ],
-              "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "21",
+          "date": "23",
           "events": [
             {
               "name": "Library Week - Reading - A Window to the World Commences",
@@ -3591,44 +2449,7 @@
           ]
         },
         {
-          "date": "23",
-          "events": [
-            {
-              "name": "Library Week - Reading - A Window to the World",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "activity"
-            },
-            {
-              "name": "No Bag Day KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
-              "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "24",
+          "date": "27",
           "events": [
             {
               "name": "Library Week - Reading - A Window to the World Concludes",
@@ -3652,88 +2473,14 @@
               "category": "activity"
             },
             {
-              "name": "Working Day",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "25",
-          "events": [
-            {
-              "name": "FA/PA / UT Commences",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "26",
-          "events": [
-            {
-              "name": "Revision Exam 2 Commences",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "27",
-          "events": [
-            {
-              "name": "No Bag Day",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
+              "name": "Club Activities",
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "activity"
             },
             {
-              "name": "Model Practical Exam Commences",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
+              "name": "Term 2 PBL Display",
+              "class_range": ["I", "II"],
+              "category": "academic"
             }
           ]
         },
@@ -3741,39 +2488,6 @@
           "date": "28",
           "events": [
             {
-              "name": "Result Publication Revision Exam 1",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            },
-            {
-              "name": "Custodian Meeting",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "ptm"
-            },
-            {
               "name": "Working Day",
               "class_range": [
                 "III",
@@ -3788,19 +2502,6 @@
                 "XII"
               ],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "30",
-          "events": [
-            {
-              "name": "Custodian Meeting",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "ptm"
             }
           ]
         }
@@ -3827,49 +2528,57 @@
         },
         {
           "name": "Inter House Competition – Short Film",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "XI"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "XI"],
           "category": "activity"
         },
         {
           "name": "CSSC Model Exam",
-          "class_range": [
-            "X",
-            "XII"
-          ],
+          "class_range": ["X", "XII"],
           "category": "exam"
         }
       ],
       "daily_activities": [
         {
-          "date": "01",
+          "date": "2",
           "events": [
             {
-              "name": "Revision Exam 2 Ends",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
+              "name": "UKG Class Competition - Talk Show",
+              "class_range": ["UKG"],
+              "category": "activity"
             }
           ]
         },
         {
-          "date": "02",
+          "date": "3",
           "events": [
             {
-              "name": "Result Publication FA/PA/UT",
+              "name": "LKG Class Competition - Talk Show",
+              "class_range": ["LKG"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "4",
+          "events": [
+            {
+              "name": "Pre-KG Class Competition - Talk Show",
+              "class_range": ["Pre-KG"],
+              "category": "activity"
+            },
+            {
+              "name": "Club Activities",
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "5",
+          "events": [
+            {
+              "name": "Working Day",
               "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
                 "III",
                 "IV",
                 "V",
@@ -3881,57 +2590,34 @@
                 "XI",
                 "XII"
               ],
-              "category": "exam"
+              "category": "academic"
             }
           ]
         },
         {
-          "date": "07",
+          "date": "17",
           "events": [
             {
-              "name": "Revision Exam 2 Ends",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
+              "name": "Assignment Topic - Term 2 All Subjects",
+              "class_range": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "academic"
+            },
+            {
+              "name": "Project Topics",
+              "class_range": ["IX", "XI"],
+              "category": "academic"
             }
           ]
         },
         {
-          "date": "10",
+          "date": "18",
           "events": [
             {
-              "name": "Term 2 Parent Interactive Meeting (PIM) - KG & All Classes Ends",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "ptm"
-            }
-          ]
-        },
-        {
-          "date": "12",
-          "events": [
-            {
-              "name": "Term 2 Parent Interactive Meeting (PIM) - KG Classes",
+              "name": "No Bag Day",
               "class_range": [
                 "Pre-KG",
                 "LKG",
-                "UKG"
-              ],
-              "category": "ptm"
-            }
-          ]
-        },
-        {
-          "date": "14",
-          "events": [
-            {
-              "name": "Club Activities",
-              "class_range": [
+                "UKG",
                 "III",
                 "IV",
                 "V",
@@ -3944,69 +2630,15 @@
           ]
         },
         {
-          "date": "18",
+          "date": "19",
           "events": [
             {
-              "name": "Result Publication FA/PA/UT",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "21",
-          "events": [
-            {
-              "name": "Result Publication All Subjects",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "exam"
+              "name": "Working Day",
+              "class_range": ["LKG", "III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "academic"
             },
             {
-              "name": "Assignment Topic - Term 2 All Subjects",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "23",
-          "events": [
-            {
-              "name": "Christmas Concert",
+              "name": "Christmas Concert 2026",
               "class_range": [
                 "Pre-KG",
                 "LKG",
@@ -4024,59 +2656,7 @@
                 "XI",
                 "XII"
               ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "25",
-          "events": [
-            {
-              "name": "Holiday - Christmas",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "30",
-          "events": [
-            {
-              "name": "Term Holiday Commences for Students",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
+              "category": "activity"
             }
           ]
         }
@@ -4086,56 +2666,24 @@
       "month_year": "January 2027",
       "activities": [
         {
-          "name": "Pre-Board Exam",
-          "class_range": [
-            "X",
-            "XII"
-          ],
-          "category": "exam"
-        },
-        {
-          "name": "CBSE Board Practical Exam",
-          "class_range": [
-            "X",
-            "XII"
-          ],
-          "category": "exam"
-        },
-        {
           "name": "Inter House Competition – Heritage Quiz",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "XI"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "XI"],
           "category": "activity"
         },
         {
           "name": "Inter House Competition – Rangoli",
-          "class_range": [
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "XI"
-          ],
+          "class_range": ["VI", "VII", "VIII", "IX", "XI"],
           "category": "activity"
         },
         {
           "name": "Picnic",
-          "class_range": [
-            "III",
-            "IV",
-            "V"
-          ],
+          "class_range": ["III", "IV", "V"],
           "category": "activity"
         }
       ],
       "daily_activities": [
         {
-          "date": "01",
+          "date": "04",
           "events": [
             {
               "name": "School Reopens for Students",
@@ -4161,46 +2709,33 @@
           ]
         },
         {
-          "date": "05",
+          "date": "06",
           "events": [
             {
               "name": "Assignment Submission Term 2",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII"
-              ],
+              "class_range": ["I", "II", "III", "IV", "V", "VI", "VII"],
               "category": "academic"
             },
             {
               "name": "Project Submission",
-              "class_range": [
-                "IX",
-                "X",
-                "XII"
-              ],
+              "class_range": ["IX", "XI"],
               "category": "academic"
             }
           ]
         },
         {
-          "date": "06",
+          "date": "08",
           "events": [
             {
-              "name": "Holiday KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
-              "category": "holiday"
-            },
+              "name": "UKG Class Competition: Handwriting",
+              "class_range": ["UKG"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "09",
+          "events": [
             {
               "name": "Working Day",
               "class_range": [
@@ -4220,121 +2755,52 @@
           ]
         },
         {
-          "date": "11",
-          "events": [
-            {
-              "name": "KG Class Competition: Handwriting Competition",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "activity"
-            }
-          ]
-        },
-        {
           "date": "13",
           "events": [
             {
-              "name": "KG Class Fest - Farm to Table - No Bag Day",
+              "name": "KG Class Fest - Farm to Table",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "activity"
+            },
+            {
+              "name": "Literary Fest 2027",
               "class_range": [
                 "Pre-KG",
                 "LKG",
-                "UKG"
+                "UKG",
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V",
+                "VI",
+                "VII",
+                "VIII",
+                "IX",
+                "X",
+                "XI",
+                "XII"
               ],
+              "category": "activity"
+            },
+            {
+              "name": "No Bag Day",
+              "class_range": ["Pre-KG", "LKG", "UKG", "IX", "XI"],
+              "category": "activity"
+            },
+            {
+              "name": "Graduation Day",
+              "class_range": ["XII"],
               "category": "activity"
             }
           ]
         },
         {
-          "date": "14",
+          "date": "18",
           "events": [
             {
-              "name": "Holiday - Pongal",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "15",
-          "events": [
-            {
-              "name": "Holiday - Thiruvalluvar Day",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "16",
-          "events": [
-            {
-              "name": "Holiday - Uzhavar Thirunal",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "19",
-          "events": [
-            {
-              "name": "KG Class Activity - Kiddies Royal Makeover - Prince & Princess",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "name": "Term 2 PBL Commences",
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
               "category": "academic"
             }
           ]
@@ -4343,48 +2809,29 @@
           "date": "20",
           "events": [
             {
-              "name": "No Bag Day KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "name": "KG Class Activity - Kiddies Royal Makeover - Prince & Princess",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "activity"
             }
           ]
         },
         {
-          "date": "21",
+          "date": "22",
           "events": [
             {
-              "name": "Term 2 PBL Commences for KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
-              "category": "exam"
+              "name": "KG Class Activity - Fun with Clay - National Symbols",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "activity"
+            },
+            {
+              "name": "No Bag Day",
+              "class_range": ["Pre-KG", "LKG", "UKG", "IX", "XI"],
+              "category": "activity"
             }
           ]
         },
         {
           "date": "23",
-          "events": [
-            {
-              "name": "KG Class Activity - Fun with Clay - National Symbols",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "25",
           "events": [
             {
               "name": "Annual Sports Meet",
@@ -4410,36 +2857,20 @@
           ]
         },
         {
-          "date": "26",
-          "events": [
-            {
-              "name": "Holiday - Republic Day",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
           "date": "27",
           "events": [
             {
               "name": "Farewell Grade XII",
+              "class_range": ["XII"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "28",
+          "events": [
+            {
+              "name": "Annual Class Photo Shoot",
               "class_range": [
                 "Pre-KG",
                 "LKG",
@@ -4487,42 +2918,19 @@
             },
             {
               "name": "Club Activities",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "activity"
+            },
+            {
+              "name": "Portion Completion",
+              "class_range": ["IX", "XI"],
+              "category": "academic"
             }
           ]
         },
         {
           "date": "30",
           "events": [
-            {
-              "name": "Annual Class Photo Shoot",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "activity"
-            },
             {
               "name": "Working Day",
               "class_range": [
@@ -4540,33 +2948,6 @@
                 "XII"
               ],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "day": "Sun",
-          "date": "31",
-          "events": [
-            {
-              "name": "Holiday KG, Working Day",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
             }
           ]
         }
@@ -4577,13 +2958,7 @@
       "activities": [
         {
           "name": "Picnic",
-          "class_range": [
-            "Pre-KG",
-            "LKG",
-            "UKG",
-            "I",
-            "II"
-          ],
+          "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
           "category": "activity"
         }
       ],
@@ -4592,17 +2967,23 @@
           "date": "01",
           "events": [
             {
-              "name": "Health Check-up KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V"
-              ],
+              "name": "Health Check-up",
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
+              "category": "academic"
+            },
+            {
+              "name": "Revision commences",
+              "class_range": ["IX", "XI"],
+              "category": "academic"
+            }
+          ]
+        },
+        {
+          "date": "02",
+          "events": [
+            {
+              "name": "Health Check-up",
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
               "category": "academic"
             }
           ]
@@ -4611,14 +2992,8 @@
           "date": "03",
           "events": [
             {
-              "name": "Health Check-up - KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "V"
-              ],
+              "name": "Health Check-up",
+              "class_range": ["Pre-KG", "LKG", "UKG", "III", "IV", "V"],
               "category": "academic"
             }
           ]
@@ -4628,13 +3003,7 @@
           "events": [
             {
               "name": "Health Check-up",
-              "class_range": [
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "academic"
             }
           ]
@@ -4644,10 +3013,7 @@
           "events": [
             {
               "name": "Health Check-up",
-              "class_range": [
-                "XI",
-                "XII"
-              ],
+              "class_range": ["VI", "VII", "VIII", "IX", "X", "XI", "XII"],
               "category": "academic"
             }
           ]
@@ -4656,10 +3022,13 @@
           "date": "06",
           "events": [
             {
+              "name": "Health Check-up",
+              "class_range": ["I", "II"],
+              "category": "academic"
+            },
+            {
               "name": "Working Day",
               "class_range": [
-                "I",
-                "II",
                 "III",
                 "IV",
                 "V",
@@ -4676,86 +3045,20 @@
           ]
         },
         {
-          "date": "08",
+          "date": "12",
           "events": [
             {
-              "name": "Health Check-up - KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "11",
-          "events": [
-            {
-              "name": "FA/PA Commences",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "15",
-          "events": [
-            {
-              "name": "KG Class Activity - Nature Trail",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "16",
-          "events": [
-            {
-              "name": "No Bag Day - KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "name": "No Bag Day",
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
               "category": "activity"
             }
           ]
         },
         {
-          "date": "17",
+          "date": "13",
           "events": [
             {
-              "name": "Term PBL Display KG",
+              "name": "Working Day",
               "class_range": [
                 "Pre-KG",
                 "LKG",
@@ -4773,60 +3076,42 @@
                 "XI",
                 "XII"
               ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "22",
-          "events": [
+              "category": "academic"
+            },
             {
-              "name": "Year End Exam Ends",
-              "class_range": [
-                "IX",
-                "XI"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "24",
-          "events": [
-            {
-              "name": "Portion Completion",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "name": "Term 2 PBL Display",
+              "class_range": ["Pre-KG", "LKG", "UKG", "I", "II"],
               "category": "academic"
             }
           ]
         },
         {
-          "date": "26",
+          "date": "19",
           "events": [
             {
-              "name": "Term 2 Parent Teacher Meeting (PTM)",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "XI"
-              ],
-              "category": "ptm"
+              "name": "KG Class Activity - Nature Trail",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "academic"
+            },
+            {
+              "name": "Club Activities",
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "25",
+          "events": [
+            {
+              "name": "Portion Completion",
+              "class_range": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "academic"
+            },
+            {
+              "name": "Mom & Me Program Concludes for KG",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "academic"
             }
           ]
         },
@@ -4834,65 +3119,8 @@
           "date": "27",
           "events": [
             {
-              "name": "Result Declaration and Promotion List",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "academic"
-            },
-            {
-              "name": "Term 2 Parent Teacher Meeting (PTM)",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "XI"
-              ],
-              "category": "ptm"
-            }
-          ]
-        },
-        {
-          "date": "28",
-          "events": [
-            {
-              "name": "Holiday KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
-              "category": "holiday"
-            },
-            {
               "name": "Working Day",
-              "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
+              "class_range": ["III", "IV", "V", "VI", "VII", "VIII"],
               "category": "academic"
             }
           ]
@@ -4904,11 +3132,7 @@
       "activities": [
         {
           "name": "Leadership Camp",
-          "class_range": [
-            "V",
-            "VI",
-            "VII"
-          ],
+          "class_range": ["V", "VI", "VII"],
           "category": "academic"
         }
       ],
@@ -4917,25 +3141,34 @@
           "date": "01",
           "events": [
             {
-              "name": "Revision Commences for SA 2",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
+              "name": "Revision Commences",
+              "class_range": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"],
+              "category": "academic"
+            },
+            {
+              "name": "Dad & Me Program for KG",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "activity"
+            },
+            {
+              "name": "No Bag Day",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "activity"
+            }
+          ]
+        },
+        {
+          "date": "03",
+          "events": [
+            {
+              "name": "Parent Orientation AY 2027-28",
+              "class_range": ["X", "XII"],
+              "category": "ptm"
+            },
+            {
+              "name": "AY 2027-28 commences",
+              "class_range": ["X", "XII"],
+              "category": "academic"
             }
           ]
         },
@@ -4943,22 +3176,9 @@
           "date": "04",
           "events": [
             {
-              "name": "Parent Orientation AY 2027-28",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX"
-              ],
-              "category": "ptm"
+              "name": "Fancy Dress Competition - Incredible India",
+              "class_range": ["Pre-KG"],
+              "category": "activity"
             }
           ]
         },
@@ -4966,10 +3186,8 @@
           "date": "05",
           "events": [
             {
-              "name": "Pre KG - No Bag Day",
-              "class_range": [
-                "Pre-KG"
-              ],
+              "name": "Fancy Dress Competition - Incredible India",
+              "class_range": ["LKG"],
               "category": "activity"
             }
           ]
@@ -4978,11 +3196,8 @@
           "date": "06",
           "events": [
             {
-              "name": "Holiday KG",
+              "name": "Working Day",
               "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
                 "I",
                 "II",
                 "III",
@@ -4996,19 +3211,7 @@
                 "XI",
                 "XII"
               ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "08",
-          "events": [
-            {
-              "name": "LKG - Fancy Dress Competition (Incredible India)",
-              "class_range": [
-                "LKG"
-              ],
-              "category": "activity"
+              "category": "academic"
             }
           ]
         },
@@ -5017,33 +3220,17 @@
           "events": [
             {
               "name": "UKG - Fancy Dress Competition (Incredible India)",
-              "class_range": [
-                "UKG"
-              ],
+              "class_range": ["UKG"],
               "category": "activity"
             }
           ]
         },
         {
-          "date": "11",
+          "date": "13",
           "events": [
             {
-              "name": "SA 2 Exam Commences",
+              "name": "Working Day",
               "class_range": [
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII"
-              ],
-              "category": "exam"
-            },
-            {
-              "name": "Diagnostic Assessment Commences",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
                 "I",
                 "II",
                 "III",
@@ -5057,7 +3244,7 @@
                 "XI",
                 "XII"
               ],
-              "category": "exam"
+              "category": "academic"
             }
           ]
         },
@@ -5065,39 +3252,19 @@
           "date": "15",
           "events": [
             {
-              "name": "KG - Fancy Dress Competition - Clay Modelling",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
+              "name": "Wealth from Waste Competition",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
               "category": "activity"
             }
           ]
         },
         {
-          "date": "18",
+          "date": "19",
           "events": [
             {
-              "name": "Holiday KG - Working Day",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
+              "name": "KG Event - Puppet Show",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "academic"
             }
           ]
         },
@@ -5105,25 +3272,8 @@
           "date": "20",
           "events": [
             {
-              "name": "Wealth from Waste Competition - KG",
+              "name": "Working Day",
               "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "22",
-          "events": [
-            {
-              "name": "SA 2 Exam Ends",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
                 "I",
                 "II",
                 "III",
@@ -5136,104 +3286,8 @@
                 "X",
                 "XI",
                 "XII"
-              ],
-              "category": "exam"
-            },
-            {
-              "name": "Diagnostic Assessment Ends",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
-          "date": "24",
-          "events": [
-            {
-              "name": "KG Event - Puppet Show",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
               ],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "26",
-          "events": [
-            {
-              "name": "Holiday - Good Friday",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "31",
-          "events": [
-            {
-              "name": "KG Diagnostic Assessment Commences",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "exam"
-            },
-            {
-              "name": "Result Publication SA1",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "exam"
             }
           ]
         }
@@ -5263,45 +3317,8 @@
           ]
         },
         {
-          "date": "06",
+          "date": "03",
           "events": [
-            {
-              "name": "Holiday - Ugadi",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII",
-                "IX",
-                "X",
-                "XI",
-                "XII"
-              ],
-              "category": "holiday"
-            }
-          ]
-        },
-        {
-          "date": "07",
-          "events": [
-            {
-              "name": "Holiday KG",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II"
-              ],
-              "category": "holiday"
-            },
             {
               "name": "Working Day",
               "class_range": [
@@ -5321,43 +3338,11 @@
           ]
         },
         {
-          "date": "09",
-          "events": [
-            {
-              "name": "PA / Unit Test Ends",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
-            }
-          ]
-        },
-        {
           "date": "10",
           "events": [
             {
-              "name": "Quiz Competition (Unique India)",
+              "name": "Working Day",
               "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG"
-              ],
-              "category": "activity"
-            }
-          ]
-        },
-        {
-          "date": "14",
-          "events": [
-            {
-              "name": "Holiday - Tamil New Year",
-              "class_range": [
-                "Pre-KG",
-                "LKG",
-                "UKG",
-                "I",
-                "II",
                 "III",
                 "IV",
                 "V",
@@ -5369,7 +3354,17 @@
                 "XI",
                 "XII"
               ],
-              "category": "holiday"
+              "category": "academic"
+            }
+          ]
+        },
+        {
+          "date": "12",
+          "events": [
+            {
+              "name": "Quiz Competition (Unique India)",
+              "class_range": ["LKG", "UKG"],
+              "category": "activity"
             }
           ]
         },
@@ -5377,12 +3372,9 @@
           "date": "15",
           "events": [
             {
-              "name": "PA / Unit Test Ends",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
+              "name": "Last Working Day KG",
+              "class_range": ["Pre-KG", "LKG", "UKG"],
+              "category": "academic"
             }
           ]
         },
@@ -5390,10 +3382,8 @@
           "date": "16",
           "events": [
             {
-              "name": "Graduation Day LKG",
-              "class_range": [
-                "LKG"
-              ],
+              "name": "Graduation Day UKG",
+              "class_range": ["UKG"],
               "category": "activity"
             }
           ]
@@ -5402,10 +3392,8 @@
           "date": "17",
           "events": [
             {
-              "name": "Holiday Working Day",
+              "name": "Working Day",
               "class_range": [
-                "I",
-                "II",
                 "III",
                 "IV",
                 "V",
@@ -5417,67 +3405,22 @@
                 "XI",
                 "XII"
               ],
-              "category": "holiday"
+              "category": "academic"
             }
           ]
         },
         {
-          "date": "19",
-          "events": [
-            {
-              "name": "Summer Vacation Commences",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
-              "category": "vacation"
-            }
-          ]
-        },
-        {
-          "date": "20",
+          "date": "21",
           "events": [
             {
               "name": "Assignment Topics - Term 1 All Subjects",
-              "class_range": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V",
-                "VI",
-                "VII",
-                "VIII"
-              ],
+              "class_range": ["II", "III", "IV", "V", "VI", "VII", "VIII"],
               "category": "academic"
             },
             {
               "name": "Record Work and Project Topics",
-              "class_range": [
-                "IX",
-                "X",
-                "XII"
-              ],
+              "class_range": ["IX", "X", "XII"],
               "category": "academic"
-            }
-          ]
-        },
-        {
-          "date": "22",
-          "events": [
-            {
-              "name": "PA / Unit Test Ends",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
             }
           ]
         },
@@ -5485,9 +3428,17 @@
           "date": "24",
           "events": [
             {
-              "name": "Last Working Day for",
+              "name": "Working Day",
               "class_range": [
+                "III",
+                "IV",
+                "V",
+                "VI",
+                "VII",
+                "VIII",
+                "IX",
                 "X",
+                "XI",
                 "XII"
               ],
               "category": "academic"
@@ -5495,36 +3446,12 @@
           ]
         },
         {
-          "date": "26",
+          "date": "30",
           "events": [
             {
-              "name": "Result Publication SA1 Ends",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "exam"
-            },
-            {
-              "name": "Summer Vacation Commences",
-              "class_range": [
-                "III",
-                "IV"
-              ],
-              "category": "vacation"
-            }
-          ]
-        },
-        {
-          "date": "28",
-          "events": [
-            {
-              "name": "Summer Vacation Commences for",
-              "class_range": [
-                "X",
-                "XII"
-              ],
-              "category": "vacation"
+              "name": "Last Working Day",
+              "class_range": ["X", "XII"],
+              "category": "academic"
             }
           ]
         }
